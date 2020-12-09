@@ -237,6 +237,21 @@ enum class ELifetimeCondition : uint8_t
 
 
 
+// Enum MediaAssets.EMediaPlayerTrack
+enum class EMediaPlayerTrack : uint8_t
+{
+	Audio                          = 0,
+	Binary                         = 1,
+	Caption                        = 2,
+	Script                         = 3,
+	Subtitle                       = 4,
+	Text                           = 5,
+	Video                          = 6,
+	EMediaPlayerTrack_MAX          = 7
+};
+
+
+
 // Enum Engine.ETextGender
 enum class ETextGender : uint8_t
 {
@@ -524,696 +539,6 @@ enum class EQuitPreference : uint8_t
 };
 
 
-// Enum Engine.EInputEvent
-enum class EInputEvent : uint8_t
-{
-	IE_Pressed                     = 0,
-	IE_Released                    = 1,
-	IE_Repeat                      = 2,
-	IE_DoubleClick                 = 3,
-	IE_Axis                        = 4,
-	IE_MAX                         = 5
-};
-
-
-// Enum Engine.EStanceMode
-enum class EStanceMode : uint8_t
-{
-	STANCE_None                    = 0,
-	STANCE_Stand                   = 1,
-	STANCE_Crouch                  = 2,
-	STANCE_Prone                   = 3,
-	STANCE_MAX                     = 4
-};
-
-
-// Enum Engine.EIndoorOutdoorMask
-enum class EIndoorOutdoorMask : uint8_t
-{
-	IOM_NONE                       = 0,
-	IOM_INDOOR                     = 1,
-	IOM_OUTDOOR                    = 2,
-	IOM_BOTH                       = 3,
-	IOM_MAX                        = 4
-};
-
-
-// Enum Engine.EMeshBufferAccess
-enum class EMeshBufferAccess : uint8_t
-{
-	Default                        = 0,
-	ForceCPUAndGPU                 = 1,
-	EMeshBufferAccess_MAX          = 2
-};
-
-
-// Enum Engine.ESpawnActorCollisionHandlingMethod
-enum class ESpawnActorCollisionHandlingMethod : uint8_t
-{
-	Undefined                      = 0,
-	AlwaysSpawn                    = 1,
-	AdjustIfPossibleButAlwaysSpawn = 2,
-	AdjustIfPossibleButDontSpawnIfColliding = 3,
-	DontSpawnIfColliding           = 4,
-	ESpawnActorCollisionHandlingMethod_MAX = 5
-};
-
-
-// Enum Engine.EConstraintFrame
-enum class EConstraintFrame : uint8_t
-{
-	Frame1                         = 0,
-	Frame2                         = 1,
-	EConstraintFrame_MAX           = 2
-};
-
-
-// Enum Engine.EAngularConstraintMotion
-enum class EAngularConstraintMotion : uint8_t
-{
-	ACM_Free                       = 0,
-	ACM_Limited                    = 1,
-	ACM_Locked                     = 2,
-	ACM_MAX                        = 3
-};
-
-
-// Enum Engine.EComponentSocketType
-enum class EComponentSocketType : uint8_t
-{
-	Invalid                        = 0,
-	Bone                           = 1,
-	Socket                         = 2,
-	EComponentSocketType_MAX       = 3
-};
-
-
-// Enum Engine.EComponentMobility
-enum class EComponentMobility : uint8_t
-{
-	Static                         = 0,
-	Stationary                     = 1,
-	Movable                        = 2,
-	EComponentMobility_MAX         = 3
-};
-
-
-// Enum Engine.EPhysicalSurface
-enum class EPhysicalSurface : uint8_t
-{
-	SurfaceType_Default            = 0,
-	SurfaceType1                   = 1,
-	SurfaceType2                   = 2,
-	SurfaceType3                   = 3,
-	SurfaceType4                   = 4,
-	SurfaceType5                   = 5,
-	SurfaceType6                   = 6,
-	SurfaceType7                   = 7,
-	SurfaceType8                   = 8,
-	SurfaceType9                   = 9,
-	SurfaceType10                  = 10,
-	SurfaceType11                  = 11,
-	SurfaceType12                  = 12,
-	SurfaceType13                  = 13,
-	SurfaceType14                  = 14,
-	SurfaceType15                  = 15,
-	SurfaceType16                  = 16,
-	SurfaceType17                  = 17,
-	SurfaceType18                  = 18,
-	SurfaceType19                  = 19,
-	SurfaceType20                  = 20,
-	SurfaceType21                  = 21,
-	SurfaceType22                  = 22,
-	SurfaceType23                  = 23,
-	SurfaceType24                  = 24,
-	SurfaceType25                  = 25,
-	SurfaceType26                  = 26,
-	SurfaceType27                  = 27,
-	SurfaceType28                  = 28,
-	SurfaceType29                  = 29,
-	SurfaceType30                  = 30,
-	SurfaceType31                  = 31,
-	SurfaceType32                  = 32,
-	SurfaceType33                  = 33,
-	SurfaceType34                  = 34,
-	SurfaceType35                  = 35,
-	SurfaceType36                  = 36,
-	SurfaceType37                  = 37,
-	SurfaceType38                  = 38,
-	SurfaceType39                  = 39,
-	SurfaceType40                  = 40,
-	SurfaceType41                  = 41,
-	SurfaceType42                  = 42,
-	SurfaceType43                  = 43,
-	SurfaceType44                  = 44,
-	SurfaceType45                  = 45,
-	SurfaceType46                  = 46,
-	SurfaceType47                  = 47,
-	SurfaceType48                  = 48,
-	SurfaceType49                  = 49,
-	SurfaceType50                  = 50,
-	SurfaceType51                  = 51,
-	SurfaceType52                  = 52,
-	SurfaceType53                  = 53,
-	SurfaceType54                  = 54,
-	SurfaceType55                  = 55,
-	SurfaceType56                  = 56,
-	SurfaceType57                  = 57,
-	SurfaceType58                  = 58,
-	SurfaceType59                  = 59,
-	SurfaceType60                  = 60,
-	SurfaceType61                  = 61,
-	SurfaceType62                  = 62,
-	SurfaceType_Max                = 63,
-	EPhysicalSurface_MAX           = 64
-};
-
-
-// Enum Engine.EWalkableSlopeBehavior
-enum class EWalkableSlopeBehavior : uint8_t
-{
-	WalkableSlope_Default          = 0,
-	WalkableSlope_Increase         = 1,
-	WalkableSlope_Decrease         = 2,
-	WalkableSlope_Unwalkable       = 3,
-	WalkableSlope_Max              = 4
-};
-
-
-// Enum Engine.ERotatorQuantization
-enum class ERotatorQuantization : uint8_t
-{
-	ByteComponents                 = 0,
-	ShortComponents                = 1,
-	ERotatorQuantization_MAX       = 2
-};
-
-
-// Enum Engine.EVectorQuantization
-enum class EVectorQuantization : uint8_t
-{
-	RoundWholeNumber               = 0,
-	RoundOneDecimal                = 1,
-	RoundTwoDecimals               = 2,
-	EVectorQuantization_MAX        = 3
-};
-
-
-// Enum Engine.EAutoPossessAI
-enum class EAutoPossessAI : uint8_t
-{
-	Disabled                       = 0,
-	PlacedInWorld                  = 1,
-	Spawned                        = 2,
-	PlacedInWorldOrSpawned         = 3,
-	EAutoPossessAI_MAX             = 4
-};
-
-
-// Enum Engine.EAutoReceiveInput
-enum class EAutoReceiveInput : uint8_t
-{
-	Disabled                       = 0,
-	Player0                        = 1,
-	Player1                        = 2,
-	Player2                        = 3,
-	Player3                        = 4,
-	Player4                        = 5,
-	Player5                        = 6,
-	Player6                        = 7,
-	Player7                        = 8,
-	EAutoReceiveInput_MAX          = 9
-};
-
-
-// Enum Engine.ENetDormancy
-enum class ENetDormancy : uint8_t
-{
-	DORM_Never                     = 0,
-	DORM_Awake                     = 1,
-	DORM_DormantAll                = 2,
-	DORM_DormantPartial            = 3,
-	DORM_Initial                   = 4,
-	DORN_MAX                       = 5,
-	ENetDormancy_MAX               = 6
-};
-
-
-// Enum Engine.ENetRole
-enum class ENetRole : uint8_t
-{
-	ROLE_None                      = 0,
-	ROLE_SimulatedProxy            = 1,
-	ROLE_AutonomousProxy           = 2,
-	ROLE_Authority                 = 3,
-	ROLE_MAX                       = 4
-};
-
-
-// Enum Engine.EUpdateRateShiftBucket
-enum class EUpdateRateShiftBucket : uint8_t
-{
-	ShiftBucket0                   = 0,
-	ShiftBucket1                   = 1,
-	ShiftBucket2                   = 2,
-	ShiftBucket3                   = 3,
-	ShiftBucket4                   = 4,
-	ShiftBucket5                   = 5,
-	ShiftBucketMax                 = 6,
-	EUpdateRateShiftBucket_MAX     = 7
-};
-
-
-// Enum Engine.EShadowMapFlags
-enum class EShadowMapFlags : uint8_t
-{
-	SMF_None                       = 0,
-	SMF_Streamed                   = 1,
-	SMF_MAX                        = 2
-};
-
-
-// Enum Engine.ELightMapPaddingType
-enum class ELightMapPaddingType : uint8_t
-{
-	LMPT_NormalPadding             = 0,
-	LMPT_PrePadding                = 1,
-	LMPT_NoPadding                 = 2,
-	LMPT_MAX                       = 3
-};
-
-
-// Enum Engine.ECollisionEnabled
-enum class ECollisionEnabled : uint8_t
-{
-	NoCollision                    = 0,
-	QueryOnly                      = 1,
-	PhysicsOnly                    = 2,
-	QueryAndPhysics                = 3,
-	ECollisionEnabled_MAX          = 4
-};
-
-
-// Enum Engine.ETimelineSigType
-enum class ETimelineSigType : uint8_t
-{
-	ETS_EventSignature             = 0,
-	ETS_FloatSignature             = 1,
-	ETS_VectorSignature            = 2,
-	ETS_LinearColorSignature       = 3,
-	ETS_InvalidSignature           = 4,
-	ETS_MAX                        = 5
-};
-
-
-// Enum Engine.ESleepFamily
-enum class ESleepFamily : uint8_t
-{
-	Normal                         = 0,
-	Sensitive                      = 1,
-	Custom                         = 2,
-	ESleepFamily_MAX               = 3
-};
-
-
-// Enum Engine.ERadialImpulseFalloff
-enum class ERadialImpulseFalloff : uint8_t
-{
-	RIF_Constant                   = 0,
-	RIF_Linear                     = 1,
-	RIF_MAX                        = 2
-};
-
-
-// Enum Engine.EInputConsumeOptions
-enum class EInputConsumeOptions : uint8_t
-{
-	ICO_ConsumeAll                 = 0,
-	ICO_ConsumeBoundKeys           = 1,
-	ICO_ConsumeNone                = 2,
-	ICO_MAX                        = 3
-};
-
-
-// Enum Engine.EFilterInterpolationType
-enum class EFilterInterpolationType : uint8_t
-{
-	BSIT_Average                   = 0,
-	BSIT_Linear                    = 1,
-	BSIT_Cubic                     = 2,
-	BSIT_MAX                       = 3
-};
-
-
-// Enum Engine.ECollisionResponse
-enum class ECollisionResponse : uint8_t
-{
-	ECR_Ignore                     = 0,
-	ECR_Overlap                    = 1,
-	ECR_Block                      = 2,
-	ECR_MAX                        = 3
-};
-
-
-// Enum Engine.EPhysicsSceneType
-enum class EPhysicsSceneType : uint8_t
-{
-	PST_Sync                       = 0,
-	PST_Cloth                      = 1,
-	PST_Async                      = 2,
-	PST_MAX                        = 3
-};
-
-
-// Enum Engine.EOverlapFilterOption
-enum class EOverlapFilterOption : uint8_t
-{
-	OverlapFilter_All              = 0,
-	OverlapFilter_DynamicOnly      = 1,
-	OverlapFilter_StaticOnly       = 2,
-	OverlapFilter_MAX              = 3
-};
-
-
-// Enum Engine.ECollisionChannel
-enum class ECollisionChannel : uint8_t
-{
-	ECC_WorldStatic                = 0,
-	ECC_WorldDynamic               = 1,
-	ECC_Pawn                       = 2,
-	ECC_Visibility                 = 3,
-	ECC_Camera                     = 4,
-	ECC_PhysicsBody                = 5,
-	ECC_Vehicle                    = 6,
-	ECC_Destructible               = 7,
-	ECC_EngineTraceChannel1        = 8,
-	ECC_EngineTraceChannel2        = 9,
-	ECC_EngineTraceChannel3        = 10,
-	ECC_EngineTraceChannel4        = 11,
-	ECC_EngineTraceChannel5        = 12,
-	ECC_EngineTraceChannel6        = 13,
-	ECC_GameTraceChannel1          = 14,
-	ECC_GameTraceChannel2          = 15,
-	ECC_GameTraceChannel3          = 16,
-	ECC_GameTraceChannel4          = 17,
-	ECC_GameTraceChannel5          = 18,
-	ECC_GameTraceChannel6          = 19,
-	ECC_GameTraceChannel7          = 20,
-	ECC_GameTraceChannel8          = 21,
-	ECC_GameTraceChannel9          = 22,
-	ECC_GameTraceChannel10         = 23,
-	ECC_GameTraceChannel11         = 24,
-	ECC_GameTraceChannel12         = 25,
-	ECC_GameTraceChannel13         = 26,
-	ECC_GameTraceChannel14         = 27,
-	ECC_GameTraceChannel15         = 28,
-	ECC_GameTraceChannel16         = 29,
-	ECC_GameTraceChannel17         = 30,
-	ECC_GameTraceChannel18         = 31,
-	ECC_OverlapAll_Deprecated      = 32,
-	ECC_MAX                        = 33
-};
-
-
-// Enum Engine.ENetworkSmoothingMode
-enum class ENetworkSmoothingMode : uint8_t
-{
-	Disabled                       = 0,
-	Linear                         = 1,
-	Exponential                    = 2,
-	Replay                         = 3,
-	RotationOnly                   = 4,
-	ENetworkSmoothingMode_MAX      = 5
-};
-
-
-// Enum Engine.ETriangleSortAxis
-enum class ETriangleSortAxis : uint8_t
-{
-	TSA_X_Axis                     = 0,
-	TSA_Y_Axis                     = 1,
-	TSA_Z_Axis                     = 2,
-	TSA_MAX                        = 3
-};
-
-
-// Enum Engine.ETriangleSortOption
-enum class ETriangleSortOption : uint8_t
-{
-	TRISORT_None                   = 0,
-	TRISORT_CenterRadialDistance   = 1,
-	TRISORT_Random                 = 2,
-	TRISORT_MergeContiguous        = 3,
-	TRISORT_Custom                 = 4,
-	TRISORT_CustomLeftRight        = 5,
-	TRISORT_MAX                    = 6
-};
-
-
-// Enum Engine.ELightingBuildQuality
-enum class ELightingBuildQuality : uint8_t
-{
-	Quality_Preview                = 0,
-	Quality_Medium                 = 1,
-	Quality_High                   = 2,
-	Quality_Production             = 3,
-	Quality_MAX                    = 4
-};
-
-
-// Enum Engine.EMaterialSamplerType
-enum class EMaterialSamplerType : uint8_t
-{
-	SAMPLERTYPE_Color              = 0,
-	SAMPLERTYPE_Grayscale          = 1,
-	SAMPLERTYPE_Alpha              = 2,
-	SAMPLERTYPE_Normal             = 3,
-	SAMPLERTYPE_Masks              = 4,
-	SAMPLERTYPE_DistanceFieldFont  = 5,
-	SAMPLERTYPE_LinearColor        = 6,
-	SAMPLERTYPE_LinearGrayscale    = 7,
-	SAMPLERTYPE_MAX                = 8
-};
-
-
-// Enum Engine.EMaterialTessellationMode
-enum class EMaterialTessellationMode : uint8_t
-{
-	MTM_NoTessellation             = 0,
-	MTM_FlatTessellation           = 1,
-	MTM_PNTriangles                = 2,
-	MTM_MAX                        = 3
-};
-
-
-// Enum Engine.EMaterialShadingModel
-enum class EMaterialShadingModel : uint8_t
-{
-	MSM_Unlit                      = 0,
-	MSM_DefaultLit                 = 1,
-	MSM_Subsurface                 = 2,
-	MSM_PreintegratedSkin          = 3,
-	MSM_ClearCoat                  = 4,
-	MSM_SubsurfaceProfile          = 5,
-	MSM_TwoSidedFoliage            = 6,
-	MSM_Hair                       = 7,
-	MSM_Cloth                      = 8,
-	MSM_Eye                        = 9,
-	MSM_MAX                        = 10
-};
-
-
-// Enum Engine.EParticleCollisionMode
-enum class EParticleCollisionMode : uint8_t
-{
-	SceneDepth                     = 0,
-	DistanceField                  = 1,
-	HeightBuffer                   = 2,
-	EParticleCollisionMode_MAX     = 3
-};
-
-
-// Enum Engine.ETrailWidthMode
-enum class ETrailWidthMode : uint8_t
-{
-	ETrailWidthMode_FromCentre     = 0,
-	ETrailWidthMode_FromFirst      = 1,
-	ETrailWidthMode_FromSecond     = 2,
-	ETrailWidthMode_MAX            = 3
-};
-
-
-// Enum Engine.EGBufferFormat
-enum class EGBufferFormat : uint8_t
-{
-	Force8BitsPerChannel           = 0,
-	Default                        = 1,
-	HighPrecisionNormals           = 2,
-	Force16BitsPerChannel          = 3,
-	EGBufferFormat_MAX             = 4
-};
-
-
-// Enum Engine.ESceneCaptureCompositeMode
-enum class ESceneCaptureCompositeMode : uint8_t
-{
-	SCCM_Overwrite                 = 0,
-	SCCM_Additive                  = 1,
-	SCCM_Composite                 = 2,
-	SCCM_MAX                       = 3
-};
-
-
-// Enum Engine.ESceneCaptureSource
-enum class ESceneCaptureSource : uint8_t
-{
-	SCS_SceneColorHDR              = 0,
-	SCS_SceneColorHDRNoAlpha       = 1,
-	SCS_FinalColorLDR              = 2,
-	SCS_SceneColorSceneDepth       = 3,
-	SCS_SceneDepth                 = 4,
-	SCS_DeviceDepth                = 5,
-	SCS_Normal                     = 6,
-	SCS_BaseColor                  = 7,
-	SCS_BRO_SuperSampling          = 8,
-	SCS_BRO_Masked                 = 9,
-	SCS_MAX                        = 10
-};
-
-
-// Enum Engine.ETranslucentSortPolicy
-enum class ETranslucentSortPolicy : uint8_t
-{
-	SortByDistance                 = 0,
-	SortByProjectedZ               = 1,
-	SortAlongAxis                  = 2,
-	ETranslucentSortPolicy_MAX     = 3
-};
-
-
-// Enum Engine.ERefractionMode
-enum class ERefractionMode : uint8_t
-{
-	RM_IndexOfRefraction           = 0,
-	RM_PixelNormalOffset           = 1,
-	RM_MAX                         = 2
-};
-
-
-// Enum Engine.ETranslucencyLightingMode
-enum class ETranslucencyLightingMode : uint8_t
-{
-	TLM_VolumetricNonDirectional   = 0,
-	TLM_VolumetricDirectional      = 1,
-	TLM_VolumetricPerVertexNonDirectional = 2,
-	TLM_VolumetricPerVertexDirectional = 3,
-	TLM_Surface                    = 4,
-	TLM_SurfacePerPixelLighting    = 5,
-	TLM_MAX                        = 6
-};
-
-
-// Enum Engine.ESamplerSourceMode
-enum class ESamplerSourceMode : uint8_t
-{
-	SSM_FromTextureAsset           = 0,
-	SSM_Wrap_WorldGroupSettings    = 1,
-	SSM_Clamp_WorldGroupSettings   = 2,
-	SSM_MAX                        = 3
-};
-
-
-// Enum Engine.EBlendMode
-enum class EBlendMode : uint8_t
-{
-	BLEND_Opaque                   = 0,
-	BLEND_Masked                   = 1,
-	BLEND_Translucent              = 2,
-	BLEND_Additive                 = 3,
-	BLEND_Modulate                 = 4,
-	BLEND_AlphaComposite           = 5,
-	BLEND_MAX                      = 6
-};
-
-
-// Enum Engine.EOcclusionCombineMode
-enum class EOcclusionCombineMode : uint8_t
-{
-	OCM_Minimum                    = 0,
-	OCM_Multiply                   = 1,
-	OCM_MAX                        = 2
-};
-
-
-// Enum Engine.EIndirectLightingCacheQuality
-enum class EIndirectLightingCacheQuality : uint8_t
-{
-	ILCQ_Off                       = 0,
-	ILCQ_Point                     = 1,
-	ILCQ_Volume                    = 2,
-	ILCQ_MAX                       = 3
-};
-
-
-// Enum Engine.ESceneDepthPriorityGroup
-enum class ESceneDepthPriorityGroup : uint8_t
-{
-	SDPG_World                     = 0,
-	SDPG_Foreground                = 1,
-	SDPG_MAX                       = 2
-};
-
-
-// Enum Engine.EAttachLocation
-enum class EAttachLocation : uint8_t
-{
-	KeepRelativeOffset             = 0,
-	KeepWorldPosition              = 1,
-	SnapToTarget                   = 2,
-	SnapToTargetIncludingScale     = 3,
-	EAttachLocation_MAX            = 4
-};
-
-
-// Enum Engine.EDetachmentRule
-enum class EDetachmentRule : uint8_t
-{
-	KeepRelative                   = 0,
-	KeepWorld                      = 1,
-	EDetachmentRule_MAX            = 2
-};
-
-
-// Enum Engine.EAttachmentRule
-enum class EAttachmentRule : uint8_t
-{
-	KeepRelative                   = 0,
-	KeepWorld                      = 1,
-	SnapToTarget                   = 2,
-	EAttachmentRule_MAX            = 3
-};
-
-
-// Enum Engine.EActorMetricsType
-enum class EActorMetricsType : uint8_t
-{
-	METRICS_VERTS                  = 0,
-	METRICS_TRIS                   = 1,
-	METRICS_SECTIONS               = 2,
-	METRICS_MAX                    = 3
-};
-
-
-// Enum Engine.EAspectRatioAxisConstraint
-enum class EAspectRatioAxisConstraint : uint8_t
-{
-	AspectRatio_MaintainYFOV       = 0,
-	AspectRatio_MaintainXFOV       = 1,
-	AspectRatio_MajorAxisFOV       = 2,
-	AspectRatio_MAX                = 3
-};
-
-
 // Enum Engine.EViewModeIndex
 enum class EViewModeIndex : uint8_t
 {
@@ -1345,6 +670,18 @@ enum class EMouseCaptureMode : uint8_t
 	CaptureDuringMouseDown         = 3,
 	CaptureDuringRightMouseDown    = 4,
 	EMouseCaptureMode_MAX          = 5
+};
+
+
+// Enum Engine.EInputEvent
+enum class EInputEvent : uint8_t
+{
+	IE_Pressed                     = 0,
+	IE_Released                    = 1,
+	IE_Repeat                      = 2,
+	IE_DoubleClick                 = 3,
+	IE_Axis                        = 4,
+	IE_MAX                         = 5
 };
 
 
@@ -2520,6 +1857,1155 @@ enum class EAngularDriveMode : uint8_t
 	SLERP                          = 0,
 	TwistAndSwing                  = 1,
 	EAngularDriveMode_MAX          = 2
+};
+
+
+// Enum Engine.EIndoorOutdoorMask
+enum class EIndoorOutdoorMask : uint8_t
+{
+	IOM_NONE                       = 0,
+	IOM_INDOOR                     = 1,
+	IOM_OUTDOOR                    = 2,
+	IOM_BOTH                       = 3,
+	IOM_MAX                        = 4
+};
+
+
+// Enum Engine.EMeshBufferAccess
+enum class EMeshBufferAccess : uint8_t
+{
+	Default                        = 0,
+	ForceCPUAndGPU                 = 1,
+	EMeshBufferAccess_MAX          = 2
+};
+
+
+// Enum Engine.ESpawnActorCollisionHandlingMethod
+enum class ESpawnActorCollisionHandlingMethod : uint8_t
+{
+	Undefined                      = 0,
+	AlwaysSpawn                    = 1,
+	AdjustIfPossibleButAlwaysSpawn = 2,
+	AdjustIfPossibleButDontSpawnIfColliding = 3,
+	DontSpawnIfColliding           = 4,
+	ESpawnActorCollisionHandlingMethod_MAX = 5
+};
+
+
+// Enum Engine.EConstraintFrame
+enum class EConstraintFrame : uint8_t
+{
+	Frame1                         = 0,
+	Frame2                         = 1,
+	EConstraintFrame_MAX           = 2
+};
+
+
+// Enum Engine.EAngularConstraintMotion
+enum class EAngularConstraintMotion : uint8_t
+{
+	ACM_Free                       = 0,
+	ACM_Limited                    = 1,
+	ACM_Locked                     = 2,
+	ACM_MAX                        = 3
+};
+
+
+// Enum Engine.EComponentSocketType
+enum class EComponentSocketType : uint8_t
+{
+	Invalid                        = 0,
+	Bone                           = 1,
+	Socket                         = 2,
+	EComponentSocketType_MAX       = 3
+};
+
+
+// Enum Engine.EComponentMobility
+enum class EComponentMobility : uint8_t
+{
+	Static                         = 0,
+	Stationary                     = 1,
+	Movable                        = 2,
+	EComponentMobility_MAX         = 3
+};
+
+
+// Enum Engine.EPhysicalSurface
+enum class EPhysicalSurface : uint8_t
+{
+	SurfaceType_Default            = 0,
+	SurfaceType1                   = 1,
+	SurfaceType2                   = 2,
+	SurfaceType3                   = 3,
+	SurfaceType4                   = 4,
+	SurfaceType5                   = 5,
+	SurfaceType6                   = 6,
+	SurfaceType7                   = 7,
+	SurfaceType8                   = 8,
+	SurfaceType9                   = 9,
+	SurfaceType10                  = 10,
+	SurfaceType11                  = 11,
+	SurfaceType12                  = 12,
+	SurfaceType13                  = 13,
+	SurfaceType14                  = 14,
+	SurfaceType15                  = 15,
+	SurfaceType16                  = 16,
+	SurfaceType17                  = 17,
+	SurfaceType18                  = 18,
+	SurfaceType19                  = 19,
+	SurfaceType20                  = 20,
+	SurfaceType21                  = 21,
+	SurfaceType22                  = 22,
+	SurfaceType23                  = 23,
+	SurfaceType24                  = 24,
+	SurfaceType25                  = 25,
+	SurfaceType26                  = 26,
+	SurfaceType27                  = 27,
+	SurfaceType28                  = 28,
+	SurfaceType29                  = 29,
+	SurfaceType30                  = 30,
+	SurfaceType31                  = 31,
+	SurfaceType32                  = 32,
+	SurfaceType33                  = 33,
+	SurfaceType34                  = 34,
+	SurfaceType35                  = 35,
+	SurfaceType36                  = 36,
+	SurfaceType37                  = 37,
+	SurfaceType38                  = 38,
+	SurfaceType39                  = 39,
+	SurfaceType40                  = 40,
+	SurfaceType41                  = 41,
+	SurfaceType42                  = 42,
+	SurfaceType43                  = 43,
+	SurfaceType44                  = 44,
+	SurfaceType45                  = 45,
+	SurfaceType46                  = 46,
+	SurfaceType47                  = 47,
+	SurfaceType48                  = 48,
+	SurfaceType49                  = 49,
+	SurfaceType50                  = 50,
+	SurfaceType51                  = 51,
+	SurfaceType52                  = 52,
+	SurfaceType53                  = 53,
+	SurfaceType54                  = 54,
+	SurfaceType55                  = 55,
+	SurfaceType56                  = 56,
+	SurfaceType57                  = 57,
+	SurfaceType58                  = 58,
+	SurfaceType59                  = 59,
+	SurfaceType60                  = 60,
+	SurfaceType61                  = 61,
+	SurfaceType62                  = 62,
+	SurfaceType_Max                = 63,
+	EPhysicalSurface_MAX           = 64
+};
+
+
+// Enum Engine.EWalkableSlopeBehavior
+enum class EWalkableSlopeBehavior : uint8_t
+{
+	WalkableSlope_Default          = 0,
+	WalkableSlope_Increase         = 1,
+	WalkableSlope_Decrease         = 2,
+	WalkableSlope_Unwalkable       = 3,
+	WalkableSlope_Max              = 4
+};
+
+
+// Enum Engine.ERotatorQuantization
+enum class ERotatorQuantization : uint8_t
+{
+	ByteComponents                 = 0,
+	ShortComponents                = 1,
+	ERotatorQuantization_MAX       = 2
+};
+
+
+// Enum Engine.EVectorQuantization
+enum class EVectorQuantization : uint8_t
+{
+	RoundWholeNumber               = 0,
+	RoundOneDecimal                = 1,
+	RoundTwoDecimals               = 2,
+	EVectorQuantization_MAX        = 3
+};
+
+
+// Enum Engine.EAutoPossessAI
+enum class EAutoPossessAI : uint8_t
+{
+	Disabled                       = 0,
+	PlacedInWorld                  = 1,
+	Spawned                        = 2,
+	PlacedInWorldOrSpawned         = 3,
+	EAutoPossessAI_MAX             = 4
+};
+
+
+// Enum Engine.EAutoReceiveInput
+enum class EAutoReceiveInput : uint8_t
+{
+	Disabled                       = 0,
+	Player0                        = 1,
+	Player1                        = 2,
+	Player2                        = 3,
+	Player3                        = 4,
+	Player4                        = 5,
+	Player5                        = 6,
+	Player6                        = 7,
+	Player7                        = 8,
+	EAutoReceiveInput_MAX          = 9
+};
+
+
+// Enum Engine.ENetDormancy
+enum class ENetDormancy : uint8_t
+{
+	DORM_Never                     = 0,
+	DORM_Awake                     = 1,
+	DORM_DormantAll                = 2,
+	DORM_DormantPartial            = 3,
+	DORM_Initial                   = 4,
+	DORN_MAX                       = 5,
+	ENetDormancy_MAX               = 6
+};
+
+
+// Enum Engine.ENetRole
+enum class ENetRole : uint8_t
+{
+	ROLE_None                      = 0,
+	ROLE_SimulatedProxy            = 1,
+	ROLE_AutonomousProxy           = 2,
+	ROLE_Authority                 = 3,
+	ROLE_MAX                       = 4
+};
+
+
+// Enum Engine.EUpdateRateShiftBucket
+enum class EUpdateRateShiftBucket : uint8_t
+{
+	ShiftBucket0                   = 0,
+	ShiftBucket1                   = 1,
+	ShiftBucket2                   = 2,
+	ShiftBucket3                   = 3,
+	ShiftBucket4                   = 4,
+	ShiftBucket5                   = 5,
+	ShiftBucketMax                 = 6,
+	EUpdateRateShiftBucket_MAX     = 7
+};
+
+
+// Enum Engine.EShadowMapFlags
+enum class EShadowMapFlags : uint8_t
+{
+	SMF_None                       = 0,
+	SMF_Streamed                   = 1,
+	SMF_MAX                        = 2
+};
+
+
+// Enum Engine.ELightMapPaddingType
+enum class ELightMapPaddingType : uint8_t
+{
+	LMPT_NormalPadding             = 0,
+	LMPT_PrePadding                = 1,
+	LMPT_NoPadding                 = 2,
+	LMPT_MAX                       = 3
+};
+
+
+// Enum Engine.ECollisionEnabled
+enum class ECollisionEnabled : uint8_t
+{
+	NoCollision                    = 0,
+	QueryOnly                      = 1,
+	PhysicsOnly                    = 2,
+	QueryAndPhysics                = 3,
+	ECollisionEnabled_MAX          = 4
+};
+
+
+// Enum Engine.ETimelineSigType
+enum class ETimelineSigType : uint8_t
+{
+	ETS_EventSignature             = 0,
+	ETS_FloatSignature             = 1,
+	ETS_VectorSignature            = 2,
+	ETS_LinearColorSignature       = 3,
+	ETS_InvalidSignature           = 4,
+	ETS_MAX                        = 5
+};
+
+
+// Enum Engine.ESleepFamily
+enum class ESleepFamily : uint8_t
+{
+	Normal                         = 0,
+	Sensitive                      = 1,
+	Custom                         = 2,
+	ESleepFamily_MAX               = 3
+};
+
+
+// Enum Engine.ERadialImpulseFalloff
+enum class ERadialImpulseFalloff : uint8_t
+{
+	RIF_Constant                   = 0,
+	RIF_Linear                     = 1,
+	RIF_MAX                        = 2
+};
+
+
+// Enum Engine.EInputConsumeOptions
+enum class EInputConsumeOptions : uint8_t
+{
+	ICO_ConsumeAll                 = 0,
+	ICO_ConsumeBoundKeys           = 1,
+	ICO_ConsumeNone                = 2,
+	ICO_MAX                        = 3
+};
+
+
+// Enum Engine.EFilterInterpolationType
+enum class EFilterInterpolationType : uint8_t
+{
+	BSIT_Average                   = 0,
+	BSIT_Linear                    = 1,
+	BSIT_Cubic                     = 2,
+	BSIT_MAX                       = 3
+};
+
+
+// Enum Engine.ECollisionResponse
+enum class ECollisionResponse : uint8_t
+{
+	ECR_Ignore                     = 0,
+	ECR_Overlap                    = 1,
+	ECR_Block                      = 2,
+	ECR_MAX                        = 3
+};
+
+
+// Enum Engine.EPhysicsSceneType
+enum class EPhysicsSceneType : uint8_t
+{
+	PST_Sync                       = 0,
+	PST_Cloth                      = 1,
+	PST_Async                      = 2,
+	PST_MAX                        = 3
+};
+
+
+// Enum Engine.EOverlapFilterOption
+enum class EOverlapFilterOption : uint8_t
+{
+	OverlapFilter_All              = 0,
+	OverlapFilter_DynamicOnly      = 1,
+	OverlapFilter_StaticOnly       = 2,
+	OverlapFilter_MAX              = 3
+};
+
+
+// Enum Engine.ECollisionChannel
+enum class ECollisionChannel : uint8_t
+{
+	ECC_WorldStatic                = 0,
+	ECC_WorldDynamic               = 1,
+	ECC_Pawn                       = 2,
+	ECC_Visibility                 = 3,
+	ECC_Camera                     = 4,
+	ECC_PhysicsBody                = 5,
+	ECC_Vehicle                    = 6,
+	ECC_Destructible               = 7,
+	ECC_EngineTraceChannel1        = 8,
+	ECC_EngineTraceChannel2        = 9,
+	ECC_EngineTraceChannel3        = 10,
+	ECC_EngineTraceChannel4        = 11,
+	ECC_EngineTraceChannel5        = 12,
+	ECC_EngineTraceChannel6        = 13,
+	ECC_GameTraceChannel1          = 14,
+	ECC_GameTraceChannel2          = 15,
+	ECC_GameTraceChannel3          = 16,
+	ECC_GameTraceChannel4          = 17,
+	ECC_GameTraceChannel5          = 18,
+	ECC_GameTraceChannel6          = 19,
+	ECC_GameTraceChannel7          = 20,
+	ECC_GameTraceChannel8          = 21,
+	ECC_GameTraceChannel9          = 22,
+	ECC_GameTraceChannel10         = 23,
+	ECC_GameTraceChannel11         = 24,
+	ECC_GameTraceChannel12         = 25,
+	ECC_GameTraceChannel13         = 26,
+	ECC_GameTraceChannel14         = 27,
+	ECC_GameTraceChannel15         = 28,
+	ECC_GameTraceChannel16         = 29,
+	ECC_GameTraceChannel17         = 30,
+	ECC_GameTraceChannel18         = 31,
+	ECC_OverlapAll_Deprecated      = 32,
+	ECC_MAX                        = 33
+};
+
+
+// Enum Engine.ENetworkSmoothingMode
+enum class ENetworkSmoothingMode : uint8_t
+{
+	Disabled                       = 0,
+	Linear                         = 1,
+	Exponential                    = 2,
+	Replay                         = 3,
+	RotationOnly                   = 4,
+	ENetworkSmoothingMode_MAX      = 5
+};
+
+
+// Enum Engine.EStanceMode
+enum class EStanceMode : uint8_t
+{
+	STANCE_None                    = 0,
+	STANCE_Stand                   = 1,
+	STANCE_Crouch                  = 2,
+	STANCE_Prone                   = 3,
+	STANCE_MAX                     = 4
+};
+
+
+// Enum Engine.ETriangleSortAxis
+enum class ETriangleSortAxis : uint8_t
+{
+	TSA_X_Axis                     = 0,
+	TSA_Y_Axis                     = 1,
+	TSA_Z_Axis                     = 2,
+	TSA_MAX                        = 3
+};
+
+
+// Enum Engine.ETriangleSortOption
+enum class ETriangleSortOption : uint8_t
+{
+	TRISORT_None                   = 0,
+	TRISORT_CenterRadialDistance   = 1,
+	TRISORT_Random                 = 2,
+	TRISORT_MergeContiguous        = 3,
+	TRISORT_Custom                 = 4,
+	TRISORT_CustomLeftRight        = 5,
+	TRISORT_MAX                    = 6
+};
+
+
+// Enum Engine.ELightingBuildQuality
+enum class ELightingBuildQuality : uint8_t
+{
+	Quality_Preview                = 0,
+	Quality_Medium                 = 1,
+	Quality_High                   = 2,
+	Quality_Production             = 3,
+	Quality_MAX                    = 4
+};
+
+
+// Enum Engine.EMaterialSamplerType
+enum class EMaterialSamplerType : uint8_t
+{
+	SAMPLERTYPE_Color              = 0,
+	SAMPLERTYPE_Grayscale          = 1,
+	SAMPLERTYPE_Alpha              = 2,
+	SAMPLERTYPE_Normal             = 3,
+	SAMPLERTYPE_Masks              = 4,
+	SAMPLERTYPE_DistanceFieldFont  = 5,
+	SAMPLERTYPE_LinearColor        = 6,
+	SAMPLERTYPE_LinearGrayscale    = 7,
+	SAMPLERTYPE_MAX                = 8
+};
+
+
+// Enum Engine.EMaterialTessellationMode
+enum class EMaterialTessellationMode : uint8_t
+{
+	MTM_NoTessellation             = 0,
+	MTM_FlatTessellation           = 1,
+	MTM_PNTriangles                = 2,
+	MTM_MAX                        = 3
+};
+
+
+// Enum Engine.EMaterialShadingModel
+enum class EMaterialShadingModel : uint8_t
+{
+	MSM_Unlit                      = 0,
+	MSM_DefaultLit                 = 1,
+	MSM_Subsurface                 = 2,
+	MSM_PreintegratedSkin          = 3,
+	MSM_ClearCoat                  = 4,
+	MSM_SubsurfaceProfile          = 5,
+	MSM_TwoSidedFoliage            = 6,
+	MSM_Hair                       = 7,
+	MSM_Cloth                      = 8,
+	MSM_Eye                        = 9,
+	MSM_MAX                        = 10
+};
+
+
+// Enum Engine.EParticleCollisionMode
+enum class EParticleCollisionMode : uint8_t
+{
+	SceneDepth                     = 0,
+	DistanceField                  = 1,
+	HeightBuffer                   = 2,
+	EParticleCollisionMode_MAX     = 3
+};
+
+
+// Enum Engine.ETrailWidthMode
+enum class ETrailWidthMode : uint8_t
+{
+	ETrailWidthMode_FromCentre     = 0,
+	ETrailWidthMode_FromFirst      = 1,
+	ETrailWidthMode_FromSecond     = 2,
+	ETrailWidthMode_MAX            = 3
+};
+
+
+// Enum Engine.EGBufferFormat
+enum class EGBufferFormat : uint8_t
+{
+	Force8BitsPerChannel           = 0,
+	Default                        = 1,
+	HighPrecisionNormals           = 2,
+	Force16BitsPerChannel          = 3,
+	EGBufferFormat_MAX             = 4
+};
+
+
+// Enum Engine.ESceneCaptureCompositeMode
+enum class ESceneCaptureCompositeMode : uint8_t
+{
+	SCCM_Overwrite                 = 0,
+	SCCM_Additive                  = 1,
+	SCCM_Composite                 = 2,
+	SCCM_MAX                       = 3
+};
+
+
+// Enum Engine.ESceneCaptureSource
+enum class ESceneCaptureSource : uint8_t
+{
+	SCS_SceneColorHDR              = 0,
+	SCS_SceneColorHDRNoAlpha       = 1,
+	SCS_FinalColorLDR              = 2,
+	SCS_SceneColorSceneDepth       = 3,
+	SCS_SceneDepth                 = 4,
+	SCS_DeviceDepth                = 5,
+	SCS_Normal                     = 6,
+	SCS_BaseColor                  = 7,
+	SCS_BRO_SuperSampling          = 8,
+	SCS_BRO_Masked                 = 9,
+	SCS_MAX                        = 10
+};
+
+
+// Enum Engine.ETranslucentSortPolicy
+enum class ETranslucentSortPolicy : uint8_t
+{
+	SortByDistance                 = 0,
+	SortByProjectedZ               = 1,
+	SortAlongAxis                  = 2,
+	ETranslucentSortPolicy_MAX     = 3
+};
+
+
+// Enum Engine.ERefractionMode
+enum class ERefractionMode : uint8_t
+{
+	RM_IndexOfRefraction           = 0,
+	RM_PixelNormalOffset           = 1,
+	RM_MAX                         = 2
+};
+
+
+// Enum Engine.ETranslucencyLightingMode
+enum class ETranslucencyLightingMode : uint8_t
+{
+	TLM_VolumetricNonDirectional   = 0,
+	TLM_VolumetricDirectional      = 1,
+	TLM_VolumetricPerVertexNonDirectional = 2,
+	TLM_VolumetricPerVertexDirectional = 3,
+	TLM_Surface                    = 4,
+	TLM_SurfacePerPixelLighting    = 5,
+	TLM_MAX                        = 6
+};
+
+
+// Enum Engine.ESamplerSourceMode
+enum class ESamplerSourceMode : uint8_t
+{
+	SSM_FromTextureAsset           = 0,
+	SSM_Wrap_WorldGroupSettings    = 1,
+	SSM_Clamp_WorldGroupSettings   = 2,
+	SSM_MAX                        = 3
+};
+
+
+// Enum Engine.EBlendMode
+enum class EBlendMode : uint8_t
+{
+	BLEND_Opaque                   = 0,
+	BLEND_Masked                   = 1,
+	BLEND_Translucent              = 2,
+	BLEND_Additive                 = 3,
+	BLEND_Modulate                 = 4,
+	BLEND_AlphaComposite           = 5,
+	BLEND_MAX                      = 6
+};
+
+
+// Enum Engine.EOcclusionCombineMode
+enum class EOcclusionCombineMode : uint8_t
+{
+	OCM_Minimum                    = 0,
+	OCM_Multiply                   = 1,
+	OCM_MAX                        = 2
+};
+
+
+// Enum Engine.EIndirectLightingCacheQuality
+enum class EIndirectLightingCacheQuality : uint8_t
+{
+	ILCQ_Off                       = 0,
+	ILCQ_Point                     = 1,
+	ILCQ_Volume                    = 2,
+	ILCQ_MAX                       = 3
+};
+
+
+// Enum Engine.ESceneDepthPriorityGroup
+enum class ESceneDepthPriorityGroup : uint8_t
+{
+	SDPG_World                     = 0,
+	SDPG_Foreground                = 1,
+	SDPG_MAX                       = 2
+};
+
+
+// Enum Engine.EAttachLocation
+enum class EAttachLocation : uint8_t
+{
+	KeepRelativeOffset             = 0,
+	KeepWorldPosition              = 1,
+	SnapToTarget                   = 2,
+	SnapToTargetIncludingScale     = 3,
+	EAttachLocation_MAX            = 4
+};
+
+
+// Enum Engine.EDetachmentRule
+enum class EDetachmentRule : uint8_t
+{
+	KeepRelative                   = 0,
+	KeepWorld                      = 1,
+	EDetachmentRule_MAX            = 2
+};
+
+
+// Enum Engine.EAttachmentRule
+enum class EAttachmentRule : uint8_t
+{
+	KeepRelative                   = 0,
+	KeepWorld                      = 1,
+	SnapToTarget                   = 2,
+	EAttachmentRule_MAX            = 3
+};
+
+
+// Enum Engine.EActorMetricsType
+enum class EActorMetricsType : uint8_t
+{
+	METRICS_VERTS                  = 0,
+	METRICS_TRIS                   = 1,
+	METRICS_SECTIONS               = 2,
+	METRICS_MAX                    = 3
+};
+
+
+// Enum Engine.EAspectRatioAxisConstraint
+enum class EAspectRatioAxisConstraint : uint8_t
+{
+	AspectRatio_MaintainYFOV       = 0,
+	AspectRatio_MaintainXFOV       = 1,
+	AspectRatio_MajorAxisFOV       = 2,
+	AspectRatio_MAX                = 3
+};
+
+
+// Enum Engine.EAttenuationShape
+enum class EAttenuationShape : uint8_t
+{
+	Sphere                         = 0,
+	Capsule                        = 1,
+	Box                            = 2,
+	Cone                           = 3,
+	EAttenuationShape_MAX          = 4
+};
+
+
+// Enum Engine.EAttenuationDistanceModel
+enum class EAttenuationDistanceModel : uint8_t
+{
+	Linear                         = 0,
+	Logarithmic                    = 1,
+	Inverse                        = 2,
+	LogReverse                     = 3,
+	NaturalSound                   = 4,
+	Custom                         = 5,
+	EAttenuationDistanceModel_MAX  = 6
+};
+
+
+// Enum Engine.ESoundSpatializationAlgorithm
+enum class ESoundSpatializationAlgorithm : uint8_t
+{
+	SPATIALIZATION_Default         = 0,
+	SPATIALIZATION_HRTF            = 1,
+	SPATIALIZATION_MAX             = 2
+};
+
+
+// Enum Engine.ESoundDistanceCalc
+enum class ESoundDistanceCalc : uint8_t
+{
+	SOUNDDISTANCE_Normal           = 0,
+	SOUNDDISTANCE_InfiniteXYPlane  = 1,
+	SOUNDDISTANCE_InfiniteXZPlane  = 2,
+	SOUNDDISTANCE_InfiniteYZPlane  = 3,
+	SOUNDDISTANCE_MAX              = 4
+};
+
+
+// Enum Engine.EPreviewIndexType
+enum class EPreviewIndexType : uint8_t
+{
+	RandomSeed                     = 0,
+	VariantIndex                   = 1,
+	PermutationIndex               = 2,
+	EPreviewIndexType_MAX          = 3
+};
+
+
+// Enum Engine.ESpawnPointRollType
+enum class ESpawnPointRollType : uint8_t
+{
+	Probability                    = 0,
+	LocalRatio                     = 1,
+	GlobalRatio                    = 2,
+	ESpawnPointRollType_MAX        = 3
+};
+
+
+// Enum Engine.ESkyLightSourceType
+enum class ESkyLightSourceType : uint8_t
+{
+	SLS_CapturedScene              = 0,
+	SLS_SpecifiedCubemap           = 1,
+	SLS_MAX                        = 2
+};
+
+
+// Enum Engine.EBoneSpaces
+enum class EBoneSpaces : uint8_t
+{
+	WorldSpace                     = 0,
+	ComponentSpace                 = 1,
+	EBoneSpaces_MAX                = 2
+};
+
+
+// Enum Engine.EMeshComponentUpdateFlag
+enum class EMeshComponentUpdateFlag : uint8_t
+{
+	AlwaysTickPoseAndRefreshBones  = 0,
+	AlwaysTickPose                 = 1,
+	OnlyTickPoseWhenRendered       = 2,
+	EMeshComponentUpdateFlag_MAX   = 3
+};
+
+
+// Enum Engine.EPhysBodyOp
+enum class EPhysBodyOp : uint8_t
+{
+	PBO_None                       = 0,
+	PBO_Term                       = 1,
+	PBO_MAX                        = 2
+};
+
+
+// Enum Engine.EBoneVisibilityStatus
+enum class EBoneVisibilityStatus : uint8_t
+{
+	BVS_HiddenByParent             = 0,
+	BVS_Visible                    = 1,
+	BVS_ExplicitlyHidden           = 2,
+	BVS_MAX                        = 3
+};
+
+
+// Enum Engine.EPhysicsTransformUpdateMode
+enum class EPhysicsTransformUpdateMode : uint8_t
+{
+	SimulationUpatesComponentTransform = 0,
+	ComponentTransformIsKinematic  = 1,
+	EPhysicsTransformUpdateMode_MAX = 2
+};
+
+
+// Enum Engine.EAnimationMode
+enum class EAnimationMode : uint8_t
+{
+	AnimationBlueprint             = 0,
+	AnimationSingleNode            = 1,
+	AnimationCustomMode            = 2,
+	EAnimationMode_MAX             = 3
+};
+
+
+// Enum Engine.EKinematicBonesUpdateToPhysics
+enum class EKinematicBonesUpdateToPhysics : uint8_t
+{
+	SkipSimulatingBones            = 0,
+	SkipAllBones                   = 1,
+	EKinematicBonesUpdateToPhysics_MAX = 2
+};
+
+
+// Enum Engine.ESplineMeshAxis
+enum class ESplineMeshAxis : uint8_t
+{
+	X                              = 0,
+	Y                              = 1,
+	Z                              = 2,
+	ESplineMeshAxis_MAX            = 3
+};
+
+
+// Enum Engine.ESplineCoordinateSpace
+enum class ESplineCoordinateSpace : uint8_t
+{
+	Local                          = 0,
+	World                          = 1,
+	ESplineCoordinateSpace_MAX     = 2
+};
+
+
+// Enum Engine.ESplinePointType
+enum class ESplinePointType : uint8_t
+{
+	Linear                         = 0,
+	Curve                          = 1,
+	Constant                       = 2,
+	CurveClamped                   = 3,
+	CurveCustomTangent             = 4,
+	ESplinePointType_MAX           = 5
+};
+
+
+// Enum Engine.EVerticalTextAligment
+enum class EVerticalTextAligment : uint8_t
+{
+	EVRTA_TextTop                  = 0,
+	EVRTA_TextCenter               = 1,
+	EVRTA_TextBottom               = 2,
+	EVRTA_QuadTop                  = 3,
+	EVRTA_MAX                      = 4
+};
+
+
+// Enum Engine.EHorizTextAligment
+enum class EHorizTextAligment : uint8_t
+{
+	EHTA_Left                      = 0,
+	EHTA_Center                    = 1,
+	EHTA_Right                     = 2,
+	EHTA_MAX                       = 3
+};
+
+
+// Enum Engine.EReflectionSourceType
+enum class EReflectionSourceType : uint8_t
+{
+	CapturedScene                  = 0,
+	SpecifiedCubemap               = 1,
+	EReflectionSourceType_MAX      = 2
+};
+
+
+// Enum Engine.EStereoLayerShape
+enum class EStereoLayerShape : uint8_t
+{
+	SLSH_QuadLayer                 = 0,
+	SLSH_CylinderLayer             = 1,
+	SLSH_CubemapLayer              = 2,
+	SLSH_MAX                       = 3
+};
+
+
+// Enum Engine.EStereoLayerType
+enum class EStereoLayerType : uint8_t
+{
+	SLT_WorldLocked                = 0,
+	SLT_TrackerLocked              = 1,
+	SLT_FaceLocked                 = 2,
+	SLT_MAX                        = 3
+};
+
+
+// Enum Engine.EWindSourceType
+enum class EWindSourceType : uint8_t
+{
+	Directional                    = 0,
+	Point                          = 1,
+	EWindSourceType_MAX            = 2
+};
+
+
+// Enum Engine.ETimelineDirection
+enum class ETimelineDirection : uint8_t
+{
+	Forward                        = 0,
+	Backward                       = 1,
+	ETimelineDirection_MAX         = 2
+};
+
+
+// Enum Engine.ETimelineLengthMode
+enum class ETimelineLengthMode : uint8_t
+{
+	TL_TimelineLength              = 0,
+	TL_LastKeyFrame                = 1,
+	TL_MAX                         = 2
+};
+
+
+// Enum Engine.AnimationKeyFormat
+enum class EAnimationKeyFormat : uint8_t
+{
+	AKF_ConstantKeyLerp            = 0,
+	AKF_VariableKeyLerp            = 1,
+	AKF_PerTrackCompression        = 2,
+	AKF_MAX                        = 3
+};
+
+
+// Enum Engine.ENotifyTriggerMode
+enum class ENotifyTriggerMode : uint8_t
+{
+	AllAnimations                  = 0,
+	HighestWeightedAnimation       = 1,
+	None                           = 2,
+	ENotifyTriggerMode_MAX         = 3
+};
+
+
+// Enum Engine.EBlendSpaceAxis
+enum class EBlendSpaceAxis : uint8_t
+{
+	BSA_None                       = 0,
+	BSA_X                          = 1,
+	BSA_Y                          = 2,
+	BSA_Max                        = 3
+};
+
+
+// Enum Engine.ETransitionLogicType
+enum class ETransitionLogicType : uint8_t
+{
+	TLT_StandardBlend              = 0,
+	TLT_Custom                     = 1,
+	TLT_MAX                        = 2
+};
+
+
+// Enum Engine.ETransitionBlendMode
+enum class ETransitionBlendMode : uint8_t
+{
+	TBM_Linear                     = 0,
+	TBM_Cubic                      = 1,
+	TBM_MAX                        = 2
+};
+
+
+// Enum Engine.EMontagePlayReturnType
+enum class EMontagePlayReturnType : uint8_t
+{
+	MontageLength                  = 0,
+	Duration                       = 1,
+	EMontagePlayReturnType_MAX     = 2
+};
+
+
+// Enum Engine.EAnimCurveType
+enum class EAnimCurveType : uint8_t
+{
+	AttributeCurve                 = 0,
+	MaterialCurve                  = 1,
+	MorphTargetCurve               = 2,
+	MaxAnimCurveType               = 3,
+	EAnimCurveType_MAX             = 4
+};
+
+
+// Enum Engine.EPrimaryAssetCookRule
+enum class EPrimaryAssetCookRule : uint8_t
+{
+	Unknown                        = 0,
+	NeverCook                      = 1,
+	DevelopmentCook                = 2,
+	AlwaysCook                     = 3,
+	EPrimaryAssetCookRule_MAX      = 4
+};
+
+
+// Enum Engine.EBlueprintNativizationFlag
+enum class EBlueprintNativizationFlag : uint8_t
+{
+	Disabled                       = 0,
+	Dependency                     = 1,
+	ExplicitlyEnabled              = 2,
+	EBlueprintNativizationFlag_MAX = 3
+};
+
+
+// Enum Engine.EBlueprintCompileMode
+enum class EBlueprintCompileMode : uint8_t
+{
+	Default                        = 0,
+	Development                    = 1,
+	FinalRelease                   = 2,
+	EBlueprintCompileMode_MAX      = 3
+};
+
+
+// Enum Engine.EBlueprintType
+enum class EBlueprintType : uint8_t
+{
+	BPTYPE_Normal                  = 0,
+	BPTYPE_Const                   = 1,
+	BPTYPE_MacroLibrary            = 2,
+	BPTYPE_Interface               = 3,
+	BPTYPE_LevelScript             = 4,
+	BPTYPE_FunctionLibrary         = 5,
+	BPTYPE_MAX                     = 6
+};
+
+
+// Enum Engine.EBlueprintStatus
+enum class EBlueprintStatus : uint8_t
+{
+	BS_Unknown                     = 0,
+	BS_Dirty                       = 1,
+	BS_Error                       = 2,
+	BS_UpToDate                    = 3,
+	BS_BeingCreated                = 4,
+	BS_UpToDateWithWarnings        = 5,
+	BS_MAX                         = 6
+};
+
+
+// Enum Engine.EEvaluateCurveTableResult
+enum class EEvaluateCurveTableResult : uint8_t
+{
+	RowFound                       = 0,
+	RowNotFound                    = 1,
+	EEvaluateCurveTableResult_MAX  = 2
+};
+
+
+// Enum Engine.EGrammaticalNumber
+enum class EGrammaticalNumber : uint8_t
+{
+	Singular                       = 0,
+	Plural                         = 1,
+	EGrammaticalNumber_MAX         = 2
+};
+
+
+// Enum Engine.EGrammaticalGender
+enum class EGrammaticalGender : uint8_t
+{
+	Neuter                         = 0,
+	Masculine                      = 1,
+	Feminine                       = 2,
+	Mixed                          = 3,
+	EGrammaticalGender_MAX         = 4
+};
+
+
+// Enum Engine.ESuggestProjVelocityTraceOption
+enum class ESuggestProjVelocityTraceOption : uint8_t
+{
+	DoNotTrace                     = 0,
+	TraceFullPath                  = 1,
+	OnlyTraceWhileAscending        = 2,
+	ESuggestProjVelocityTraceOption_MAX = 3
+};
+
+
+// Enum Engine.EHMDWornState
+enum class EHMDWornState : uint8_t
+{
+	Unknown                        = 0,
+	Worn                           = 1,
+	NotWorn                        = 2,
+	EHMDWornState_MAX              = 3
+};
+
+
+// Enum Engine.EHMDTrackingOrigin
+enum class EHMDTrackingOrigin : uint8_t
+{
+	Floor                          = 0,
+	Eye                            = 1,
+	EHMDTrackingOrigin_MAX         = 2
+};
+
+
+// Enum Engine.EOrientPositionSelector
+enum class EOrientPositionSelector : uint8_t
+{
+	Orientation                    = 0,
+	Position                       = 1,
+	OrientationAndPosition         = 2,
+	EOrientPositionSelector_MAX    = 3
+};
+
+
+// Enum Engine.ELerpInterpolationMode
+enum class ELerpInterpolationMode : uint8_t
+{
+	QuatInterp                     = 0,
+	EulerInterp                    = 1,
+	DualQuatInterp                 = 2,
+	ELerpInterpolationMode_MAX     = 3
+};
+
+
+// Enum Engine.EEasingFunc
+enum class EEasingFunc : uint8_t
+{
+	Linear                         = 0,
+	Step                           = 1,
+	SinusoidalIn                   = 2,
+	SinusoidalOut                  = 3,
+	SinusoidalInOut                = 4,
+	EaseIn                         = 5,
+	EaseOut                        = 6,
+	EaseInOut                      = 7,
+	ExpoIn                         = 8,
+	ExpoOut                        = 9,
+	ExpoInOut                      = 10,
+	CircularIn                     = 11,
+	CircularOut                    = 12,
+	CircularInOut                  = 13,
+	EEasingFunc_MAX                = 14
 };
 
 
@@ -4155,474 +4641,317 @@ enum class EWindowTitleBarMode : uint8_t
 };
 
 
-// Enum Engine.EAttenuationShape
-enum class EAttenuationShape : uint8_t
+
+// Enum Foliage.EFoliageScaling
+enum class EFoliageScaling : uint8_t
 {
-	Sphere                         = 0,
-	Capsule                        = 1,
-	Box                            = 2,
-	Cone                           = 3,
-	EAttenuationShape_MAX          = 4
+	Uniform                        = 0,
+	Free                           = 1,
+	LockXY                         = 2,
+	LockXZ                         = 3,
+	LockYZ                         = 4,
+	EFoliageScaling_MAX            = 5
 };
 
 
-// Enum Engine.EAttenuationDistanceModel
-enum class EAttenuationDistanceModel : uint8_t
+// Enum Foliage.EVertexColorMaskChannel
+enum class EVertexColorMaskChannel : uint8_t
 {
-	Linear                         = 0,
-	Logarithmic                    = 1,
-	Inverse                        = 2,
-	LogReverse                     = 3,
-	NaturalSound                   = 4,
-	Custom                         = 5,
-	EAttenuationDistanceModel_MAX  = 6
+	Red                            = 0,
+	Green                          = 1,
+	Blue                           = 2,
+	Alpha                          = 3,
+	MAX_None                       = 4,
+	EVertexColorMaskChannel_MAX    = 5
 };
 
 
-// Enum Engine.ESoundSpatializationAlgorithm
-enum class ESoundSpatializationAlgorithm : uint8_t
+// Enum Foliage.FoliageVertexColorMask
+enum class EFoliageVertexColorMask : uint8_t
 {
-	SPATIALIZATION_Default         = 0,
-	SPATIALIZATION_HRTF            = 1,
-	SPATIALIZATION_MAX             = 2
+	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
+	FOLIAGEVERTEXCOLORMASK_Red     = 1,
+	FOLIAGEVERTEXCOLORMASK_Green   = 2,
+	FOLIAGEVERTEXCOLORMASK_Blue    = 3,
+	FOLIAGEVERTEXCOLORMASK_Alpha   = 4,
+	FOLIAGEVERTEXCOLORMASK_MAX     = 5
 };
 
 
-// Enum Engine.ESoundDistanceCalc
-enum class ESoundDistanceCalc : uint8_t
+// Enum Foliage.ESimulationQuery
+enum class ESimulationQuery : uint8_t
 {
-	SOUNDDISTANCE_Normal           = 0,
-	SOUNDDISTANCE_InfiniteXYPlane  = 1,
-	SOUNDDISTANCE_InfiniteXZPlane  = 2,
-	SOUNDDISTANCE_InfiniteYZPlane  = 3,
-	SOUNDDISTANCE_MAX              = 4
+	CollisionOverlap               = 0,
+	ShadeOverlap                   = 1,
+	AnyOverlap                     = 2,
+	ESimulationQuery_MAX           = 3
 };
 
 
-// Enum Engine.EPreviewIndexType
-enum class EPreviewIndexType : uint8_t
+// Enum Foliage.ESimulationOverlap
+enum class ESimulationOverlap : uint8_t
 {
-	RandomSeed                     = 0,
-	VariantIndex                   = 1,
-	PermutationIndex               = 2,
-	EPreviewIndexType_MAX          = 3
+	CollisionOverlap               = 0,
+	ShadeOverlap                   = 1,
+	None                           = 2,
+	ESimulationOverlap_MAX         = 3
 };
 
 
-// Enum Engine.ESpawnPointRollType
-enum class ESpawnPointRollType : uint8_t
+
+// Enum GameplayTasks.ETaskResourceOverlapPolicy
+enum class ETaskResourceOverlapPolicy : uint8_t
 {
-	Probability                    = 0,
-	LocalRatio                     = 1,
-	GlobalRatio                    = 2,
-	ESpawnPointRollType_MAX        = 3
+	StartOnTop                     = 0,
+	StartAtEnd                     = 1,
+	ETaskResourceOverlapPolicy_MAX = 2
 };
 
 
-// Enum Engine.ESkyLightSourceType
-enum class ESkyLightSourceType : uint8_t
+// Enum GameplayTasks.EGameplayTaskState
+enum class EGameplayTaskState : uint8_t
 {
-	SLS_CapturedScene              = 0,
-	SLS_SpecifiedCubemap           = 1,
-	SLS_MAX                        = 2
+	Uninitialized                  = 0,
+	AwaitingActivation             = 1,
+	Paused                         = 2,
+	Active                         = 3,
+	Finished                       = 4,
+	EGameplayTaskState_MAX         = 5
 };
 
 
-// Enum Engine.EBoneSpaces
-enum class EBoneSpaces : uint8_t
+// Enum GameplayTasks.EGameplayTaskRunResult
+enum class EGameplayTaskRunResult : uint8_t
 {
-	WorldSpace                     = 0,
-	ComponentSpace                 = 1,
-	EBoneSpaces_MAX                = 2
+	Error                          = 0,
+	Failed                         = 1,
+	Success_Paused                 = 2,
+	Success_Active                 = 3,
+	Success_Finished               = 4,
+	EGameplayTaskRunResult_MAX     = 5
 };
 
 
-// Enum Engine.EMeshComponentUpdateFlag
-enum class EMeshComponentUpdateFlag : uint8_t
+
+// Enum ClothingSystemRuntime.EClothingWindMethod
+enum class EClothingWindMethod : uint8_t
 {
-	AlwaysTickPoseAndRefreshBones  = 0,
-	AlwaysTickPose                 = 1,
-	OnlyTickPoseWhenRendered       = 2,
-	EMeshComponentUpdateFlag_MAX   = 3
+	Legacy                         = 0,
+	Accurate                       = 1,
+	EClothingWindMethod_MAX        = 2
 };
 
 
-// Enum Engine.EPhysBodyOp
-enum class EPhysBodyOp : uint8_t
+// Enum ClothingSystemRuntime.MaskTarget_PhysMesh
+enum class EMaskTarget_PhysMesh : uint8_t
 {
-	PBO_None                       = 0,
-	PBO_Term                       = 1,
-	PBO_MAX                        = 2
+	None                           = 0,
+	MaxDistance                    = 1,
+	BackstopDistance               = 2,
+	BackstopRadius                 = 3,
+	MaskTarget_MAX                 = 4
 };
 
 
-// Enum Engine.EBoneVisibilityStatus
-enum class EBoneVisibilityStatus : uint8_t
+
+// Enum MovieScene.ESpawnOwnership
+enum class ESpawnOwnership : uint8_t
 {
-	BVS_HiddenByParent             = 0,
-	BVS_Visible                    = 1,
-	BVS_ExplicitlyHidden           = 2,
-	BVS_MAX                        = 3
+	InnerSequence                  = 0,
+	MasterSequence                 = 1,
+	External                       = 2,
+	ESpawnOwnership_MAX            = 3
 };
 
 
-// Enum Engine.EPhysicsTransformUpdateMode
-enum class EPhysicsTransformUpdateMode : uint8_t
-{
-	SimulationUpatesComponentTransform = 0,
-	ComponentTransformIsKinematic  = 1,
-	EPhysicsTransformUpdateMode_MAX = 2
-};
-
-
-// Enum Engine.EAnimationMode
-enum class EAnimationMode : uint8_t
-{
-	AnimationBlueprint             = 0,
-	AnimationSingleNode            = 1,
-	AnimationCustomMode            = 2,
-	EAnimationMode_MAX             = 3
-};
-
-
-// Enum Engine.EKinematicBonesUpdateToPhysics
-enum class EKinematicBonesUpdateToPhysics : uint8_t
-{
-	SkipSimulatingBones            = 0,
-	SkipAllBones                   = 1,
-	EKinematicBonesUpdateToPhysics_MAX = 2
-};
-
-
-// Enum Engine.ESplineMeshAxis
-enum class ESplineMeshAxis : uint8_t
-{
-	X                              = 0,
-	Y                              = 1,
-	Z                              = 2,
-	ESplineMeshAxis_MAX            = 3
-};
-
-
-// Enum Engine.ESplineCoordinateSpace
-enum class ESplineCoordinateSpace : uint8_t
+// Enum MovieScene.EMovieSceneObjectBindingSpace
+enum class EMovieSceneObjectBindingSpace : uint8_t
 {
 	Local                          = 0,
-	World                          = 1,
-	ESplineCoordinateSpace_MAX     = 2
+	Root                           = 1,
+	EMovieSceneObjectBindingSpace_MAX = 2
 };
 
 
-// Enum Engine.ESplinePointType
-enum class ESplinePointType : uint8_t
+// Enum MovieScene.EMovieSceneKeyInterpolation
+enum class EMovieSceneKeyInterpolation : uint8_t
 {
-	Linear                         = 0,
-	Curve                          = 1,
-	Constant                       = 2,
-	CurveClamped                   = 3,
-	CurveCustomTangent             = 4,
-	ESplinePointType_MAX           = 5
+	Auto                           = 0,
+	User                           = 1,
+	Break                          = 2,
+	Linear                         = 3,
+	Constant                       = 4,
+	EMovieSceneKeyInterpolation_MAX = 5
 };
 
 
-// Enum Engine.EVerticalTextAligment
-enum class EVerticalTextAligment : uint8_t
+// Enum MovieScene.EMovieSceneCompletionMode
+enum class EMovieSceneCompletionMode : uint8_t
 {
-	EVRTA_TextTop                  = 0,
-	EVRTA_TextCenter               = 1,
-	EVRTA_TextBottom               = 2,
-	EVRTA_QuadTop                  = 3,
-	EVRTA_MAX                      = 4
+	KeepState                      = 0,
+	RestoreState                   = 1,
+	EMovieSceneCompletionMode_MAX  = 2
 };
 
 
-// Enum Engine.EHorizTextAligment
-enum class EHorizTextAligment : uint8_t
+// Enum MovieScene.ESectionEvaluationFlags
+enum class ESectionEvaluationFlags : uint8_t
 {
-	EHTA_Left                      = 0,
-	EHTA_Center                    = 1,
-	EHTA_Right                     = 2,
-	EHTA_MAX                       = 3
+	None                           = 0,
+	PreRoll                        = 1,
+	PostRoll                       = 2,
+	ESectionEvaluationFlags_MAX    = 3
 };
 
 
-// Enum Engine.EReflectionSourceType
-enum class EReflectionSourceType : uint8_t
+// Enum MovieScene.EEvaluationMethod
+enum class EEvaluationMethod : uint8_t
 {
-	CapturedScene                  = 0,
-	SpecifiedCubemap               = 1,
-	EReflectionSourceType_MAX      = 2
+	Static                         = 0,
+	Swept                          = 1,
+	EEvaluationMethod_MAX          = 2
 };
 
 
-// Enum Engine.EStereoLayerShape
-enum class EStereoLayerShape : uint8_t
+
+// Enum UMG.ESlateVisibility
+enum class ESlateVisibility : uint8_t
 {
-	SLSH_QuadLayer                 = 0,
-	SLSH_CylinderLayer             = 1,
-	SLSH_CubemapLayer              = 2,
-	SLSH_MAX                       = 3
+	Visible                        = 0,
+	Collapsed                      = 1,
+	Hidden                         = 2,
+	HitTestInvisible               = 3,
+	SelfHitTestInvisible           = 4,
+	ESlateVisibility_MAX           = 5
 };
 
 
-// Enum Engine.EStereoLayerType
-enum class EStereoLayerType : uint8_t
-{
-	SLT_WorldLocked                = 0,
-	SLT_TrackerLocked              = 1,
-	SLT_FaceLocked                 = 2,
-	SLT_MAX                        = 3
-};
-
-
-// Enum Engine.EWindSourceType
-enum class EWindSourceType : uint8_t
-{
-	Directional                    = 0,
-	Point                          = 1,
-	EWindSourceType_MAX            = 2
-};
-
-
-// Enum Engine.ETimelineDirection
-enum class ETimelineDirection : uint8_t
-{
-	Forward                        = 0,
-	Backward                       = 1,
-	ETimelineDirection_MAX         = 2
-};
-
-
-// Enum Engine.ETimelineLengthMode
-enum class ETimelineLengthMode : uint8_t
-{
-	TL_TimelineLength              = 0,
-	TL_LastKeyFrame                = 1,
-	TL_MAX                         = 2
-};
-
-
-// Enum Engine.AnimationKeyFormat
-enum class EAnimationKeyFormat : uint8_t
-{
-	AKF_ConstantKeyLerp            = 0,
-	AKF_VariableKeyLerp            = 1,
-	AKF_PerTrackCompression        = 2,
-	AKF_MAX                        = 3
-};
-
-
-// Enum Engine.ENotifyTriggerMode
-enum class ENotifyTriggerMode : uint8_t
-{
-	AllAnimations                  = 0,
-	HighestWeightedAnimation       = 1,
-	None                           = 2,
-	ENotifyTriggerMode_MAX         = 3
-};
-
-
-// Enum Engine.EBlendSpaceAxis
-enum class EBlendSpaceAxis : uint8_t
-{
-	BSA_None                       = 0,
-	BSA_X                          = 1,
-	BSA_Y                          = 2,
-	BSA_Max                        = 3
-};
-
-
-// Enum Engine.ETransitionLogicType
-enum class ETransitionLogicType : uint8_t
-{
-	TLT_StandardBlend              = 0,
-	TLT_Custom                     = 1,
-	TLT_MAX                        = 2
-};
-
-
-// Enum Engine.ETransitionBlendMode
-enum class ETransitionBlendMode : uint8_t
-{
-	TBM_Linear                     = 0,
-	TBM_Cubic                      = 1,
-	TBM_MAX                        = 2
-};
-
-
-// Enum Engine.EMontagePlayReturnType
-enum class EMontagePlayReturnType : uint8_t
-{
-	MontageLength                  = 0,
-	Duration                       = 1,
-	EMontagePlayReturnType_MAX     = 2
-};
-
-
-// Enum Engine.EAnimCurveType
-enum class EAnimCurveType : uint8_t
-{
-	AttributeCurve                 = 0,
-	MaterialCurve                  = 1,
-	MorphTargetCurve               = 2,
-	MaxAnimCurveType               = 3,
-	EAnimCurveType_MAX             = 4
-};
-
-
-// Enum Engine.EPrimaryAssetCookRule
-enum class EPrimaryAssetCookRule : uint8_t
-{
-	Unknown                        = 0,
-	NeverCook                      = 1,
-	DevelopmentCook                = 2,
-	AlwaysCook                     = 3,
-	EPrimaryAssetCookRule_MAX      = 4
-};
-
-
-// Enum Engine.EBlueprintNativizationFlag
-enum class EBlueprintNativizationFlag : uint8_t
-{
-	Disabled                       = 0,
-	Dependency                     = 1,
-	ExplicitlyEnabled              = 2,
-	EBlueprintNativizationFlag_MAX = 3
-};
-
-
-// Enum Engine.EBlueprintCompileMode
-enum class EBlueprintCompileMode : uint8_t
+// Enum UMG.EVirtualKeyboardType
+enum class EVirtualKeyboardType : uint8_t
 {
 	Default                        = 0,
-	Development                    = 1,
-	FinalRelease                   = 2,
-	EBlueprintCompileMode_MAX      = 3
+	Number                         = 1,
+	Web                            = 2,
+	Email                          = 3,
+	Password                       = 4,
+	AlphaNumeric                   = 5,
+	EVirtualKeyboardType_MAX       = 6
 };
 
 
-// Enum Engine.EBlueprintType
-enum class EBlueprintType : uint8_t
+// Enum UMG.EUMGSequencePlayMode
+enum class EUMGSequencePlayMode : uint8_t
 {
-	BPTYPE_Normal                  = 0,
-	BPTYPE_Const                   = 1,
-	BPTYPE_MacroLibrary            = 2,
-	BPTYPE_Interface               = 3,
-	BPTYPE_LevelScript             = 4,
-	BPTYPE_FunctionLibrary         = 5,
-	BPTYPE_MAX                     = 6
+	Forward                        = 0,
+	Reverse                        = 1,
+	PingPong                       = 2,
+	EUMGSequencePlayMode_MAX       = 3
 };
 
 
-// Enum Engine.EBlueprintStatus
-enum class EBlueprintStatus : uint8_t
+// Enum UMG.EWidgetGeometryMode
+enum class EWidgetGeometryMode : uint8_t
 {
-	BS_Unknown                     = 0,
-	BS_Dirty                       = 1,
-	BS_Error                       = 2,
-	BS_UpToDate                    = 3,
-	BS_BeingCreated                = 4,
-	BS_UpToDateWithWarnings        = 5,
-	BS_MAX                         = 6
+	Plane                          = 0,
+	Cylinder                       = 1,
+	EWidgetGeometryMode_MAX        = 2
 };
 
 
-// Enum Engine.EEvaluateCurveTableResult
-enum class EEvaluateCurveTableResult : uint8_t
+// Enum UMG.EWidgetBlendMode
+enum class EWidgetBlendMode : uint8_t
 {
-	RowFound                       = 0,
-	RowNotFound                    = 1,
-	EEvaluateCurveTableResult_MAX  = 2
+	Opaque                         = 0,
+	Masked                         = 1,
+	Transparent                    = 2,
+	EWidgetBlendMode_MAX           = 3
 };
 
 
-// Enum Engine.EGrammaticalNumber
-enum class EGrammaticalNumber : uint8_t
+// Enum UMG.EWidgetTimingPolicy
+enum class EWidgetTimingPolicy : uint8_t
 {
-	Singular                       = 0,
-	Plural                         = 1,
-	EGrammaticalNumber_MAX         = 2
+	RealTime                       = 0,
+	GameTime                       = 1,
+	EWidgetTimingPolicy_MAX        = 2
 };
 
 
-// Enum Engine.EGrammaticalGender
-enum class EGrammaticalGender : uint8_t
+// Enum UMG.EWidgetSpace
+enum class EWidgetSpace : uint8_t
 {
-	Neuter                         = 0,
-	Masculine                      = 1,
-	Feminine                       = 2,
-	Mixed                          = 3,
-	EGrammaticalGender_MAX         = 4
+	World                          = 0,
+	Screen                         = 1,
+	EWidgetSpace_MAX               = 2
 };
 
 
-// Enum Engine.ESuggestProjVelocityTraceOption
-enum class ESuggestProjVelocityTraceOption : uint8_t
+// Enum UMG.EWidgetInteractionSource
+enum class EWidgetInteractionSource : uint8_t
 {
-	DoNotTrace                     = 0,
-	TraceFullPath                  = 1,
-	OnlyTraceWhileAscending        = 2,
-	ESuggestProjVelocityTraceOption_MAX = 3
+	World                          = 0,
+	Mouse                          = 1,
+	CenterScreen                   = 2,
+	Custom                         = 3,
+	EWidgetInteractionSource_MAX   = 4
 };
 
 
-// Enum Engine.EHMDWornState
-enum class EHMDWornState : uint8_t
+// Enum UMG.EDragPivot
+enum class EDragPivot : uint8_t
 {
-	Unknown                        = 0,
-	Worn                           = 1,
-	NotWorn                        = 2,
-	EHMDWornState_MAX              = 3
+	MouseDown                      = 0,
+	TopLeft                        = 1,
+	TopCenter                      = 2,
+	TopRight                       = 3,
+	CenterLeft                     = 4,
+	CenterCenter                   = 5,
+	CenterRight                    = 6,
+	BottomLeft                     = 7,
+	BottomCenter                   = 8,
+	BottomRight                    = 9,
+	EDragPivot_MAX                 = 10
 };
 
 
-// Enum Engine.EHMDTrackingOrigin
-enum class EHMDTrackingOrigin : uint8_t
+// Enum UMG.ESlateSizeRule
+enum class ESlateSizeRule : uint8_t
 {
-	Floor                          = 0,
-	Eye                            = 1,
-	EHMDTrackingOrigin_MAX         = 2
+	Automatic                      = 0,
+	Fill                           = 1,
+	ESlateSizeRule_MAX             = 2
 };
 
 
-// Enum Engine.EOrientPositionSelector
-enum class EOrientPositionSelector : uint8_t
+// Enum UMG.EWidgetDesignFlags
+enum class EWidgetDesignFlags : uint8_t
 {
-	Orientation                    = 0,
-	Position                       = 1,
-	OrientationAndPosition         = 2,
-	EOrientPositionSelector_MAX    = 3
+	None                           = 0,
+	Designing                      = 1,
+	ShowOutline                    = 2,
+	ExecutePreConstruct            = 3,
+	EWidgetDesignFlags_MAX         = 4
 };
 
 
-// Enum Engine.ELerpInterpolationMode
-enum class ELerpInterpolationMode : uint8_t
+// Enum UMG.EBindingKind
+enum class EBindingKind : uint8_t
 {
-	QuatInterp                     = 0,
-	EulerInterp                    = 1,
-	DualQuatInterp                 = 2,
-	ELerpInterpolationMode_MAX     = 3
+	Function                       = 0,
+	Property                       = 1,
+	EBindingKind_MAX               = 2
 };
 
 
-// Enum Engine.EEasingFunc
-enum class EEasingFunc : uint8_t
+// Enum UMG.EDesignPreviewSizeMode
+enum class EDesignPreviewSizeMode : uint8_t
 {
-	Linear                         = 0,
-	Step                           = 1,
-	SinusoidalIn                   = 2,
-	SinusoidalOut                  = 3,
-	SinusoidalInOut                = 4,
-	EaseIn                         = 5,
-	EaseOut                        = 6,
-	EaseInOut                      = 7,
-	ExpoIn                         = 8,
-	ExpoOut                        = 9,
-	ExpoInOut                      = 10,
-	CircularIn                     = 11,
-	CircularOut                    = 12,
-	CircularInOut                  = 13,
-	EEasingFunc_MAX                = 14
+	FillScreen                     = 0,
+	Custom                         = 1,
+	CustomOnScreen                 = 2,
+	Desired                        = 3,
+	DesiredOnScreen                = 4,
+	EDesignPreviewSizeMode_MAX     = 5
 };
 
 
@@ -6023,1454 +6352,308 @@ enum class EWheelContactType : uint8_t
 };
 
 
-// Enum TslGame.EGuideKeyType
-enum class EGuideKeyType : uint8_t
+// Enum TslGame.ETslParticleCullType
+enum class ETslParticleCullType : uint8_t
 {
 	None                           = 0,
-	PickUp                         = 1,
-	PickUpAndEquip                 = 2,
-	PickUpAndPickUpAmount          = 3,
-	Unequip                        = 4,
-	DetachAll                      = 5,
-	DetachAndDetachAll             = 6,
-	Drop                           = 7,
-	DropAndEquip                   = 8,
-	DropAndDropAmount              = 9,
-	DropAndDropAll                 = 10,
-	Equip                          = 11,
-	EquipAndQuickEquip             = 12,
-	XQuickEquip                    = 13,
-	XHoldQuickEquip                = 14,
-	Swap                           = 15,
-	Use                            = 16,
-	Confirm                        = 17,
-	Cancel                         = 18,
-	SwitchSlot                     = 19,
-	Charm                          = 20,
-	CharmAndDetachAll              = 21,
-	Apply                          = 22,
-	EGuideKeyType_MAX              = 23
+	Distance                       = 1,
+	Frustum                        = 2,
+	LastRenderedTime               = 3,
+	SameTransform                  = 4,
+	NearbyTransform                = 5,
+	DistAndFrustumAndNear          = 6,
+	All                            = 7,
+	ETslParticleCullType_MAX       = 8
 };
 
 
-// Enum TslGame.EGuideLineType
-enum class EGuideLineType : uint8_t
+// Enum TslGame.ETslParticleGroupPriority
+enum class ETslParticleGroupPriority : uint8_t
 {
-	Switch                         = 0,
-	Upper                          = 1,
-	Lower                          = 2,
-	EGuideLineType_MAX             = 3
-};
-
-
-// Enum TslGame.EFiremode
-enum class EFiremode : uint8_t
-{
-	FullAuto                       = 0,
-	ThreeRoundBurst                = 1,
-	TwoRoundBurst                  = 2,
-	SemiAuto                       = 3,
-	Single                         = 4,
-	FullAutoFast                   = 5,
-	EFiremode_MAX                  = 6
-};
-
-
-// Enum TslGame.EConsoleHitDirections
-enum class EConsoleHitDirections : uint8_t
-{
-	None                           = 0,
-	Front_Right                    = 1,
-	Front_Left                     = 2,
-	Rear                           = 3,
-	EConsoleHitDirections_MAX      = 4
-};
-
-
-// Enum TslGame.ERoundEndPointType
-enum class ERoundEndPointType : uint8_t
-{
-	Empty                          = 0,
-	Lost                           = 1,
-	Won                            = 2,
-	ERoundEndPointType_MAX         = 3
-};
-
-
-// Enum TslGame.EVehicleAIAvoidanceMode
-enum class EVehicleAIAvoidanceMode : uint8_t
-{
-	Off                            = 0,
-	SingleTrace                    = 1,
-	MultiTrace                     = 2,
-	EVehicleAIAvoidanceMode_MAX    = 3
-};
-
-
-// Enum TslGame.ESpawnType
-enum class ESpawnType : uint8_t
-{
-	Single                         = 0,
-	ContinuousOnTimer              = 1,
-	ContinuousOnDeath              = 2,
-	ESpawnType_MAX                 = 3
-};
-
-
-// Enum TslGame.TslAudioInterpolation
-enum class ETslAudioInterpolation : uint8_t
-{
-	AudioInterpolation_Log3        = 0,
-	AudioInterpolation_Sine        = 1,
-	AudioInterpolation_Log1        = 2,
-	AudioInterpolation_InvSCurve   = 3,
-	AudioInterpolation_Linear      = 4,
-	AudioInterpolation_SCurve      = 5,
-	AudioInterpolation_Exp1        = 6,
-	AudioInterpolation_SineRecip   = 7,
-	AudioInterpolation_Exp3        = 8,
-	AudioInterpolation_MAX         = 9
-};
-
-
-// Enum TslGame.eVehicleSpawnStatus
-enum class EeVehicleSpawnStatus : uint8_t
-{
-	SpawnNone                      = 0,
-	SpawnAlived                    = 1,
-	SpawnDestroyed                 = 2,
-	eVehicleSpawnStatus_MAX        = 3
-};
-
-
-// Enum TslGame.ESurfaceEffect
-enum class ESurfaceEffect : uint8_t
-{
-	S_None                         = 0,
-	S_Concrete_Roll                = 1,
-	S_Concrete_Skid                = 2,
-	S_Concrete_Spin                = 3,
-	S_Dirt_Roll                    = 4,
-	S_Dirt_Skid                    = 5,
-	S_Dirt_Spin                    = 6,
-	S_Water_Roll                   = 7,
-	S_Water_Skid                   = 8,
-	S_Water_Spin                   = 9,
-	S_Metal_Roll                   = 10,
-	S_Metal_Skid                   = 11,
-	S_Metal_Spin                   = 12,
-	S_Wood_Roll                    = 13,
-	S_Wood_Skid                    = 14,
-	S_Wood_Spin                    = 15,
-	S_Rock_Roll                    = 16,
-	S_Rock_Skid                    = 17,
-	S_Rock_Spin                    = 18,
-	S_Grass_Roll                   = 19,
-	S_Grass_Skid                   = 20,
-	S_Grass_Spin                   = 21,
-	S_Sand_Roll                    = 22,
-	S_Sand_Skid                    = 23,
-	S_Sand_Spin                    = 24,
-	S_Concrete_Brake               = 25,
-	S_Dirt_Brake                   = 26,
-	S_Water_Brake                  = 27,
-	S_Metal_Brake                  = 28,
-	S_Wood_Brake                   = 29,
-	S_Rock_Brake                   = 30,
-	S_Grass_Brake                  = 31,
-	S_Sand_Brake                   = 32,
-	S_Snow_Brake                   = 33,
-	S_SnowRock_Brake               = 34,
-	S_Ice_Brake                    = 35,
-	S_Common_BrakeDisc             = 36,
-	S_Concrete_Punctured_Roll      = 37,
-	S_Concrete_Punctured_Skid      = 38,
-	S_Concrete_Punctured_Spin      = 39,
-	S_Concrete_Punctured_Brake     = 40,
-	S_Snow_Roll                    = 41,
-	S_Snow_Skid                    = 42,
-	S_Snow_Spin                    = 43,
-	S_SnowRock_Roll                = 44,
-	S_SnowRock_Skid                = 45,
-	S_SnowRock_Spin                = 46,
-	S_Ice_Roll                     = 47,
-	S_Ice_Skid                     = 48,
-	S_Ice_Spin                     = 49,
-	S_Mud_Roll                     = 50,
-	S_Mud_Skid                     = 51,
-	S_Mud_Spin                     = 52,
-	S_Mud_Brake                    = 53,
-	S_Common_Neutral               = 54,
-	S_MAX                          = 55
-};
-
-
-// Enum TslGame.EWeaponDisplayZoomState
-enum class EWeaponDisplayZoomState : uint8_t
-{
-	ZoomState_Default              = 0,
-	ZoomState_Charm                = 1,
-	ZoomState_MAX                  = 2
-};
-
-
-// Enum TslGame.EBlendSequenceByBoolStartType
-enum class EBlendSequenceByBoolStartType : uint8_t
-{
-	Restart                        = 0,
-	SameTime                       = 1,
-	EBlendSequenceByBoolStartType_MAX = 2
-};
-
-
-// Enum TslGame.EJumpStartAnimationType
-enum class EJumpStartAnimationType : uint8_t
-{
-	Stationary                     = 0,
-	Forward                        = 1,
-	Backward                       = 2,
-	EJumpStartAnimationType_MAX    = 3
-};
-
-
-// Enum TslGame.ETslLocomotionNodeState
-enum class ETslLocomotionNodeState : uint8_t
-{
-	Idle                           = 0,
-	Locomotion                     = 1,
-	Start                          = 2,
-	Stop_Left                      = 3,
-	Stop_Right                     = 4,
-	Pivot_Left                     = 5,
-	Pivot_Right                    = 6,
-	FastTurn_Pivot                 = 7,
-	ETslLocomotionNodeState_MAX    = 8
-};
-
-
-// Enum TslGame.ETslLocomotionStateChangeType
-enum class ETslLocomotionStateChangeType : uint8_t
-{
-	None                           = 0,
-	Blending                       = 1,
-	NoBlending                     = 2,
-	BlendingSameTime               = 3,
-	ETslLocomotionStateChangeType_MAX = 4
-};
-
-
-// Enum TslGame.FPlaySequenceFromAnimDBMapAnimType
-enum class EFPlaySequenceFromAnimDBMapAnimType : uint8_t
-{
-	Base                           = 0,
-	Transition                     = 1,
-	TransitionStance               = 2,
-	FPlaySequenceFromAnimDBMapAnimType_MAX = 3
-};
-
-
-// Enum TslGame.ERotateBoneInputType
-enum class ERotateBoneInputType : uint8_t
-{
-	Rotator                        = 0,
-	AngleAxis                      = 1,
-	ERotateBoneInputType_MAX       = 2
-};
-
-
-// Enum TslGame.ERotateBoneSpace
-enum class ERotateBoneSpace : uint8_t
-{
-	BoneSpace                      = 0,
-	LocalSpace                     = 1,
-	WorldSpace                     = 2,
-	ERotateBoneSpace_MAX           = 3
-};
-
-
-// Enum TslGame.ETppAimCameraPosition
-enum class ETppAimCameraPosition : uint8_t
-{
-	LatestAimPosition              = 0,
-	LastPeekingPosition            = 1,
-	ResetToRightShoulderPosition   = 2,
-	ResetToLeftShoulderPosition    = 3,
-	ETppAimCameraPosition_MAX      = 4
-};
-
-
-// Enum TslGame.EAccessorySlot
-enum class EAccessorySlot : uint8_t
-{
-	Slot_Primary                   = 0,
-	Slot_Secondary                 = 1,
-	Slot_SideArm                   = 2,
-	Slot_Melee                     = 3,
-	Slot_Thrown                    = 4,
-	Slot_None                      = 5,
-	Slot_MAX                       = 6
-};
-
-
-// Enum TslGame.EInventorySlotType
-enum class EInventorySlotType : uint8_t
-{
-	Vicinity                       = 0,
-	Inventory                      = 1,
-	Crafting                       = 2,
-	Equipment                      = 3,
-	Weapon                         = 4,
-	Max                            = 5,
-	EInventorySlotType_MAX         = 6
-};
-
-
-// Enum TslGame.ELobbyCharacterCameraType
-enum class ELobbyCharacterCameraType : uint8_t
-{
-	None                           = 0,
-	WholeBodyCamera                = 1,
-	TopCamera                      = 2,
-	HeadCamera                     = 3,
-	BodyCamera                     = 4,
-	LegCamera                      = 5,
-	FootCamera                     = 6,
-	Max                            = 7,
-	ELobbyCharacterCameraType_MAX  = 8
-};
-
-
-// Enum TslGame.EAnimWeaponSpecificClass
-enum class EAnimWeaponSpecificClass : uint8_t
-{
-	None                           = 0,
-	EAnimWeaponSpecificClass_MAX   = 1
-};
-
-
-// Enum TslGame.EContinuousHealItem
-enum class EContinuousHealItem : uint8_t
-{
-	Continuous_On                  = 0,
-	Bandaged_Only                  = 1,
-	Continuous_Off                 = 2,
-	EContinuousHealItem_MAX        = 3
-};
-
-
-// Enum TslGame.EWeaponClass
-enum class EWeaponClass : uint8_t
-{
-	Class_None                     = 0,
-	Class_Pistol                   = 1,
-	Class_SMG                      = 2,
-	Class_Rifle                    = 3,
-	Class_Carbine                  = 4,
-	Class_Shotgun                  = 5,
-	Class_Sniper                   = 6,
-	Class_DMR                      = 7,
-	Class_LMG                      = 8,
-	Class_Melee                    = 9,
-	Class_Throwable                = 10,
-	Class_Shield                   = 11,
-	Class_Crossbow                 = 12,
-	Class_Launcher                 = 13,
-	EWeaponClass_MAX               = 14
-};
-
-
-// Enum TslGame.EAllowedThrowMode
-enum class EAllowedThrowMode : uint8_t
-{
-	Any                            = 0,
-	ThrowHigh                      = 1,
-	ThrowLow                       = 2,
-	EAllowedThrowMode_MAX          = 3
-};
-
-
-// Enum TslGame.ECharThrowMode
-enum class ECharThrowMode : uint8_t
-{
-	ThrowHigh                      = 0,
-	ThrowLow                       = 1,
-	ECharThrowMode_MAX             = 2
-};
-
-
-// Enum TslGame.EAttachmentCalculateType
-enum class EAttachmentCalculateType : uint8_t
-{
-	Addition                       = 0,
-	Multiply                       = 1,
-	EAttachmentCalculateType_MAX   = 2
-};
-
-
-// Enum TslGame.EAutoEquipAttachmentForScopeMode
-enum class EAutoEquipAttachmentForScopeMode : uint8_t
-{
-	Off                            = 0,
-	Sight_Only                     = 1,
-	ALL                            = 2,
-	EAutoEquipAttachmentForScopeMode_MAX = 3
-};
-
-
-// Enum TslGame.EItemCategory
-enum class EItemCategory : uint8_t
-{
-	None                           = 0,
-	Equipment                      = 1,
-	Weapon                         = 2,
-	Attachment                     = 3,
-	Ammunition                     = 4,
-	Use                            = 5,
-	Skin                           = 6,
-	Event                          = 7,
-	EItemCategory_MAX              = 8
-};
-
-
-// Enum TslGame.EFiringMode
-enum class EFiringMode : uint8_t
-{
-	Normal                         = 0,
-	Burst                          = 1,
-	FullAuto                       = 2,
-	FullAutoFast                   = 3,
-	EFiringMode_MAX                = 4
-};
-
-
-// Enum TslGame.ECharacterGait
-enum class ECharacterGait : uint8_t
-{
-	Walk                           = 0,
-	Run                            = 1,
-	Sprint                         = 2,
-	ECharacterGait_MAX             = 3
-};
-
-
-// Enum TslGame.EWeaponHand
-enum class EWeaponHand : uint8_t
-{
-	Left                           = 0,
-	Right                          = 1,
-	Total                          = 2,
-	EWeaponHand_MAX                = 3
-};
-
-
-// Enum TslGame.EWeaponArmState
-enum class EWeaponArmState : uint8_t
-{
-	None                           = 0,
-	NotArmed                       = 1,
-	Arming                         = 2,
-	Armed                          = 3,
-	UnArming                       = 4,
-	EWeaponArmState_MAX            = 5
-};
-
-
-// Enum TslGame.EPlatoonType
-enum class EPlatoonType : uint8_t
-{
-	PlatoonA                       = 0,
-	PlatoonB                       = 1,
-	EPlatoonType_MAX               = 2
-};
-
-
-// Enum TslGame.EAnimVehicleSeatType
-enum class EAnimVehicleSeatType : uint8_t
-{
-	BikeDriver                     = 0,
-	BikePassenger                  = 1,
-	VehicleDriver                  = 2,
-	VehiclePassenger               = 3,
-	Pilot                          = 4,
-	AircraftPassenger              = 5,
-	GliderPassenger                = 6,
-	EAnimVehicleSeatType_MAX       = 7
-};
-
-
-// Enum TslGame.ETurningDirection
-enum class ETurningDirection : uint8_t
-{
-	None                           = 0,
-	Right                          = 1,
-	Right01                        = 2,
-	Right02                        = 3,
-	Right03                        = 4,
-	Left                           = 5,
-	Left01                         = 6,
-	Left02                         = 7,
-	Left03                         = 8,
-	ETurningDirection_MAX          = 9
-};
-
-
-// Enum TslGame.EMovementDirection
-enum class EMovementDirection : uint8_t
-{
-	F_Direction                    = 0,
-	L_Direction                    = 1,
-	R_Direction                    = 2,
-	B_Direction                    = 3,
-	FL_Direction                   = 4,
-	FR_Direction                   = 5,
-	BL_Direction                   = 6,
-	BR_Direction                   = 7,
-	EMovementDirection_MAX         = 8
-};
-
-
-// Enum TslGame.EAnimStance
-enum class EAnimStance : uint8_t
-{
-	Stand                          = 0,
-	Crouch                         = 1,
-	Prone                          = 2,
-	Groggy                         = 3,
-	EAnimStance_MAX                = 4
-};
-
-
-// Enum TslGame.EAnimWeaponType
-enum class EAnimWeaponType : uint8_t
-{
-	None                           = 0,
-	Rifle                          = 1,
-	Launcher                       = 2,
-	Pistol                         = 3,
-	Throwable                      = 4,
-	SpikeTrap                      = 5,
-	Melee                          = 6,
-	Shield                         = 7,
-	MAX                            = 8,
-	EAnimWeaponType_MAX            = 9
-};
-
-
-// Enum TslGame.EExhaustPopType
-enum class EExhaustPopType : uint8_t
-{
-	ExPop_ThrottleDecrease         = 0,
-	ExPop_RevLimiterHit            = 1,
-	ExPop_MAX                      = 2
-};
-
-
-// Enum TslGame.ECameraViewBehaviour
-enum class ECameraViewBehaviour : uint8_t
-{
-	FpsAndTps                      = 0,
-	FpsOnly                        = 1,
-	TpsOnly                        = 2,
-	ECameraViewBehaviour_MAX       = 3
-};
-
-
-// Enum TslGame.EPlayerStartType
-enum class EPlayerStartType : uint8_t
-{
-	OnePlace                       = 0,
-	SeveralPlace                   = 1,
-	EPlayerStartType_MAX           = 2
-};
-
-
-// Enum TslGame.EMatchStartType
-enum class EMatchStartType : uint8_t
-{
-	Normal                         = 0,
-	Airborne                       = 1,
-	EMatchStartType_MAX            = 2
-};
-
-
-// Enum TslGame.EGender
-enum class EGender : uint8_t
-{
-	Male                           = 0,
-	Female                         = 1,
-	EGender_MAX                    = 2
-};
-
-
-// Enum TslGame.EKillcamDisplayCode
-enum class EKillcamDisplayCode : uint8_t
-{
-	NotVisible                     = 0,
-	OptionDisabled                 = 1,
-	Recording                      = 2,
-	Playable                       = 3,
-	Replay                         = 4,
-	FailToLoad                     = 5,
-	DemoFailure                    = 6,
-	DetectedUnusualMovement        = 7,
-	EKillcamDisplayCode_MAX        = 8
-};
-
-
-// Enum TslGame.EWidgetShowType
-enum class EWidgetShowType : uint8_t
-{
-	Show                           = 0,
-	Hide                           = 1,
-	Toggle                         = 2,
-	EWidgetShowType_MAX            = 3
-};
-
-
-// Enum TslGame.ESlotOffsetType
-enum class ESlotOffsetType : uint8_t
-{
-	NoOffset                       = 0,
-	BagLevel1                      = 1,
-	BagLevel2                      = 2,
-	BagLevel3                      = 3,
-	ESlotOffsetType_MAX            = 4
-};
-
-
-// Enum TslGame.EItemSpotGroupType
-enum class EItemSpotGroupType : uint8_t
-{
-	GroupA                         = 0,
-	GroupB                         = 1,
-	GroupC                         = 2,
-	GroupD                         = 3,
-	GroupE                         = 4,
-	GroupF                         = 5,
-	GroupG                         = 6,
-	GroupH                         = 7,
-	GroupI                         = 8,
-	GroupJ                         = 9,
-	EItemSpotGroupType_MAX         = 10
-};
-
-
-// Enum TslGame.EItemSpotType
-enum class EItemSpotType : uint8_t
-{
-	TypeA                          = 0,
-	TypeB                          = 1,
-	TypeC                          = 2,
-	TypeD                          = 3,
-	TypeE                          = 4,
-	TypeF                          = 5,
-	EItemSpotType_MAX              = 6
-};
-
-
-// Enum TslGame.EAttackType
-enum class EAttackType : uint8_t
-{
-	None                           = 0,
-	Weapon                         = 1,
-	VehicleCrash                   = 2,
-	VehicleExplosion               = 3,
-	Fall                           = 4,
-	BlueZone                       = 5,
-	RedZone                        = 6,
-	BlackZone                      = 7,
-	EAttackType_MAX                = 8
-};
-
-
-// Enum TslGame.EPlayerMoveType
-enum class EPlayerMoveType : uint8_t
-{
-	OnFoot                         = 0,
-	OnSwim                         = 1,
-	OnVehicle                      = 2,
-	OnParachute                    = 3,
-	OnFreefall                     = 4,
-	EPlayerMoveType_MAX            = 5
-};
-
-
-// Enum TslGame.EVaultRequirementType
-enum class EVaultRequirementType : uint8_t
-{
-	VaultReqType_False             = 0,
-	VaultReqType_True              = 1,
-	VaultReqType_Any               = 2,
-	VaultReqType_MAX               = 3
-};
-
-
-// Enum TslGame.EVaultAnimType
-enum class EVaultAnimType : uint8_t
-{
-	VaultNone                      = 0,
-	Vault200_Stationary            = 1,
-	Vault200_Mobile                = 2,
-	Vault200_Narrow                = 3,
-	Vault160_Stationary            = 4,
-	Vault160_Mobile                = 5,
-	Vault160_Narrow                = 6,
-	Vault120_Stationary            = 7,
-	Vault120_Mobile                = 8,
-	Vault120_Slide                 = 9,
-	Vault120_Narrow                = 10,
-	Vault90_Stationary             = 11,
-	Vault90_Mobile                 = 12,
-	Vault90_Slide                  = 13,
-	Vault90_Narrow                 = 14,
-	Climb200_Stationary            = 15,
-	Climb200_Mobile                = 16,
-	Climb200_Slide                 = 17,
-	Climb200_Narrow                = 18,
-	Climb160_Stationary            = 19,
-	Climb160_Mobile                = 20,
-	Climb160_Slide                 = 21,
-	Climb160_Narrow                = 22,
-	Climb120_Stationary            = 23,
-	Climb120_Mobile                = 24,
-	Climb120_Slide                 = 25,
-	Climb120_Narrow                = 26,
-	Climb90_Stationary             = 27,
-	Climb90_Mobile                 = 28,
-	Climb90_Slide                  = 29,
-	Climb90_Narrow                 = 30,
-	Vault90Roll                    = 31,
-	Vault120Window                 = 32,
-	Vault60_Stationary             = 33,
-	Vault60_Mobile                 = 34,
-	Vault60_Slide                  = 35,
-	Vault60_Narrow                 = 36,
-	Climb60_Stationary             = 37,
-	Climb60_Mobile                 = 38,
-	Climb60_Narrow                 = 39,
-	LedgeGrab_Up_Climb             = 40,
-	LedgeGrab_Up_Climb_Swing       = 41,
-	LedgeGrab_Up_Climb_HalfSwing   = 42,
-	LedgeGrab_Up_Vault             = 43,
-	LedgeGrab_Up_Vault_Swing       = 44,
-	LedgeGrab_Up_Vault_HalfSwing   = 45,
-	LedgeGrab_High_Climb           = 46,
-	LedgeGrab_High_Climb_Swing     = 47,
-	LedgeGrab_High_Climb_HalfSwing = 48,
-	LedgeGrab_High_Vault           = 49,
-	LedgeGrab_High_Vault_Swing     = 50,
-	LedgeGrab_High_Vault_HalfSwing = 51,
-	LedgeGrab_Low_Climb            = 52,
-	LedgeGrab_Low_Climb_Swing      = 53,
-	LedgeGrab_Low_Climb_HalfSwing  = 54,
-	LedgeGrab_Low_Vault            = 55,
-	LedgeGrab_Low_Vault_Swing      = 56,
-	LedgeGrab_Low_Vault_HalfSwing  = 57,
-	LedgeGrab_Low_Vault_Narrow     = 58,
-	LedgeGrab_Low_Vault_HalfSwing_Narrow = 59,
-	LedgeGrab_Low_Vault_Swing_Narrow = 60,
-	LedgeGrab_High_Vault_Narrow    = 61,
-	LedgeGrab_High_Vault_HalfSwing_Narrow = 62,
-	LedgeGrab_High_Vault_Swing_Narrow = 63,
-	LedgeGrab_Up_Vault_Narrow      = 64,
-	LedgeGrab_Up_Vault_HalfSwing_Narrow = 65,
-	LedgeGrab_Up_Vault_Swing_Narrow = 66,
-	EVaultAnimType_MAX             = 67
-};
-
-
-// Enum TslGame.EBuffOverlapSolveMethod
-enum class EBuffOverlapSolveMethod : uint8_t
-{
-	IgnoreLater                    = 0,
-	Overwrite                      = 1,
-	RestartTimer                   = 2,
-	Stack                          = 3,
-	EBuffOverlapSolveMethod_MAX    = 4
-};
-
-
-// Enum TslGame.EDamageVictimActorType
-enum class EDamageVictimActorType : uint8_t
-{
-	Character                      = 0,
-	Vehicle                        = 1,
-	Wheel                          = 2,
-	DestructibleActor              = 3,
-	ExplosiveItem                  = 4,
-	EDamageVictimActorType_MAX     = 5
-};
-
-
-// Enum TslGame.ECastableItemType
-enum class ECastableItemType : uint8_t
-{
-	None                           = 0,
-	Bandage                        = 1,
-	FirstAid                       = 2,
-	Medkit                         = 3,
-	EnergyDrink                    = 4,
-	Painkiller                     = 5,
-	Adrenaline                     = 6,
-	GasCan                         = 7,
-	Battery                        = 8,
-	Key                            = 9,
-	ECastableItemType_MAX          = 10
-};
-
-
-// Enum TslGame.ECastLevel
-enum class ECastLevel : uint8_t
-{
-	None                           = 0,
-	NoRestriction                  = 1,
-	Restriction                    = 2,
-	ECastLevel_MAX                 = 3
-};
-
-
-// Enum TslGame.ECastPriority
-enum class ECastPriority : uint8_t
-{
-	None                           = 0,
+	High                           = 0,
 	Low                            = 1,
-	Normal                         = 2,
-	High                           = 3,
-	Max                            = 4,
-	ECastPriority_MAX              = 5
+	ETslParticleGroupPriority_MAX  = 2
 };
 
 
-// Enum TslGame.ELandingSoundSwitchState
-enum class ELandingSoundSwitchState : uint8_t
+// Enum TslGame.ECustomDamageZoneType
+enum class ECustomDamageZoneType : uint8_t
 {
-	None                           = 0,
-	Light                          = 1,
-	Heavy                          = 2,
-	VeryHeavy                      = 3,
-	ELandingSoundSwitchState_MAX   = 4
+	Head                           = 0,
+	UpperBody                      = 1,
+	LowerBody                      = 2,
+	Arms                           = 3,
+	Legs                           = 4,
+	ECustomDamageZoneType_MAX      = 5
 };
 
 
-// Enum TslGame.EStatTrakState
-enum class EStatTrakState : uint8_t
+// Enum TslGame.ECustomDamageWeaponClass
+enum class ECustomDamageWeaponClass : uint8_t
 {
-	Run                            = 0,
-	Locked                         = 1,
-	Error                          = 2,
-	EStatTrakState_MAX             = 3
+	Bullet                         = 0,
+	Melee                          = 1,
+	ECustomDamageWeaponClass_MAX   = 2
 };
 
 
-// Enum TslGame.ESkinApplicationType
-enum class ESkinApplicationType : uint8_t
+// Enum TslGame.EArenaStartType
+enum class EArenaStartType : uint8_t
 {
-	Application_InOrder            = 0,
-	Application_Slot               = 1,
-	Application_Index              = 2,
-	Application_MAX                = 3
+	Player                         = 0,
+	AircraftStart                  = 1,
+	AircraftEnd                    = 2,
+	EArenaStartType_MAX            = 3
 };
 
 
-// Enum TslGame.ESkinMeshType
-enum class ESkinMeshType : uint8_t
+// Enum TslGame.EMolotovSimulationType
+enum class EMolotovSimulationType : uint8_t
 {
-	SkeletalMesh                   = 0,
-	AsyncStaticMesh                = 1,
-	StaticMesh                     = 2,
-	ESkinMeshType_MAX              = 3
+	Molotov_SimulationImpact       = 0,
+	Molotov_SimulationProjectile   = 1,
+	Molotov_SimulationFragment     = 2,
+	Molotov_SimulationVolumetric   = 3,
+	Molotov_MAX                    = 4
 };
 
 
-// Enum TslGame.ESkinCategory
-enum class ESkinCategory : uint8_t
+// Enum TslGame.ESpikeDeploymentState
+enum class ESpikeDeploymentState : uint8_t
 {
-	Skin_None                      = 0,
-	Skin_Equipment                 = 1,
-	Skin_Parachute                 = 2,
-	Skin_Weapon                    = 3,
-	Skin_MeleeWeapon               = 4,
-	Skin_Vehicle                   = 5,
-	Skin_MAX                       = 6
+	PreDeploy                      = 0,
+	Deploying                      = 1,
+	PostDeploy                     = 2,
+	Popped                         = 3,
+	Idle                           = 4,
+	ESpikeDeploymentState_MAX      = 5
 };
 
 
-// Enum TslGame.ESandboxGroypType
-enum class ESandboxGroypType : uint8_t
+// Enum TslGame.EWarheadExplodedState
+enum class EWarheadExplodedState : uint8_t
 {
-	Weapon                         = 0,
-	Item                           = 1,
-	Vehicle                        = 2,
-	ESandboxGroypType_MAX          = 3
+	NotExploded                    = 0,
+	Exploded                       = 1,
+	EWarheadExplodedState_MAX      = 2
 };
 
 
-// Enum TslGame.ESandboxPowerType
-enum class ESandboxPowerType : uint8_t
+// Enum TslGame.ETslReferenceObjType
+enum class ETslReferenceObjType : uint8_t
 {
-	None                           = 0,
-	Fly                            = 1,
-	InvulnerableEffect             = 2,
-	CarePackage                    = 3,
-	RedZone                        = 4,
-	Revive                         = 5,
-	TeamRevive                     = 6,
-	GiveItemToEveryone             = 7,
-	ESandboxPowerType_MAX          = 8
-};
-
-
-// Enum TslGame.EPlayerInputType
-enum class EPlayerInputType : uint8_t
-{
-	KeyboardMouse                  = 0,
-	Gamepad                        = 1,
-	Mixed                          = 2,
-	EPlayerInputType_MAX           = 3
-};
-
-
-// Enum TslGame.EAntiCheatKickType
-enum class EAntiCheatKickType : uint8_t
-{
-	Default                        = 0,
-	HWID                           = 1,
-	MouseMacro                     = 2,
-	InGame                         = 3,
-	BattleEye                      = 4,
-	EAntiCheatKickType_MAX         = 5
-};
-
-
-// Enum TslGame.ECheatType
-enum class ECheatType : uint8_t
-{
-	SpeedHack                      = 0,
-	SpeedHack_UE                   = 1,
-	IgnoreWall_Hit                 = 2,
-	IgnoreWall_Sight               = 3,
-	IgnoreVelocity_Hit             = 4,
-	IgnoreVelocity                 = 5,
-	IgnoreVelocity2                = 6,
-	ItemPackage                    = 7,
-	CarePackageMount               = 8,
-	HitLag                         = 9,
-	Aimbot                         = 10,
-	InvalidImpact                  = 11,
-	InvalidImpactZ                 = 12,
-	InvalidImpact_Gun_C            = 13,
-	InvalidOrigin_Gun              = 14,
-	InvalidOrigin_Melee            = 15,
-	InvalidOrigin_Punch            = 16,
-	InvalidOrigin_Throwable        = 17,
-	InvalidOrigin_MeleeThrow       = 18,
-	InvalidSimStep_MeleeThrow      = 19,
-	InvalidRange                   = 20,
-	InvalidRange2                  = 21,
-	InvalidSequence                = 22,
-	InvalidAmmo                    = 23,
-	InvalidReviving                = 24,
-	InvalidKick                    = 25,
-	InvalidA0                      = 26,
-	InvalidB0                      = 27,
-	InvalidB1                      = 28,
-	InvalidB101                    = 29,
-	InvalidH0                      = 30,
-	InvalidOrigin_Gun_C            = 31,
-	InvalidD0                      = 32,
-	InvalidD1                      = 33,
-	InvalidS0                      = 34,
-	InvalidS1                      = 35,
-	InvalidH1                      = 36,
-	InvalidH2                      = 37,
-	InvalidH3                      = 38,
-	InvalidC0                      = 39,
-	InvalidC1                      = 40,
-	InvalidC2                      = 41,
-	InvalidC3                      = 42,
-	InvalidC4                      = 43,
-	InvalidC5                      = 44,
-	InvalidC6                      = 45,
-	InvalidC7                      = 46,
-	InvalidT0                      = 47,
-	InvalidT1                      = 48,
-	InvalidT2                      = 49,
-	InvalidAimDir                  = 50,
-	InvalidPelletDir               = 51,
-	InvalidAmmoSpeed               = 52,
-	InvalidAmmoDir                 = 53,
-	InvalidCharacterFlag           = 54,
-	InvalidPropertyCrc             = 55,
-	InvalidWeaponCrc               = 56,
-	InvalidWeaponRecoil            = 57,
-	InvalidSwayBuffer              = 58,
-	InvalidCameraYaw               = 59,
-	InvalidWeaponPackageCrc        = 60,
-	InvalidWeaponFlag              = 61,
-	InvalidHitComponent            = 62,
-	InvalidCollisionProfileCrc     = 63,
-	InvalidPakListCrc              = 64,
-	InvalidPOV                     = 65,
-	InvalidCharacterCrc            = 66,
-	VerifyAim                      = 67,
-	CHKSUM_GUN                     = 68,
-	CHKSUM_PUNCH                   = 69,
-	CHKSUM_MELEE                   = 70,
-	CHKSUM_VEHICLE                 = 71,
-	CHKSUM_A0                      = 72,
-	CHKSUM_T0                      = 73,
-	CHKSUM_S0                      = 74,
-	CHKSUM_D0                      = 75,
-	CHKSUM_V0                      = 76,
-	CHKSUM_W0                      = 77,
-	CHKSUM_T1                      = 78,
-	CHKSUM_D1                      = 79,
-	CHKSUM_CD                      = 80,
-	CHKSUM_LC                      = 81,
-	CHKSUM_V1                      = 82,
-	CHKSUM_P0                      = 83,
-	CHKSUM_BP                      = 84,
-	CHKSUM_G0                      = 85,
-	CHKSUM_G1                      = 86,
-	CHKSUM_H2                      = 87,
-	CHKSUM_H3                      = 88,
-	CHKSUM_UO                      = 89,
-	CHKSUM_UF                      = 90,
-	VHC_RI                         = 91,
-	VHC_SC                         = 92,
-	VHC_MG                         = 93,
-	VHC_MG_FF                      = 94,
-	VHC_MG_FC                      = 95,
-	VHC_MG_SW                      = 96,
-	VHC_MG_OS                      = 97,
-	VHC_MG_BC                      = 98,
-	VHC_MG_TC                      = 99,
-	VHC_MG_PL                      = 100,
-	VHC_MG_HL                      = 101,
-	VHC_MG_SD                      = 102,
-	VHC_MGB                        = 103,
-	VHC_MGB_FF                     = 104,
-	VHC_MGB_FC                     = 105,
-	VHC_MGB_OS                     = 106,
-	VHC_MGB_BC                     = 107,
-	VHC_MGB_TC                     = 108,
-	VHC_MGB_PL                     = 109,
-	VHC_MGB_HL                     = 110,
-	VHC_MGF_OS                     = 111,
-	VHC_MGF_TC                     = 112,
-	VHC_MGF_BC                     = 113,
-	VHC_MGF_SD                     = 114,
-	VHC_KILL                       = 115,
-	VHC_ED                         = 116,
-	VHC_SIMULATION_ACTIVATE        = 117,
-	VHC_SIMULATION_DEACTIVATE      = 118,
-	VHC_TRY_BYPASS_SERVERSIMUL     = 119,
-	VHC_BYPASSED_SERVERSIMUL       = 120,
-	VHC_FORCE_SERVERSIMUL          = 121,
-	CK_ACTIVATE                    = 122,
-	CK_DEACTIVATE                  = 123,
-	AntiCheatKick_WallHack         = 124,
-	AntiCheatKick_ESP              = 125,
-	AntiCheatKick_SpeedHack1       = 126,
-	AntiCheatKick_SpeedHack2       = 127,
-	AntiCheatKick_SpeedHack3       = 128,
-	AntiCheatKick_PLFC             = 129,
-	AntiCheatKick_TCFC             = 130,
-	AntiCheatKick_HL               = 131,
-	AntiCheatKick_OS               = 132,
-	AntiCheatKick_FC               = 133,
-	VehicleSimulation_PLFC         = 134,
-	VehicleSimulation_TCFC         = 135,
-	VehicleSimulation_HL           = 136,
-	VehicleSimulation_OS           = 137,
-	VehicleSimulation_FC           = 138,
-	QS_AA                          = 139,
-	QS_NA                          = 140,
-	QS_AL                          = 141,
-	QS_AJ                          = 142,
-	QS_AT                          = 143,
-	QS_ADT                         = 144,
-	QS_CJE                         = 145,
-	QS_CWE                         = 146,
-	CP_RZ                          = 147,
-	CP_RZD                         = 148,
-	KGB_AF                         = 149,
-	ESP1                           = 150,
-	ESP2                           = 151,
-	ESP3                           = 152,
-	SimilarHit                     = 153,
-	DoubleKill                     = 154,
-	B0Log                          = 155,
-	InputLog                       = 156,
-	FireInputLog                   = 157,
-	HighLocationVehicle            = 158,
-	HighLocationBoat               = 159,
-	None                           = 160,
-	ECheatType_MAX                 = 161
-};
-
-
-// Enum TslGame.ECharFlagsNormal
-enum class ECharFlagsNormal : uint8_t
-{
-	IsGroggying                    = 0,
-	IsActiveRagdollActive          = 1,
-	HasShieldEquipped              = 2,
-	IsOutsideBluezone              = 3,
-	ECharFlagsNormal_MAX           = 4
-};
-
-
-// Enum TslGame.ELandingState
-enum class ELandingState : uint8_t
-{
-	None                           = 0,
-	Falling                        = 1,
-	HeavyFalling                   = 2,
-	ExtremeFalling                 = 3,
-	FallingRecovery                = 4,
-	PostLandingRecovery            = 5,
-	ELandingState_MAX              = 6
-};
-
-
-// Enum TslGame.ECharFlagsSkipOwner
-enum class ECharFlagsSkipOwner : uint8_t
-{
-	WantsToRun                     = 0,
-	WantsToSprint                  = 1,
-	WantsToSprintingAuto           = 2,
-	WantsToRollingLeft             = 3,
-	WantsToRollingRight            = 4,
-	AimStateActive                 = 5,
-	IsThirdPerson                  = 6,
-	IsReviving                     = 7,
-	IgnoreRotation                 = 8,
-	IsWeaponObstructed             = 9,
-	IsCoatEquipped                 = 10,
-	IsThrowHigh                    = 11,
-	WantsToCancelVault             = 12,
-	IsScopingRemote                = 13,
-	IsAimingRemote                 = 14,
-	IsFirstPersonRemote            = 15,
-	IsInVehicleRemote              = 16,
-	IsPeekLeftRemote               = 17,
-	IsPeekRightRemote              = 18,
-	IsHoldingAngled                = 19,
-	ECharFlagsSkipOwner_MAX        = 20
-};
-
-
-// Enum TslGame.EPunchDamageType
-enum class EPunchDamageType : uint8_t
-{
-	PunchDamage_Light              = 0,
-	PunchDamage_Heavy              = 1,
-	PunchDamage_MAX                = 2
-};
-
-
-// Enum TslGame.EMovementType
-enum class EMovementType : uint8_t
-{
-	M_StandWalk                    = 0,
-	M_StandRun                     = 1,
-	M_StandSprint                  = 2,
-	M_CrouchWalk                   = 3,
-	M_CrouchRun                    = 4,
-	M_CrouchSprint                 = 5,
-	M_ProneWalk                    = 6,
-	M_ProneRun                     = 7,
-	M_ProneSprint                  = 8,
-	M_StandScope                   = 9,
-	M_CrouchScope                  = 10,
-	M_ProneScope                   = 11,
-	M_StandAim                     = 12,
-	M_CrouchAim                    = 13,
-	M_ProneAim                     = 14,
-	M_Swim                         = 15,
-	M_UnderwaterSwim               = 16,
-	M_DBNO                         = 17,
-	M_MAX                          = 18
-};
-
-
-// Enum TslGame.ERaycastDirection
-enum class ERaycastDirection : uint8_t
-{
-	Forward                        = 0,
-	Down_45_Degrees                = 1,
-	Down                           = 2,
-	ERaycastDirection_MAX          = 3
-};
-
-
-// Enum TslGame.ELobbyItemPointSellingType
-enum class ELobbyItemPointSellingType : uint8_t
-{
-	Normal                         = 0,
-	WeeklyDouble                   = 1,
-	ELobbyItemPointSellingType_MAX = 2
-};
-
-
-// Enum TslGame.ELobbyItemPlatform
-enum class ELobbyItemPlatform : uint8_t
-{
-	PC_Steam                       = 0,
-	PC_NonSteam                    = 1,
-	Xbox                           = 2,
-	ELobbyItemPlatform_MAX         = 3
-};
-
-
-// Enum TslGame.ELobbyItemTier
-enum class ELobbyItemTier : uint8_t
-{
-	Basic                          = 0,
-	Common                         = 1,
-	Classic                        = 2,
-	Special                        = 3,
-	Rare                           = 4,
-	Elite                          = 5,
-	Epic                           = 6,
-	Legendary                      = 7,
-	Ultimate                       = 8,
-	Event                          = 9,
-	ELobbyItemTier_MAX             = 10
-};
-
-
-// Enum TslGame.ELobbyItemCategory
-enum class ELobbyItemCategory : uint8_t
-{
-	Belt                           = 0,
-	Body                           = 1,
-	Eyes                           = 2,
-	Feet                           = 3,
-	Head                           = 4,
-	Jacket                         = 5,
-	Legs                           = 6,
-	Mask                           = 7,
-	Hands                          = 8,
-	Box                            = 9,
-	Key                            = 10,
-	WeaponSkin                     = 11,
-	ParachuteSkin                  = 12,
-	HelmetSkin                     = 13,
-	BackpackSkin                   = 14,
-	TorsoArmorSkin                 = 15,
-	VehicleSkin                    = 16,
-	Multislot                      = 17,
-	ELobbyItemCategory_MAX         = 18
-};
-
-
-// Enum TslGame.EAttachParent
-enum class EAttachParent : uint8_t
-{
-	None                           = 0,
+	GameMode                       = 0,
 	Character                      = 1,
-	WeaponGun                      = 2,
-	EAttachParent_MAX              = 3
+	Preload                        = 2,
+	ETslReferenceObjType_MAX       = 3
 };
 
 
-// Enum TslGame.ERoamingActionType
-enum class ERoamingActionType : uint8_t
+// Enum TslGame.EReplayTimelineMode
+enum class EReplayTimelineMode : uint8_t
 {
-	RAction_MoveToCenter           = 0,
-	RAction_OcclusionCrouch        = 1,
-	RAction_OcclusionProne         = 2,
-	RActoin_Max                    = 3,
-	ERoamingActionType_MAX         = 4
+	ReplayPlay                     = 0,
+	ReplayEditor                   = 1,
+	ReplayRender                   = 2,
+	EReplayTimelineMode_MAX        = 3
 };
 
 
-// Enum TslGame.EAIODealDoor
-enum class EAIODealDoor : uint8_t
+// Enum TslGame.ETrainHeadingDir
+enum class ETrainHeadingDir : uint8_t
 {
-	Deal_None                      = 0,
-	Deal_Wait                      = 1,
-	Deal_MAX                       = 2
+	XPositive                      = 0,
+	XNegative                      = 1,
+	YPositive                      = 2,
+	YNegative                      = 3,
+	ETrainHeadingDir_MAX           = 4
 };
 
 
-// Enum TslGame.ESurviveWeaponPropSlot
-enum class ESurviveWeaponPropSlot : uint8_t
+// Enum TslGame.ESwitcherHideWhen
+enum class ESwitcherHideWhen : uint8_t
 {
-	SWPS_MainShootWeapon1          = 0,
-	SWPS_MainShootWeapon2          = 1,
-	SWPS_SubShootWeapon            = 2,
-	SWPS_MeleeWeapon               = 3,
-	SWPS_HandProp                  = 4,
-	SWPS_Max                       = 5
+	UsingKeyboardMouse             = 0,
+	UsingGamepad                   = 1,
+	ESwitcherHideWhen_MAX          = 2
 };
 
 
-// Enum TslGame.EWeatherStatusType
-enum class EWeatherStatusType : uint8_t
+// Enum TslGame.ENoReloadGuideType
+enum class ENoReloadGuideType : uint8_t
 {
-	EWeatherStatusType_None        = 0,
-	EWeatherStatusType_SunnyDay    = 1,
-	EWeatherStatusType_Night       = 2,
-	EWeatherStatusType_Fog         = 3,
-	EWeatherStatusType_Rain        = 4,
-	EWeatherStatusType_Snow        = 5,
-	EWeatherStatusType_Blizzard    = 6,
-	EWeatherStatusType_MAX         = 7
+	Alwyas                         = 0,
+	WhenCurrentWeapon              = 1,
+	ENoReloadGuideType_MAX         = 2
 };
 
 
-// Enum TslGame.UTPickerTargetType
-enum class EUTPickerTargetType : uint8_t
-{
-	PTT_FRIEND                     = 0,
-	PTT_ENEMY                      = 1,
-	PTT_ALL                        = 2,
-	PTT_Self                       = 3,
-	PTT_MAX                        = 4
-};
-
-
-// Enum TslGame.ExtraPlayerLiveState
-enum class ExtraPlayerLiveState : uint8_t
-{
-	InDefault                      = 0,
-	InPlane                        = 1,
-	InParachute                    = 2,
-	InVehicle                      = 3,
-	InDying                        = 4,
-	InDied                         = 5,
-	Offline                        = 6,
-	ExtraPlayerLiveState_MAX       = 7
-};
-
-
-// Enum TslGame.EAIMoveType
-enum class EAIMoveType : uint8_t
-{
-	StraightMove                   = 0,
-	CurveMove                      = 1,
-	EAIMoveType_MAX                = 2
-};
-
-
-// Enum TslGame.EAIWeaponShootType
-enum class EAIWeaponShootType : uint8_t
-{
-	SingleShot                     = 0,
-	Auto                           = 1,
-	EAIWeaponShootType_MAX         = 2
-};
-
-
-// Enum TslGame.EAINewFocusPriority
-enum class EAINewFocusPriority : uint8_t
-{
-	Default                        = 0,
-	Move                           = 1,
-	Gameplay                       = 2,
-	EAINewFocusPriority_MAX        = 3
-};
-
-
-// Enum TslGame.EAIMovePose
-enum class EAIMovePose : uint8_t
-{
-	Walk                           = 0,
-	Run                            = 1,
-	CrouchSprint                   = 2,
-	KeepCurrentPose                = 3,
-	EAIMovePose_MAX                = 4
-};
-
-
-// Enum TslGame.EAIPoseState
-enum class EAIPoseState : uint8_t
-{
-	Stand                          = 0,
-	Crouch                         = 1,
-	Prone                          = 2,
-	Jump                           = 3,
-	Reload                         = 4,
-	UnArmed                        = 5,
-	EAIPoseState_MAX               = 6
-};
-
-
-// Enum TslGame.EAITriggerAttrType
-enum class EAITriggerAttrType : uint8_t
-{
-	None                           = 0,
-	Health                         = 1,
-	Energy                         = 2,
-	EAITriggerAttrType_MAX         = 3
-};
-
-
-// Enum TslGame.EAIAttrCompareType
-enum class EAIAttrCompareType : uint8_t
-{
-	None                           = 0,
-	Great                          = 1,
-	Less                           = 2,
-	EAIAttrCompareType_MAX         = 3
-};
-
-
-// Enum TslGame.EAIEquipSpawnItemType
-enum class EAIEquipSpawnItemType : uint8_t
-{
-	Shoot_Weap                     = 0,
-	Backpack                       = 1,
-	other                          = 2,
-	EAIEquipSpawnItemType_MAX      = 3
-};
-
-
-// Enum TslGame.EThownWeapon_AI
-enum class EThownWeapon_AI : uint8_t
-{
-	GRENADE                        = 0,
-	MOLOTOV                        = 1,
-	SMOKEBOMB                      = 2,
-	FLASHBANG                      = 3,
-	EThownWeapon_MAX               = 4
-};
-
-
-// Enum TslGame.EThrowablePoseState_AI
-enum class EThrowablePoseState_AI : uint8_t
+// Enum TslGame.EMeleeThrowState
+enum class EMeleeThrowState : uint8_t
 {
 	Idle                           = 0,
-	PinOffStart                    = 1,
-	Cooking                        = 2,
-	WaitForThrow                   = 3,
-	Throwing                       = 4,
-	EThrowablePoseState_MAX        = 5
+	Prepare                        = 1,
+	Throw                          = 2,
+	EMeleeThrowState_MAX           = 3
 };
 
 
-// Enum TslGame.ERoamingMoveType
-enum class ERoamingMoveType : uint8_t
+// Enum TslGame.EHitCheckType
+enum class EHitCheckType : uint8_t
 {
-	RMoveCenter                    = 0,
-	RMoveMax                       = 1,
-	ERoamingMoveType_MAX           = 2
+	HitCheck_Once                  = 0,
+	HitCheck_Multi                 = 1,
+	HitCheck_MAX                   = 2
 };
 
 
-// Enum TslGame.EModifyBlackboardDataValueType
-enum class EModifyBlackboardDataValueType : uint8_t
+// Enum TslGame.EWeaponTransitionState
+enum class EWeaponTransitionState : uint8_t
 {
-	Int                            = 0,
-	Float                          = 1,
-	Bool                           = 2,
-	String                         = 3,
-	Object                         = 4,
-	Vector3                        = 5,
-	EModifyBlackboardDataValueType_MAX = 6
+	Stable                         = 0,
+	Arming                         = 1,
+	UnArming                       = 2,
+	EWeaponTransitionState_MAX     = 3
+};
+
+
+// Enum TslGame.EMinimapFocus
+enum class EMinimapFocus : uint8_t
+{
+	CharacterFocus                 = 0,
+	NextPlayzoneFocus              = 1,
+	None                           = 2,
+	EMinimapFocus_MAX              = 3
+};
+
+
+// Enum TslGame.ETslArenaLoadoutItemCategory
+enum class ETslArenaLoadoutItemCategory : uint8_t
+{
+	Pistol                         = 0,
+	Shotgun                        = 1,
+	Smg                            = 2,
+	Ar                             = 3,
+	Dmr                            = 4,
+	Sr                             = 5,
+	Equipment                      = 6,
+	ETslArenaLoadoutItemCategory_MAX = 7
+};
+
+
+// Enum TslGame.ETslArenaLoadoutDirections
+enum class ETslArenaLoadoutDirections : uint8_t
+{
+	Up                             = 0,
+	Right                          = 1,
+	Down                           = 2,
+	Left                           = 3,
+	ETslArenaLoadoutDirections_MAX = 4
+};
+
+
+// Enum TslGame.EConditionOfDeath
+enum class EConditionOfDeath : uint8_t
+{
+	HeadShot                       = 0,
+	DBNO                           = 1,
+	DBNOByHeadShot                 = 2,
+	None                           = 3,
+	EConditionOfDeath_MAX          = 4
+};
+
+
+// Enum TslGame.EControllerImageType
+enum class EControllerImageType : uint8_t
+{
+	XboxOne                        = 0,
+	PS4                            = 1,
+	Quail                          = 2,
+	Quail_ThirdParty               = 3,
+	None                           = 4,
+	EControllerImageType_MAX       = 5
+};
+
+
+// Enum TslGame.EBinaryStepperType
+enum class EBinaryStepperType : uint8_t
+{
+	OFF                            = 0,
+	ON                             = 1,
+	EBinaryStepperType_MAX         = 2
+};
+
+
+// Enum TslGame.ETslWheelWidgetMouseCursorDirectionType
+enum class ETslWheelWidgetMouseCursorDirectionType : uint8_t
+{
+	ABSOLUTE_COORD                 = 0,
+	AREA_RESTRICTED_COORD          = 1,
+	CIRCULAR_RESTRICTED_COORD      = 2,
+	ETslWheelWidgetMouseCursorDirectionType_MAX = 3
+};
+
+
+// Enum TslGame.ETslWheelWidgetSelectType
+enum class ETslWheelWidgetSelectType : uint8_t
+{
+	BY_CLICK                       = 0,
+	BY_RELEASE                     = 1,
+	BY_MAX                         = 2
+};
+
+
+// Enum TslGame.EBluezoneState
+enum class EBluezoneState : uint8_t
+{
+	None                           = 0,
+	Wait                           = 1,
+	Release                        = 2,
+	EBluezoneState_MAX             = 3
+};
+
+
+// Enum TslGame.ECounterWidgetType
+enum class ECounterWidgetType : uint8_t
+{
+	Assist                         = 0,
+	ECounterWidgetType_MAX         = 1
+};
+
+
+// Enum TslGame.EDisplayPlayerInfoType
+enum class EDisplayPlayerInfoType : uint8_t
+{
+	PlayerList                     = 0,
+	EngagedEnemies                 = 1,
+	NearbyPlayers                  = 2,
+	OtherEngagements               = 3,
+	ObserverTeamInfoList           = 4,
+	EDisplayPlayerInfoType_MAX     = 5
+};
+
+
+// Enum TslGame.EMarkStates
+enum class EMarkStates : uint8_t
+{
+	Normal                         = 0,
+	Groggy                         = 1,
+	Dead                           = 2,
+	Vehicle                        = 3,
+	Parachute                      = 4,
+	Quitter                        = 5,
+	Aircraft                       = 6,
+	ItemRequest                    = 7,
+	EMarkStates_MAX                = 8
+};
+
+
+// Enum TslGame.ETeenageInfoType
+enum class ETeenageInfoType : uint8_t
+{
+	Normal                         = 0,
+	Season                         = 1,
+	ETeenageInfoType_MAX           = 2
 };
 
 
@@ -9416,450 +8599,1454 @@ enum class EObserverPlayerListType : uint8_t
 };
 
 
-// Enum TslGame.ETslParticleCullType
-enum class ETslParticleCullType : uint8_t
+// Enum TslGame.ETppAimCameraPosition
+enum class ETppAimCameraPosition : uint8_t
+{
+	LatestAimPosition              = 0,
+	LastPeekingPosition            = 1,
+	ResetToRightShoulderPosition   = 2,
+	ResetToLeftShoulderPosition    = 3,
+	ETppAimCameraPosition_MAX      = 4
+};
+
+
+// Enum TslGame.EAccessorySlot
+enum class EAccessorySlot : uint8_t
+{
+	Slot_Primary                   = 0,
+	Slot_Secondary                 = 1,
+	Slot_SideArm                   = 2,
+	Slot_Melee                     = 3,
+	Slot_Thrown                    = 4,
+	Slot_None                      = 5,
+	Slot_MAX                       = 6
+};
+
+
+// Enum TslGame.EInventorySlotType
+enum class EInventorySlotType : uint8_t
+{
+	Vicinity                       = 0,
+	Inventory                      = 1,
+	Crafting                       = 2,
+	Equipment                      = 3,
+	Weapon                         = 4,
+	Max                            = 5,
+	EInventorySlotType_MAX         = 6
+};
+
+
+// Enum TslGame.ELobbyCharacterCameraType
+enum class ELobbyCharacterCameraType : uint8_t
 {
 	None                           = 0,
-	Distance                       = 1,
-	Frustum                        = 2,
-	LastRenderedTime               = 3,
-	SameTransform                  = 4,
-	NearbyTransform                = 5,
-	DistAndFrustumAndNear          = 6,
-	All                            = 7,
-	ETslParticleCullType_MAX       = 8
+	WholeBodyCamera                = 1,
+	TopCamera                      = 2,
+	HeadCamera                     = 3,
+	BodyCamera                     = 4,
+	LegCamera                      = 5,
+	FootCamera                     = 6,
+	Max                            = 7,
+	ELobbyCharacterCameraType_MAX  = 8
 };
 
 
-// Enum TslGame.ETslParticleGroupPriority
-enum class ETslParticleGroupPriority : uint8_t
+// Enum TslGame.EAnimWeaponSpecificClass
+enum class EAnimWeaponSpecificClass : uint8_t
 {
-	High                           = 0,
-	Low                            = 1,
-	ETslParticleGroupPriority_MAX  = 2
+	None                           = 0,
+	EAnimWeaponSpecificClass_MAX   = 1
 };
 
 
-// Enum TslGame.ECustomDamageZoneType
-enum class ECustomDamageZoneType : uint8_t
+// Enum TslGame.EContinuousHealItem
+enum class EContinuousHealItem : uint8_t
 {
-	Head                           = 0,
-	UpperBody                      = 1,
-	LowerBody                      = 2,
-	Arms                           = 3,
-	Legs                           = 4,
-	ECustomDamageZoneType_MAX      = 5
+	Continuous_On                  = 0,
+	Bandaged_Only                  = 1,
+	Continuous_Off                 = 2,
+	EContinuousHealItem_MAX        = 3
 };
 
 
-// Enum TslGame.ECustomDamageWeaponClass
-enum class ECustomDamageWeaponClass : uint8_t
+// Enum TslGame.EWeaponClass
+enum class EWeaponClass : uint8_t
 {
-	Bullet                         = 0,
-	Melee                          = 1,
-	ECustomDamageWeaponClass_MAX   = 2
+	Class_None                     = 0,
+	Class_Pistol                   = 1,
+	Class_SMG                      = 2,
+	Class_Rifle                    = 3,
+	Class_Carbine                  = 4,
+	Class_Shotgun                  = 5,
+	Class_Sniper                   = 6,
+	Class_DMR                      = 7,
+	Class_LMG                      = 8,
+	Class_Melee                    = 9,
+	Class_Throwable                = 10,
+	Class_Shield                   = 11,
+	Class_Crossbow                 = 12,
+	Class_Launcher                 = 13,
+	EWeaponClass_MAX               = 14
 };
 
 
-// Enum TslGame.EArenaStartType
-enum class EArenaStartType : uint8_t
+// Enum TslGame.EAllowedThrowMode
+enum class EAllowedThrowMode : uint8_t
 {
-	Player                         = 0,
-	AircraftStart                  = 1,
-	AircraftEnd                    = 2,
-	EArenaStartType_MAX            = 3
+	Any                            = 0,
+	ThrowHigh                      = 1,
+	ThrowLow                       = 2,
+	EAllowedThrowMode_MAX          = 3
 };
 
 
-// Enum TslGame.EMolotovSimulationType
-enum class EMolotovSimulationType : uint8_t
+// Enum TslGame.ECharThrowMode
+enum class ECharThrowMode : uint8_t
 {
-	Molotov_SimulationImpact       = 0,
-	Molotov_SimulationProjectile   = 1,
-	Molotov_SimulationFragment     = 2,
-	Molotov_SimulationVolumetric   = 3,
-	Molotov_MAX                    = 4
+	ThrowHigh                      = 0,
+	ThrowLow                       = 1,
+	ECharThrowMode_MAX             = 2
 };
 
 
-// Enum TslGame.ESpikeDeploymentState
-enum class ESpikeDeploymentState : uint8_t
+// Enum TslGame.EAttachmentCalculateType
+enum class EAttachmentCalculateType : uint8_t
 {
-	PreDeploy                      = 0,
-	Deploying                      = 1,
-	PostDeploy                     = 2,
-	Popped                         = 3,
-	Idle                           = 4,
-	ESpikeDeploymentState_MAX      = 5
+	Addition                       = 0,
+	Multiply                       = 1,
+	EAttachmentCalculateType_MAX   = 2
 };
 
 
-// Enum TslGame.EWarheadExplodedState
-enum class EWarheadExplodedState : uint8_t
+// Enum TslGame.EAutoEquipAttachmentForScopeMode
+enum class EAutoEquipAttachmentForScopeMode : uint8_t
 {
-	NotExploded                    = 0,
-	Exploded                       = 1,
-	EWarheadExplodedState_MAX      = 2
+	Off                            = 0,
+	Sight_Only                     = 1,
+	ALL                            = 2,
+	EAutoEquipAttachmentForScopeMode_MAX = 3
 };
 
 
-// Enum TslGame.ETslReferenceObjType
-enum class ETslReferenceObjType : uint8_t
+// Enum TslGame.EItemCategory
+enum class EItemCategory : uint8_t
 {
-	GameMode                       = 0,
-	Character                      = 1,
-	Preload                        = 2,
-	ETslReferenceObjType_MAX       = 3
+	None                           = 0,
+	Equipment                      = 1,
+	Weapon                         = 2,
+	Attachment                     = 3,
+	Ammunition                     = 4,
+	Use                            = 5,
+	Skin                           = 6,
+	Event                          = 7,
+	EItemCategory_MAX              = 8
 };
 
 
-// Enum TslGame.EReplayTimelineMode
-enum class EReplayTimelineMode : uint8_t
+// Enum TslGame.EFiringMode
+enum class EFiringMode : uint8_t
 {
-	ReplayPlay                     = 0,
-	ReplayEditor                   = 1,
-	ReplayRender                   = 2,
-	EReplayTimelineMode_MAX        = 3
+	Normal                         = 0,
+	Burst                          = 1,
+	FullAuto                       = 2,
+	FullAutoFast                   = 3,
+	EFiringMode_MAX                = 4
 };
 
 
-// Enum TslGame.ETrainHeadingDir
-enum class ETrainHeadingDir : uint8_t
+// Enum TslGame.ECharacterGait
+enum class ECharacterGait : uint8_t
 {
-	XPositive                      = 0,
-	XNegative                      = 1,
-	YPositive                      = 2,
-	YNegative                      = 3,
-	ETrainHeadingDir_MAX           = 4
+	Walk                           = 0,
+	Run                            = 1,
+	Sprint                         = 2,
+	ECharacterGait_MAX             = 3
 };
 
 
-// Enum TslGame.ESwitcherHideWhen
-enum class ESwitcherHideWhen : uint8_t
+// Enum TslGame.EWeaponHand
+enum class EWeaponHand : uint8_t
 {
-	UsingKeyboardMouse             = 0,
-	UsingGamepad                   = 1,
-	ESwitcherHideWhen_MAX          = 2
-};
-
-
-// Enum TslGame.ENoReloadGuideType
-enum class ENoReloadGuideType : uint8_t
-{
-	Alwyas                         = 0,
-	WhenCurrentWeapon              = 1,
-	ENoReloadGuideType_MAX         = 2
-};
-
-
-// Enum TslGame.EMeleeThrowState
-enum class EMeleeThrowState : uint8_t
-{
-	Idle                           = 0,
-	Prepare                        = 1,
-	Throw                          = 2,
-	EMeleeThrowState_MAX           = 3
-};
-
-
-// Enum TslGame.EHitCheckType
-enum class EHitCheckType : uint8_t
-{
-	HitCheck_Once                  = 0,
-	HitCheck_Multi                 = 1,
-	HitCheck_MAX                   = 2
-};
-
-
-// Enum TslGame.EWeaponTransitionState
-enum class EWeaponTransitionState : uint8_t
-{
-	Stable                         = 0,
-	Arming                         = 1,
-	UnArming                       = 2,
-	EWeaponTransitionState_MAX     = 3
-};
-
-
-// Enum TslGame.EMinimapFocus
-enum class EMinimapFocus : uint8_t
-{
-	CharacterFocus                 = 0,
-	NextPlayzoneFocus              = 1,
-	None                           = 2,
-	EMinimapFocus_MAX              = 3
-};
-
-
-// Enum TslGame.ETslArenaLoadoutItemCategory
-enum class ETslArenaLoadoutItemCategory : uint8_t
-{
-	Pistol                         = 0,
-	Shotgun                        = 1,
-	Smg                            = 2,
-	Ar                             = 3,
-	Dmr                            = 4,
-	Sr                             = 5,
-	Equipment                      = 6,
-	ETslArenaLoadoutItemCategory_MAX = 7
-};
-
-
-// Enum TslGame.ETslArenaLoadoutDirections
-enum class ETslArenaLoadoutDirections : uint8_t
-{
-	Up                             = 0,
+	Left                           = 0,
 	Right                          = 1,
-	Down                           = 2,
-	Left                           = 3,
-	ETslArenaLoadoutDirections_MAX = 4
+	Total                          = 2,
+	EWeaponHand_MAX                = 3
 };
 
 
-// Enum TslGame.EConditionOfDeath
-enum class EConditionOfDeath : uint8_t
-{
-	HeadShot                       = 0,
-	DBNO                           = 1,
-	DBNOByHeadShot                 = 2,
-	None                           = 3,
-	EConditionOfDeath_MAX          = 4
-};
-
-
-// Enum TslGame.EControllerImageType
-enum class EControllerImageType : uint8_t
-{
-	XboxOne                        = 0,
-	PS4                            = 1,
-	Quail                          = 2,
-	Quail_ThirdParty               = 3,
-	None                           = 4,
-	EControllerImageType_MAX       = 5
-};
-
-
-// Enum TslGame.EBinaryStepperType
-enum class EBinaryStepperType : uint8_t
-{
-	OFF                            = 0,
-	ON                             = 1,
-	EBinaryStepperType_MAX         = 2
-};
-
-
-// Enum TslGame.ETslWheelWidgetMouseCursorDirectionType
-enum class ETslWheelWidgetMouseCursorDirectionType : uint8_t
-{
-	ABSOLUTE_COORD                 = 0,
-	AREA_RESTRICTED_COORD          = 1,
-	CIRCULAR_RESTRICTED_COORD      = 2,
-	ETslWheelWidgetMouseCursorDirectionType_MAX = 3
-};
-
-
-// Enum TslGame.ETslWheelWidgetSelectType
-enum class ETslWheelWidgetSelectType : uint8_t
-{
-	BY_CLICK                       = 0,
-	BY_RELEASE                     = 1,
-	BY_MAX                         = 2
-};
-
-
-// Enum TslGame.EBluezoneState
-enum class EBluezoneState : uint8_t
+// Enum TslGame.EWeaponArmState
+enum class EWeaponArmState : uint8_t
 {
 	None                           = 0,
-	Wait                           = 1,
-	Release                        = 2,
-	EBluezoneState_MAX             = 3
+	NotArmed                       = 1,
+	Arming                         = 2,
+	Armed                          = 3,
+	UnArming                       = 4,
+	EWeaponArmState_MAX            = 5
 };
 
 
-// Enum TslGame.ECounterWidgetType
-enum class ECounterWidgetType : uint8_t
+// Enum TslGame.EPlatoonType
+enum class EPlatoonType : uint8_t
 {
-	Assist                         = 0,
-	ECounterWidgetType_MAX         = 1
+	PlatoonA                       = 0,
+	PlatoonB                       = 1,
+	EPlatoonType_MAX               = 2
 };
 
 
-// Enum TslGame.EDisplayPlayerInfoType
-enum class EDisplayPlayerInfoType : uint8_t
+// Enum TslGame.EAnimVehicleSeatType
+enum class EAnimVehicleSeatType : uint8_t
 {
-	PlayerList                     = 0,
-	EngagedEnemies                 = 1,
-	NearbyPlayers                  = 2,
-	OtherEngagements               = 3,
-	ObserverTeamInfoList           = 4,
-	EDisplayPlayerInfoType_MAX     = 5
+	BikeDriver                     = 0,
+	BikePassenger                  = 1,
+	VehicleDriver                  = 2,
+	VehiclePassenger               = 3,
+	Pilot                          = 4,
+	AircraftPassenger              = 5,
+	GliderPassenger                = 6,
+	EAnimVehicleSeatType_MAX       = 7
 };
 
 
-// Enum TslGame.EMarkStates
-enum class EMarkStates : uint8_t
+// Enum TslGame.ETurningDirection
+enum class ETurningDirection : uint8_t
+{
+	None                           = 0,
+	Right                          = 1,
+	Right01                        = 2,
+	Right02                        = 3,
+	Right03                        = 4,
+	Left                           = 5,
+	Left01                         = 6,
+	Left02                         = 7,
+	Left03                         = 8,
+	ETurningDirection_MAX          = 9
+};
+
+
+// Enum TslGame.EMovementDirection
+enum class EMovementDirection : uint8_t
+{
+	F_Direction                    = 0,
+	L_Direction                    = 1,
+	R_Direction                    = 2,
+	B_Direction                    = 3,
+	FL_Direction                   = 4,
+	FR_Direction                   = 5,
+	BL_Direction                   = 6,
+	BR_Direction                   = 7,
+	EMovementDirection_MAX         = 8
+};
+
+
+// Enum TslGame.EAnimStance
+enum class EAnimStance : uint8_t
+{
+	Stand                          = 0,
+	Crouch                         = 1,
+	Prone                          = 2,
+	Groggy                         = 3,
+	EAnimStance_MAX                = 4
+};
+
+
+// Enum TslGame.EAnimWeaponType
+enum class EAnimWeaponType : uint8_t
+{
+	None                           = 0,
+	Rifle                          = 1,
+	Launcher                       = 2,
+	Pistol                         = 3,
+	Throwable                      = 4,
+	SpikeTrap                      = 5,
+	Melee                          = 6,
+	Shield                         = 7,
+	MAX                            = 8,
+	EAnimWeaponType_MAX            = 9
+};
+
+
+// Enum TslGame.EExhaustPopType
+enum class EExhaustPopType : uint8_t
+{
+	ExPop_ThrottleDecrease         = 0,
+	ExPop_RevLimiterHit            = 1,
+	ExPop_MAX                      = 2
+};
+
+
+// Enum TslGame.ECameraViewBehaviour
+enum class ECameraViewBehaviour : uint8_t
+{
+	FpsAndTps                      = 0,
+	FpsOnly                        = 1,
+	TpsOnly                        = 2,
+	ECameraViewBehaviour_MAX       = 3
+};
+
+
+// Enum TslGame.EPlayerStartType
+enum class EPlayerStartType : uint8_t
+{
+	OnePlace                       = 0,
+	SeveralPlace                   = 1,
+	EPlayerStartType_MAX           = 2
+};
+
+
+// Enum TslGame.EMatchStartType
+enum class EMatchStartType : uint8_t
 {
 	Normal                         = 0,
-	Groggy                         = 1,
-	Dead                           = 2,
-	Vehicle                        = 3,
-	Parachute                      = 4,
-	Quitter                        = 5,
-	Aircraft                       = 6,
-	ItemRequest                    = 7,
-	EMarkStates_MAX                = 8
+	Airborne                       = 1,
+	EMatchStartType_MAX            = 2
 };
 
 
-// Enum TslGame.ETeenageInfoType
-enum class ETeenageInfoType : uint8_t
+// Enum TslGame.EGender
+enum class EGender : uint8_t
 {
-	Normal                         = 0,
-	Season                         = 1,
-	ETeenageInfoType_MAX           = 2
+	Male                           = 0,
+	Female                         = 1,
+	EGender_MAX                    = 2
 };
 
 
-
-// Enum UMG.ESlateVisibility
-enum class ESlateVisibility : uint8_t
+// Enum TslGame.EKillcamDisplayCode
+enum class EKillcamDisplayCode : uint8_t
 {
-	Visible                        = 0,
-	Collapsed                      = 1,
-	Hidden                         = 2,
-	HitTestInvisible               = 3,
-	SelfHitTestInvisible           = 4,
-	ESlateVisibility_MAX           = 5
+	NotVisible                     = 0,
+	OptionDisabled                 = 1,
+	Recording                      = 2,
+	Playable                       = 3,
+	Replay                         = 4,
+	FailToLoad                     = 5,
+	DemoFailure                    = 6,
+	DetectedUnusualMovement        = 7,
+	EKillcamDisplayCode_MAX        = 8
 };
 
 
-// Enum UMG.EVirtualKeyboardType
-enum class EVirtualKeyboardType : uint8_t
+// Enum TslGame.EWidgetShowType
+enum class EWidgetShowType : uint8_t
+{
+	Show                           = 0,
+	Hide                           = 1,
+	Toggle                         = 2,
+	EWidgetShowType_MAX            = 3
+};
+
+
+// Enum TslGame.ESlotOffsetType
+enum class ESlotOffsetType : uint8_t
+{
+	NoOffset                       = 0,
+	BagLevel1                      = 1,
+	BagLevel2                      = 2,
+	BagLevel3                      = 3,
+	ESlotOffsetType_MAX            = 4
+};
+
+
+// Enum TslGame.EItemSpotGroupType
+enum class EItemSpotGroupType : uint8_t
+{
+	GroupA                         = 0,
+	GroupB                         = 1,
+	GroupC                         = 2,
+	GroupD                         = 3,
+	GroupE                         = 4,
+	GroupF                         = 5,
+	GroupG                         = 6,
+	GroupH                         = 7,
+	GroupI                         = 8,
+	GroupJ                         = 9,
+	EItemSpotGroupType_MAX         = 10
+};
+
+
+// Enum TslGame.EItemSpotType
+enum class EItemSpotType : uint8_t
+{
+	TypeA                          = 0,
+	TypeB                          = 1,
+	TypeC                          = 2,
+	TypeD                          = 3,
+	TypeE                          = 4,
+	TypeF                          = 5,
+	EItemSpotType_MAX              = 6
+};
+
+
+// Enum TslGame.EAttackType
+enum class EAttackType : uint8_t
+{
+	None                           = 0,
+	Weapon                         = 1,
+	VehicleCrash                   = 2,
+	VehicleExplosion               = 3,
+	Fall                           = 4,
+	BlueZone                       = 5,
+	RedZone                        = 6,
+	BlackZone                      = 7,
+	EAttackType_MAX                = 8
+};
+
+
+// Enum TslGame.EPlayerMoveType
+enum class EPlayerMoveType : uint8_t
+{
+	OnFoot                         = 0,
+	OnSwim                         = 1,
+	OnVehicle                      = 2,
+	OnParachute                    = 3,
+	OnFreefall                     = 4,
+	EPlayerMoveType_MAX            = 5
+};
+
+
+// Enum TslGame.EVaultRequirementType
+enum class EVaultRequirementType : uint8_t
+{
+	VaultReqType_False             = 0,
+	VaultReqType_True              = 1,
+	VaultReqType_Any               = 2,
+	VaultReqType_MAX               = 3
+};
+
+
+// Enum TslGame.EVaultAnimType
+enum class EVaultAnimType : uint8_t
+{
+	VaultNone                      = 0,
+	Vault200_Stationary            = 1,
+	Vault200_Mobile                = 2,
+	Vault200_Narrow                = 3,
+	Vault160_Stationary            = 4,
+	Vault160_Mobile                = 5,
+	Vault160_Narrow                = 6,
+	Vault120_Stationary            = 7,
+	Vault120_Mobile                = 8,
+	Vault120_Slide                 = 9,
+	Vault120_Narrow                = 10,
+	Vault90_Stationary             = 11,
+	Vault90_Mobile                 = 12,
+	Vault90_Slide                  = 13,
+	Vault90_Narrow                 = 14,
+	Climb200_Stationary            = 15,
+	Climb200_Mobile                = 16,
+	Climb200_Slide                 = 17,
+	Climb200_Narrow                = 18,
+	Climb160_Stationary            = 19,
+	Climb160_Mobile                = 20,
+	Climb160_Slide                 = 21,
+	Climb160_Narrow                = 22,
+	Climb120_Stationary            = 23,
+	Climb120_Mobile                = 24,
+	Climb120_Slide                 = 25,
+	Climb120_Narrow                = 26,
+	Climb90_Stationary             = 27,
+	Climb90_Mobile                 = 28,
+	Climb90_Slide                  = 29,
+	Climb90_Narrow                 = 30,
+	Vault90Roll                    = 31,
+	Vault120Window                 = 32,
+	Vault60_Stationary             = 33,
+	Vault60_Mobile                 = 34,
+	Vault60_Slide                  = 35,
+	Vault60_Narrow                 = 36,
+	Climb60_Stationary             = 37,
+	Climb60_Mobile                 = 38,
+	Climb60_Narrow                 = 39,
+	LedgeGrab_Up_Climb             = 40,
+	LedgeGrab_Up_Climb_Swing       = 41,
+	LedgeGrab_Up_Climb_HalfSwing   = 42,
+	LedgeGrab_Up_Vault             = 43,
+	LedgeGrab_Up_Vault_Swing       = 44,
+	LedgeGrab_Up_Vault_HalfSwing   = 45,
+	LedgeGrab_High_Climb           = 46,
+	LedgeGrab_High_Climb_Swing     = 47,
+	LedgeGrab_High_Climb_HalfSwing = 48,
+	LedgeGrab_High_Vault           = 49,
+	LedgeGrab_High_Vault_Swing     = 50,
+	LedgeGrab_High_Vault_HalfSwing = 51,
+	LedgeGrab_Low_Climb            = 52,
+	LedgeGrab_Low_Climb_Swing      = 53,
+	LedgeGrab_Low_Climb_HalfSwing  = 54,
+	LedgeGrab_Low_Vault            = 55,
+	LedgeGrab_Low_Vault_Swing      = 56,
+	LedgeGrab_Low_Vault_HalfSwing  = 57,
+	LedgeGrab_Low_Vault_Narrow     = 58,
+	LedgeGrab_Low_Vault_HalfSwing_Narrow = 59,
+	LedgeGrab_Low_Vault_Swing_Narrow = 60,
+	LedgeGrab_High_Vault_Narrow    = 61,
+	LedgeGrab_High_Vault_HalfSwing_Narrow = 62,
+	LedgeGrab_High_Vault_Swing_Narrow = 63,
+	LedgeGrab_Up_Vault_Narrow      = 64,
+	LedgeGrab_Up_Vault_HalfSwing_Narrow = 65,
+	LedgeGrab_Up_Vault_Swing_Narrow = 66,
+	EVaultAnimType_MAX             = 67
+};
+
+
+// Enum TslGame.EBuffOverlapSolveMethod
+enum class EBuffOverlapSolveMethod : uint8_t
+{
+	IgnoreLater                    = 0,
+	Overwrite                      = 1,
+	RestartTimer                   = 2,
+	Stack                          = 3,
+	EBuffOverlapSolveMethod_MAX    = 4
+};
+
+
+// Enum TslGame.EDamageVictimActorType
+enum class EDamageVictimActorType : uint8_t
+{
+	Character                      = 0,
+	Vehicle                        = 1,
+	Wheel                          = 2,
+	DestructibleActor              = 3,
+	ExplosiveItem                  = 4,
+	EDamageVictimActorType_MAX     = 5
+};
+
+
+// Enum TslGame.ECastableItemType
+enum class ECastableItemType : uint8_t
+{
+	None                           = 0,
+	Bandage                        = 1,
+	FirstAid                       = 2,
+	Medkit                         = 3,
+	EnergyDrink                    = 4,
+	Painkiller                     = 5,
+	Adrenaline                     = 6,
+	GasCan                         = 7,
+	Battery                        = 8,
+	Key                            = 9,
+	ECastableItemType_MAX          = 10
+};
+
+
+// Enum TslGame.ECastLevel
+enum class ECastLevel : uint8_t
+{
+	None                           = 0,
+	NoRestriction                  = 1,
+	Restriction                    = 2,
+	ECastLevel_MAX                 = 3
+};
+
+
+// Enum TslGame.ECastPriority
+enum class ECastPriority : uint8_t
+{
+	None                           = 0,
+	Low                            = 1,
+	Normal                         = 2,
+	High                           = 3,
+	Max                            = 4,
+	ECastPriority_MAX              = 5
+};
+
+
+// Enum TslGame.ELandingSoundSwitchState
+enum class ELandingSoundSwitchState : uint8_t
+{
+	None                           = 0,
+	Light                          = 1,
+	Heavy                          = 2,
+	VeryHeavy                      = 3,
+	ELandingSoundSwitchState_MAX   = 4
+};
+
+
+// Enum TslGame.EStatTrakState
+enum class EStatTrakState : uint8_t
+{
+	Run                            = 0,
+	Locked                         = 1,
+	Error                          = 2,
+	EStatTrakState_MAX             = 3
+};
+
+
+// Enum TslGame.ESkinApplicationType
+enum class ESkinApplicationType : uint8_t
+{
+	Application_InOrder            = 0,
+	Application_Slot               = 1,
+	Application_Index              = 2,
+	Application_MAX                = 3
+};
+
+
+// Enum TslGame.ESkinMeshType
+enum class ESkinMeshType : uint8_t
+{
+	SkeletalMesh                   = 0,
+	AsyncStaticMesh                = 1,
+	StaticMesh                     = 2,
+	ESkinMeshType_MAX              = 3
+};
+
+
+// Enum TslGame.ESkinCategory
+enum class ESkinCategory : uint8_t
+{
+	Skin_None                      = 0,
+	Skin_Equipment                 = 1,
+	Skin_Parachute                 = 2,
+	Skin_Weapon                    = 3,
+	Skin_MeleeWeapon               = 4,
+	Skin_Vehicle                   = 5,
+	Skin_MAX                       = 6
+};
+
+
+// Enum TslGame.ESandboxGroypType
+enum class ESandboxGroypType : uint8_t
+{
+	Weapon                         = 0,
+	Item                           = 1,
+	Vehicle                        = 2,
+	ESandboxGroypType_MAX          = 3
+};
+
+
+// Enum TslGame.ESandboxPowerType
+enum class ESandboxPowerType : uint8_t
+{
+	None                           = 0,
+	Fly                            = 1,
+	InvulnerableEffect             = 2,
+	CarePackage                    = 3,
+	RedZone                        = 4,
+	Revive                         = 5,
+	TeamRevive                     = 6,
+	GiveItemToEveryone             = 7,
+	ESandboxPowerType_MAX          = 8
+};
+
+
+// Enum TslGame.EPlayerInputType
+enum class EPlayerInputType : uint8_t
+{
+	KeyboardMouse                  = 0,
+	Gamepad                        = 1,
+	Mixed                          = 2,
+	EPlayerInputType_MAX           = 3
+};
+
+
+// Enum TslGame.EAntiCheatKickType
+enum class EAntiCheatKickType : uint8_t
 {
 	Default                        = 0,
-	Number                         = 1,
-	Web                            = 2,
-	Email                          = 3,
-	Password                       = 4,
-	AlphaNumeric                   = 5,
-	EVirtualKeyboardType_MAX       = 6
+	HWID                           = 1,
+	MouseMacro                     = 2,
+	InGame                         = 3,
+	BattleEye                      = 4,
+	EAntiCheatKickType_MAX         = 5
 };
 
 
-// Enum UMG.EUMGSequencePlayMode
-enum class EUMGSequencePlayMode : uint8_t
+// Enum TslGame.ECheatType
+enum class ECheatType : uint8_t
 {
-	Forward                        = 0,
-	Reverse                        = 1,
-	PingPong                       = 2,
-	EUMGSequencePlayMode_MAX       = 3
+	SpeedHack                      = 0,
+	SpeedHack_UE                   = 1,
+	IgnoreWall_Hit                 = 2,
+	IgnoreWall_Sight               = 3,
+	IgnoreVelocity_Hit             = 4,
+	IgnoreVelocity                 = 5,
+	IgnoreVelocity2                = 6,
+	ItemPackage                    = 7,
+	CarePackageMount               = 8,
+	HitLag                         = 9,
+	Aimbot                         = 10,
+	InvalidImpact                  = 11,
+	InvalidImpactZ                 = 12,
+	InvalidImpact_Gun_C            = 13,
+	InvalidOrigin_Gun              = 14,
+	InvalidOrigin_Melee            = 15,
+	InvalidOrigin_Punch            = 16,
+	InvalidOrigin_Throwable        = 17,
+	InvalidOrigin_MeleeThrow       = 18,
+	InvalidSimStep_MeleeThrow      = 19,
+	InvalidRange                   = 20,
+	InvalidRange2                  = 21,
+	InvalidSequence                = 22,
+	InvalidAmmo                    = 23,
+	InvalidReviving                = 24,
+	InvalidKick                    = 25,
+	InvalidA0                      = 26,
+	InvalidB0                      = 27,
+	InvalidB1                      = 28,
+	InvalidB101                    = 29,
+	InvalidH0                      = 30,
+	InvalidOrigin_Gun_C            = 31,
+	InvalidD0                      = 32,
+	InvalidD1                      = 33,
+	InvalidS0                      = 34,
+	InvalidS1                      = 35,
+	InvalidH1                      = 36,
+	InvalidH2                      = 37,
+	InvalidH3                      = 38,
+	InvalidC0                      = 39,
+	InvalidC1                      = 40,
+	InvalidC2                      = 41,
+	InvalidC3                      = 42,
+	InvalidC4                      = 43,
+	InvalidC5                      = 44,
+	InvalidC6                      = 45,
+	InvalidC7                      = 46,
+	InvalidT0                      = 47,
+	InvalidT1                      = 48,
+	InvalidT2                      = 49,
+	InvalidAimDir                  = 50,
+	InvalidPelletDir               = 51,
+	InvalidAmmoSpeed               = 52,
+	InvalidAmmoDir                 = 53,
+	InvalidCharacterFlag           = 54,
+	InvalidPropertyCrc             = 55,
+	InvalidWeaponCrc               = 56,
+	InvalidWeaponRecoil            = 57,
+	InvalidSwayBuffer              = 58,
+	InvalidCameraYaw               = 59,
+	InvalidWeaponPackageCrc        = 60,
+	InvalidWeaponFlag              = 61,
+	InvalidHitComponent            = 62,
+	InvalidCollisionProfileCrc     = 63,
+	InvalidPakListCrc              = 64,
+	InvalidPOV                     = 65,
+	InvalidCharacterCrc            = 66,
+	VerifyAim                      = 67,
+	CHKSUM_GUN                     = 68,
+	CHKSUM_PUNCH                   = 69,
+	CHKSUM_MELEE                   = 70,
+	CHKSUM_VEHICLE                 = 71,
+	CHKSUM_A0                      = 72,
+	CHKSUM_T0                      = 73,
+	CHKSUM_S0                      = 74,
+	CHKSUM_D0                      = 75,
+	CHKSUM_V0                      = 76,
+	CHKSUM_W0                      = 77,
+	CHKSUM_T1                      = 78,
+	CHKSUM_D1                      = 79,
+	CHKSUM_CD                      = 80,
+	CHKSUM_LC                      = 81,
+	CHKSUM_V1                      = 82,
+	CHKSUM_P0                      = 83,
+	CHKSUM_BP                      = 84,
+	CHKSUM_G0                      = 85,
+	CHKSUM_G1                      = 86,
+	CHKSUM_H2                      = 87,
+	CHKSUM_H3                      = 88,
+	CHKSUM_UO                      = 89,
+	CHKSUM_UF                      = 90,
+	VHC_RI                         = 91,
+	VHC_SC                         = 92,
+	VHC_MG                         = 93,
+	VHC_MG_FF                      = 94,
+	VHC_MG_FC                      = 95,
+	VHC_MG_SW                      = 96,
+	VHC_MG_OS                      = 97,
+	VHC_MG_BC                      = 98,
+	VHC_MG_TC                      = 99,
+	VHC_MG_PL                      = 100,
+	VHC_MG_HL                      = 101,
+	VHC_MG_SD                      = 102,
+	VHC_MGB                        = 103,
+	VHC_MGB_FF                     = 104,
+	VHC_MGB_FC                     = 105,
+	VHC_MGB_OS                     = 106,
+	VHC_MGB_BC                     = 107,
+	VHC_MGB_TC                     = 108,
+	VHC_MGB_PL                     = 109,
+	VHC_MGB_HL                     = 110,
+	VHC_MGF_OS                     = 111,
+	VHC_MGF_TC                     = 112,
+	VHC_MGF_BC                     = 113,
+	VHC_MGF_SD                     = 114,
+	VHC_KILL                       = 115,
+	VHC_ED                         = 116,
+	VHC_SIMULATION_ACTIVATE        = 117,
+	VHC_SIMULATION_DEACTIVATE      = 118,
+	VHC_TRY_BYPASS_SERVERSIMUL     = 119,
+	VHC_BYPASSED_SERVERSIMUL       = 120,
+	VHC_FORCE_SERVERSIMUL          = 121,
+	CK_ACTIVATE                    = 122,
+	CK_DEACTIVATE                  = 123,
+	AntiCheatKick_WallHack         = 124,
+	AntiCheatKick_ESP              = 125,
+	AntiCheatKick_SpeedHack1       = 126,
+	AntiCheatKick_SpeedHack2       = 127,
+	AntiCheatKick_SpeedHack3       = 128,
+	AntiCheatKick_PLFC             = 129,
+	AntiCheatKick_TCFC             = 130,
+	AntiCheatKick_HL               = 131,
+	AntiCheatKick_OS               = 132,
+	AntiCheatKick_FC               = 133,
+	VehicleSimulation_PLFC         = 134,
+	VehicleSimulation_TCFC         = 135,
+	VehicleSimulation_HL           = 136,
+	VehicleSimulation_OS           = 137,
+	VehicleSimulation_FC           = 138,
+	QS_AA                          = 139,
+	QS_NA                          = 140,
+	QS_AL                          = 141,
+	QS_AJ                          = 142,
+	QS_AT                          = 143,
+	QS_ADT                         = 144,
+	QS_CJE                         = 145,
+	QS_CWE                         = 146,
+	CP_RZ                          = 147,
+	CP_RZD                         = 148,
+	KGB_AF                         = 149,
+	ESP1                           = 150,
+	ESP2                           = 151,
+	ESP3                           = 152,
+	SimilarHit                     = 153,
+	DoubleKill                     = 154,
+	B0Log                          = 155,
+	InputLog                       = 156,
+	FireInputLog                   = 157,
+	HighLocationVehicle            = 158,
+	HighLocationBoat               = 159,
+	None                           = 160,
+	ECheatType_MAX                 = 161
 };
 
 
-// Enum UMG.EDragPivot
-enum class EDragPivot : uint8_t
+// Enum TslGame.ECharFlagsNormal
+enum class ECharFlagsNormal : uint8_t
 {
-	MouseDown                      = 0,
-	TopLeft                        = 1,
-	TopCenter                      = 2,
-	TopRight                       = 3,
-	CenterLeft                     = 4,
-	CenterCenter                   = 5,
-	CenterRight                    = 6,
-	BottomLeft                     = 7,
-	BottomCenter                   = 8,
-	BottomRight                    = 9,
-	EDragPivot_MAX                 = 10
+	IsGroggying                    = 0,
+	IsActiveRagdollActive          = 1,
+	HasShieldEquipped              = 2,
+	IsOutsideBluezone              = 3,
+	ECharFlagsNormal_MAX           = 4
 };
 
 
-// Enum UMG.ESlateSizeRule
-enum class ESlateSizeRule : uint8_t
-{
-	Automatic                      = 0,
-	Fill                           = 1,
-	ESlateSizeRule_MAX             = 2
-};
-
-
-// Enum UMG.EWidgetDesignFlags
-enum class EWidgetDesignFlags : uint8_t
+// Enum TslGame.ELandingState
+enum class ELandingState : uint8_t
 {
 	None                           = 0,
-	Designing                      = 1,
-	ShowOutline                    = 2,
-	ExecutePreConstruct            = 3,
-	EWidgetDesignFlags_MAX         = 4
+	Falling                        = 1,
+	HeavyFalling                   = 2,
+	ExtremeFalling                 = 3,
+	FallingRecovery                = 4,
+	PostLandingRecovery            = 5,
+	ELandingState_MAX              = 6
 };
 
 
-// Enum UMG.EBindingKind
-enum class EBindingKind : uint8_t
+// Enum TslGame.ECharFlagsSkipOwner
+enum class ECharFlagsSkipOwner : uint8_t
 {
-	Function                       = 0,
-	Property                       = 1,
-	EBindingKind_MAX               = 2
+	WantsToRun                     = 0,
+	WantsToSprint                  = 1,
+	WantsToSprintingAuto           = 2,
+	WantsToRollingLeft             = 3,
+	WantsToRollingRight            = 4,
+	AimStateActive                 = 5,
+	IsThirdPerson                  = 6,
+	IsReviving                     = 7,
+	IgnoreRotation                 = 8,
+	IsWeaponObstructed             = 9,
+	IsCoatEquipped                 = 10,
+	IsThrowHigh                    = 11,
+	WantsToCancelVault             = 12,
+	IsScopingRemote                = 13,
+	IsAimingRemote                 = 14,
+	IsFirstPersonRemote            = 15,
+	IsInVehicleRemote              = 16,
+	IsPeekLeftRemote               = 17,
+	IsPeekRightRemote              = 18,
+	IsHoldingAngled                = 19,
+	ECharFlagsSkipOwner_MAX        = 20
 };
 
 
-// Enum UMG.EDesignPreviewSizeMode
-enum class EDesignPreviewSizeMode : uint8_t
+// Enum TslGame.EPunchDamageType
+enum class EPunchDamageType : uint8_t
 {
-	FillScreen                     = 0,
-	Custom                         = 1,
-	CustomOnScreen                 = 2,
-	Desired                        = 3,
-	DesiredOnScreen                = 4,
-	EDesignPreviewSizeMode_MAX     = 5
+	PunchDamage_Light              = 0,
+	PunchDamage_Heavy              = 1,
+	PunchDamage_MAX                = 2
 };
 
 
-// Enum UMG.EWidgetGeometryMode
-enum class EWidgetGeometryMode : uint8_t
+// Enum TslGame.EMovementType
+enum class EMovementType : uint8_t
 {
-	Plane                          = 0,
-	Cylinder                       = 1,
-	EWidgetGeometryMode_MAX        = 2
+	M_StandWalk                    = 0,
+	M_StandRun                     = 1,
+	M_StandSprint                  = 2,
+	M_CrouchWalk                   = 3,
+	M_CrouchRun                    = 4,
+	M_CrouchSprint                 = 5,
+	M_ProneWalk                    = 6,
+	M_ProneRun                     = 7,
+	M_ProneSprint                  = 8,
+	M_StandScope                   = 9,
+	M_CrouchScope                  = 10,
+	M_ProneScope                   = 11,
+	M_StandAim                     = 12,
+	M_CrouchAim                    = 13,
+	M_ProneAim                     = 14,
+	M_Swim                         = 15,
+	M_UnderwaterSwim               = 16,
+	M_DBNO                         = 17,
+	M_MAX                          = 18
 };
 
 
-// Enum UMG.EWidgetBlendMode
-enum class EWidgetBlendMode : uint8_t
+// Enum TslGame.ERaycastDirection
+enum class ERaycastDirection : uint8_t
 {
-	Opaque                         = 0,
-	Masked                         = 1,
-	Transparent                    = 2,
-	EWidgetBlendMode_MAX           = 3
+	Forward                        = 0,
+	Down_45_Degrees                = 1,
+	Down                           = 2,
+	ERaycastDirection_MAX          = 3
 };
 
 
-// Enum UMG.EWidgetTimingPolicy
-enum class EWidgetTimingPolicy : uint8_t
+// Enum TslGame.ELobbyItemPointSellingType
+enum class ELobbyItemPointSellingType : uint8_t
 {
-	RealTime                       = 0,
-	GameTime                       = 1,
-	EWidgetTimingPolicy_MAX        = 2
+	Normal                         = 0,
+	WeeklyDouble                   = 1,
+	ELobbyItemPointSellingType_MAX = 2
 };
 
 
-// Enum UMG.EWidgetSpace
-enum class EWidgetSpace : uint8_t
+// Enum TslGame.ELobbyItemPlatform
+enum class ELobbyItemPlatform : uint8_t
 {
-	World                          = 0,
-	Screen                         = 1,
-	EWidgetSpace_MAX               = 2
+	PC_Steam                       = 0,
+	PC_NonSteam                    = 1,
+	Xbox                           = 2,
+	ELobbyItemPlatform_MAX         = 3
 };
 
 
-// Enum UMG.EWidgetInteractionSource
-enum class EWidgetInteractionSource : uint8_t
+// Enum TslGame.ELobbyItemTier
+enum class ELobbyItemTier : uint8_t
 {
-	World                          = 0,
-	Mouse                          = 1,
-	CenterScreen                   = 2,
-	Custom                         = 3,
-	EWidgetInteractionSource_MAX   = 4
+	Basic                          = 0,
+	Common                         = 1,
+	Classic                        = 2,
+	Special                        = 3,
+	Rare                           = 4,
+	Elite                          = 5,
+	Epic                           = 6,
+	Legendary                      = 7,
+	Ultimate                       = 8,
+	Event                          = 9,
+	ELobbyItemTier_MAX             = 10
+};
+
+
+// Enum TslGame.ELobbyItemCategory
+enum class ELobbyItemCategory : uint8_t
+{
+	Belt                           = 0,
+	Body                           = 1,
+	Eyes                           = 2,
+	Feet                           = 3,
+	Head                           = 4,
+	Jacket                         = 5,
+	Legs                           = 6,
+	Mask                           = 7,
+	Hands                          = 8,
+	Box                            = 9,
+	Key                            = 10,
+	WeaponSkin                     = 11,
+	ParachuteSkin                  = 12,
+	HelmetSkin                     = 13,
+	BackpackSkin                   = 14,
+	TorsoArmorSkin                 = 15,
+	VehicleSkin                    = 16,
+	Multislot                      = 17,
+	ELobbyItemCategory_MAX         = 18
+};
+
+
+// Enum TslGame.EAttachParent
+enum class EAttachParent : uint8_t
+{
+	None                           = 0,
+	Character                      = 1,
+	WeaponGun                      = 2,
+	EAttachParent_MAX              = 3
+};
+
+
+// Enum TslGame.ERoamingActionType
+enum class ERoamingActionType : uint8_t
+{
+	RAction_MoveToCenter           = 0,
+	RAction_OcclusionCrouch        = 1,
+	RAction_OcclusionProne         = 2,
+	RActoin_Max                    = 3,
+	ERoamingActionType_MAX         = 4
+};
+
+
+// Enum TslGame.EAIODealDoor
+enum class EAIODealDoor : uint8_t
+{
+	Deal_None                      = 0,
+	Deal_Wait                      = 1,
+	Deal_MAX                       = 2
+};
+
+
+// Enum TslGame.ESurviveWeaponPropSlot
+enum class ESurviveWeaponPropSlot : uint8_t
+{
+	SWPS_MainShootWeapon1          = 0,
+	SWPS_MainShootWeapon2          = 1,
+	SWPS_SubShootWeapon            = 2,
+	SWPS_MeleeWeapon               = 3,
+	SWPS_HandProp                  = 4,
+	SWPS_Max                       = 5
+};
+
+
+// Enum TslGame.EWeatherStatusType
+enum class EWeatherStatusType : uint8_t
+{
+	EWeatherStatusType_None        = 0,
+	EWeatherStatusType_SunnyDay    = 1,
+	EWeatherStatusType_Night       = 2,
+	EWeatherStatusType_Fog         = 3,
+	EWeatherStatusType_Rain        = 4,
+	EWeatherStatusType_Snow        = 5,
+	EWeatherStatusType_Blizzard    = 6,
+	EWeatherStatusType_MAX         = 7
+};
+
+
+// Enum TslGame.UTPickerTargetType
+enum class EUTPickerTargetType : uint8_t
+{
+	PTT_FRIEND                     = 0,
+	PTT_ENEMY                      = 1,
+	PTT_ALL                        = 2,
+	PTT_Self                       = 3,
+	PTT_MAX                        = 4
+};
+
+
+// Enum TslGame.ExtraPlayerLiveState
+enum class ExtraPlayerLiveState : uint8_t
+{
+	InDefault                      = 0,
+	InPlane                        = 1,
+	InParachute                    = 2,
+	InVehicle                      = 3,
+	InDying                        = 4,
+	InDied                         = 5,
+	Offline                        = 6,
+	ExtraPlayerLiveState_MAX       = 7
+};
+
+
+// Enum TslGame.EAIMoveType
+enum class EAIMoveType : uint8_t
+{
+	StraightMove                   = 0,
+	CurveMove                      = 1,
+	EAIMoveType_MAX                = 2
+};
+
+
+// Enum TslGame.EAIWeaponShootType
+enum class EAIWeaponShootType : uint8_t
+{
+	SingleShot                     = 0,
+	Auto                           = 1,
+	EAIWeaponShootType_MAX         = 2
+};
+
+
+// Enum TslGame.EAINewFocusPriority
+enum class EAINewFocusPriority : uint8_t
+{
+	Default                        = 0,
+	Move                           = 1,
+	Gameplay                       = 2,
+	EAINewFocusPriority_MAX        = 3
+};
+
+
+// Enum TslGame.EAIMovePose
+enum class EAIMovePose : uint8_t
+{
+	Walk                           = 0,
+	Run                            = 1,
+	CrouchSprint                   = 2,
+	KeepCurrentPose                = 3,
+	EAIMovePose_MAX                = 4
+};
+
+
+// Enum TslGame.EAIPoseState
+enum class EAIPoseState : uint8_t
+{
+	Stand                          = 0,
+	Crouch                         = 1,
+	Prone                          = 2,
+	Jump                           = 3,
+	Reload                         = 4,
+	UnArmed                        = 5,
+	EAIPoseState_MAX               = 6
+};
+
+
+// Enum TslGame.EAITriggerAttrType
+enum class EAITriggerAttrType : uint8_t
+{
+	None                           = 0,
+	Health                         = 1,
+	Energy                         = 2,
+	EAITriggerAttrType_MAX         = 3
+};
+
+
+// Enum TslGame.EAIAttrCompareType
+enum class EAIAttrCompareType : uint8_t
+{
+	None                           = 0,
+	Great                          = 1,
+	Less                           = 2,
+	EAIAttrCompareType_MAX         = 3
+};
+
+
+// Enum TslGame.EAIEquipSpawnItemType
+enum class EAIEquipSpawnItemType : uint8_t
+{
+	Shoot_Weap                     = 0,
+	Backpack                       = 1,
+	other                          = 2,
+	EAIEquipSpawnItemType_MAX      = 3
+};
+
+
+// Enum TslGame.EThownWeapon_AI
+enum class EThownWeapon_AI : uint8_t
+{
+	GRENADE                        = 0,
+	MOLOTOV                        = 1,
+	SMOKEBOMB                      = 2,
+	FLASHBANG                      = 3,
+	EThownWeapon_MAX               = 4
+};
+
+
+// Enum TslGame.EThrowablePoseState_AI
+enum class EThrowablePoseState_AI : uint8_t
+{
+	Idle                           = 0,
+	PinOffStart                    = 1,
+	Cooking                        = 2,
+	WaitForThrow                   = 3,
+	Throwing                       = 4,
+	EThrowablePoseState_MAX        = 5
+};
+
+
+// Enum TslGame.ERoamingMoveType
+enum class ERoamingMoveType : uint8_t
+{
+	RMoveCenter                    = 0,
+	RMoveMax                       = 1,
+	ERoamingMoveType_MAX           = 2
+};
+
+
+// Enum TslGame.EModifyBlackboardDataValueType
+enum class EModifyBlackboardDataValueType : uint8_t
+{
+	Int                            = 0,
+	Float                          = 1,
+	Bool                           = 2,
+	String                         = 3,
+	Object                         = 4,
+	Vector3                        = 5,
+	EModifyBlackboardDataValueType_MAX = 6
+};
+
+
+// Enum TslGame.EGuideKeyType
+enum class EGuideKeyType : uint8_t
+{
+	None                           = 0,
+	PickUp                         = 1,
+	PickUpAndEquip                 = 2,
+	PickUpAndPickUpAmount          = 3,
+	Unequip                        = 4,
+	DetachAll                      = 5,
+	DetachAndDetachAll             = 6,
+	Drop                           = 7,
+	DropAndEquip                   = 8,
+	DropAndDropAmount              = 9,
+	DropAndDropAll                 = 10,
+	Equip                          = 11,
+	EquipAndQuickEquip             = 12,
+	XQuickEquip                    = 13,
+	XHoldQuickEquip                = 14,
+	Swap                           = 15,
+	Use                            = 16,
+	Confirm                        = 17,
+	Cancel                         = 18,
+	SwitchSlot                     = 19,
+	Charm                          = 20,
+	CharmAndDetachAll              = 21,
+	Apply                          = 22,
+	EGuideKeyType_MAX              = 23
+};
+
+
+// Enum TslGame.EGuideLineType
+enum class EGuideLineType : uint8_t
+{
+	Switch                         = 0,
+	Upper                          = 1,
+	Lower                          = 2,
+	EGuideLineType_MAX             = 3
+};
+
+
+// Enum TslGame.EFiremode
+enum class EFiremode : uint8_t
+{
+	FullAuto                       = 0,
+	ThreeRoundBurst                = 1,
+	TwoRoundBurst                  = 2,
+	SemiAuto                       = 3,
+	Single                         = 4,
+	FullAutoFast                   = 5,
+	EFiremode_MAX                  = 6
+};
+
+
+// Enum TslGame.EConsoleHitDirections
+enum class EConsoleHitDirections : uint8_t
+{
+	None                           = 0,
+	Front_Right                    = 1,
+	Front_Left                     = 2,
+	Rear                           = 3,
+	EConsoleHitDirections_MAX      = 4
+};
+
+
+// Enum TslGame.ERoundEndPointType
+enum class ERoundEndPointType : uint8_t
+{
+	Empty                          = 0,
+	Lost                           = 1,
+	Won                            = 2,
+	ERoundEndPointType_MAX         = 3
+};
+
+
+// Enum TslGame.EVehicleAIAvoidanceMode
+enum class EVehicleAIAvoidanceMode : uint8_t
+{
+	Off                            = 0,
+	SingleTrace                    = 1,
+	MultiTrace                     = 2,
+	EVehicleAIAvoidanceMode_MAX    = 3
+};
+
+
+// Enum TslGame.ESpawnType
+enum class ESpawnType : uint8_t
+{
+	Single                         = 0,
+	ContinuousOnTimer              = 1,
+	ContinuousOnDeath              = 2,
+	ESpawnType_MAX                 = 3
+};
+
+
+// Enum TslGame.TslAudioInterpolation
+enum class ETslAudioInterpolation : uint8_t
+{
+	AudioInterpolation_Log3        = 0,
+	AudioInterpolation_Sine        = 1,
+	AudioInterpolation_Log1        = 2,
+	AudioInterpolation_InvSCurve   = 3,
+	AudioInterpolation_Linear      = 4,
+	AudioInterpolation_SCurve      = 5,
+	AudioInterpolation_Exp1        = 6,
+	AudioInterpolation_SineRecip   = 7,
+	AudioInterpolation_Exp3        = 8,
+	AudioInterpolation_MAX         = 9
+};
+
+
+// Enum TslGame.eVehicleSpawnStatus
+enum class EeVehicleSpawnStatus : uint8_t
+{
+	SpawnNone                      = 0,
+	SpawnAlived                    = 1,
+	SpawnDestroyed                 = 2,
+	eVehicleSpawnStatus_MAX        = 3
+};
+
+
+// Enum TslGame.ESurfaceEffect
+enum class ESurfaceEffect : uint8_t
+{
+	S_None                         = 0,
+	S_Concrete_Roll                = 1,
+	S_Concrete_Skid                = 2,
+	S_Concrete_Spin                = 3,
+	S_Dirt_Roll                    = 4,
+	S_Dirt_Skid                    = 5,
+	S_Dirt_Spin                    = 6,
+	S_Water_Roll                   = 7,
+	S_Water_Skid                   = 8,
+	S_Water_Spin                   = 9,
+	S_Metal_Roll                   = 10,
+	S_Metal_Skid                   = 11,
+	S_Metal_Spin                   = 12,
+	S_Wood_Roll                    = 13,
+	S_Wood_Skid                    = 14,
+	S_Wood_Spin                    = 15,
+	S_Rock_Roll                    = 16,
+	S_Rock_Skid                    = 17,
+	S_Rock_Spin                    = 18,
+	S_Grass_Roll                   = 19,
+	S_Grass_Skid                   = 20,
+	S_Grass_Spin                   = 21,
+	S_Sand_Roll                    = 22,
+	S_Sand_Skid                    = 23,
+	S_Sand_Spin                    = 24,
+	S_Concrete_Brake               = 25,
+	S_Dirt_Brake                   = 26,
+	S_Water_Brake                  = 27,
+	S_Metal_Brake                  = 28,
+	S_Wood_Brake                   = 29,
+	S_Rock_Brake                   = 30,
+	S_Grass_Brake                  = 31,
+	S_Sand_Brake                   = 32,
+	S_Snow_Brake                   = 33,
+	S_SnowRock_Brake               = 34,
+	S_Ice_Brake                    = 35,
+	S_Common_BrakeDisc             = 36,
+	S_Concrete_Punctured_Roll      = 37,
+	S_Concrete_Punctured_Skid      = 38,
+	S_Concrete_Punctured_Spin      = 39,
+	S_Concrete_Punctured_Brake     = 40,
+	S_Snow_Roll                    = 41,
+	S_Snow_Skid                    = 42,
+	S_Snow_Spin                    = 43,
+	S_SnowRock_Roll                = 44,
+	S_SnowRock_Skid                = 45,
+	S_SnowRock_Spin                = 46,
+	S_Ice_Roll                     = 47,
+	S_Ice_Skid                     = 48,
+	S_Ice_Spin                     = 49,
+	S_Mud_Roll                     = 50,
+	S_Mud_Skid                     = 51,
+	S_Mud_Spin                     = 52,
+	S_Mud_Brake                    = 53,
+	S_Common_Neutral               = 54,
+	S_MAX                          = 55
+};
+
+
+// Enum TslGame.EWeaponDisplayZoomState
+enum class EWeaponDisplayZoomState : uint8_t
+{
+	ZoomState_Default              = 0,
+	ZoomState_Charm                = 1,
+	ZoomState_MAX                  = 2
+};
+
+
+// Enum TslGame.EBlendSequenceByBoolStartType
+enum class EBlendSequenceByBoolStartType : uint8_t
+{
+	Restart                        = 0,
+	SameTime                       = 1,
+	EBlendSequenceByBoolStartType_MAX = 2
+};
+
+
+// Enum TslGame.EJumpStartAnimationType
+enum class EJumpStartAnimationType : uint8_t
+{
+	Stationary                     = 0,
+	Forward                        = 1,
+	Backward                       = 2,
+	EJumpStartAnimationType_MAX    = 3
+};
+
+
+// Enum TslGame.ETslLocomotionNodeState
+enum class ETslLocomotionNodeState : uint8_t
+{
+	Idle                           = 0,
+	Locomotion                     = 1,
+	Start                          = 2,
+	Stop_Left                      = 3,
+	Stop_Right                     = 4,
+	Pivot_Left                     = 5,
+	Pivot_Right                    = 6,
+	FastTurn_Pivot                 = 7,
+	ETslLocomotionNodeState_MAX    = 8
+};
+
+
+// Enum TslGame.ETslLocomotionStateChangeType
+enum class ETslLocomotionStateChangeType : uint8_t
+{
+	None                           = 0,
+	Blending                       = 1,
+	NoBlending                     = 2,
+	BlendingSameTime               = 3,
+	ETslLocomotionStateChangeType_MAX = 4
+};
+
+
+// Enum TslGame.FPlaySequenceFromAnimDBMapAnimType
+enum class EFPlaySequenceFromAnimDBMapAnimType : uint8_t
+{
+	Base                           = 0,
+	Transition                     = 1,
+	TransitionStance               = 2,
+	FPlaySequenceFromAnimDBMapAnimType_MAX = 3
+};
+
+
+// Enum TslGame.ERotateBoneInputType
+enum class ERotateBoneInputType : uint8_t
+{
+	Rotator                        = 0,
+	AngleAxis                      = 1,
+	ERotateBoneInputType_MAX       = 2
+};
+
+
+// Enum TslGame.ERotateBoneSpace
+enum class ERotateBoneSpace : uint8_t
+{
+	BoneSpace                      = 0,
+	LocalSpace                     = 1,
+	WorldSpace                     = 2,
+	ERotateBoneSpace_MAX           = 3
 };
 
 
@@ -9886,6 +10073,119 @@ enum class EVehicleDifferential4W : uint8_t
 	Open_FrontDrive                = 4,
 	Open_RearDrive                 = 5,
 	EVehicleDifferential4W_MAX     = 6
+};
+
+
+
+// Enum Landscape.ELandscapeGizmoType
+enum class ELandscapeGizmoType : uint8_t
+{
+	LGT_None                       = 0,
+	LGT_Height                     = 1,
+	LGT_Weight                     = 2,
+	LGT_MAX                        = 3
+};
+
+
+// Enum Landscape.EGrassScaling
+enum class EGrassScaling : uint8_t
+{
+	Uniform                        = 0,
+	Free                           = 1,
+	LockXY                         = 2,
+	EGrassScaling_MAX              = 3
+};
+
+
+// Enum Landscape.ELandscapeLODFalloff
+enum class ELandscapeLODFalloff : uint8_t
+{
+	Linear                         = 0,
+	SquareRoot                     = 1,
+	ELandscapeLODFalloff_MAX       = 2
+};
+
+
+// Enum Landscape.ELandscapeLayerDisplayMode
+enum class ELandscapeLayerDisplayMode : uint8_t
+{
+	Default                        = 0,
+	Alphabetical                   = 1,
+	UserSpecific                   = 2,
+	ELandscapeLayerDisplayMode_MAX = 3
+};
+
+
+// Enum Landscape.ELandscapeLayerPaintingRestriction
+enum class ELandscapeLayerPaintingRestriction : uint8_t
+{
+	None                           = 0,
+	UseMaxLayers                   = 1,
+	ExistingOnly                   = 2,
+	UseComponentWhitelist          = 3,
+	ELandscapeLayerPaintingRestriction_MAX = 4
+};
+
+
+// Enum Landscape.ELandscapeImportAlphamapType
+enum class ELandscapeImportAlphamapType : uint8_t
+{
+	Additive                       = 0,
+	Layered                        = 1,
+	ELandscapeImportAlphamapType_MAX = 2
+};
+
+
+// Enum Landscape.ELandscapeSetupErrors
+enum class ELandscapeSetupErrors : uint8_t
+{
+	LSE_None                       = 0,
+	LSE_NoLandscapeInfo            = 1,
+	LSE_CollsionXY                 = 2,
+	LSE_NoLayerInfo                = 3,
+	LSE_MAX                        = 4
+};
+
+
+// Enum Landscape.LandscapeSplineMeshOrientation
+enum class ELandscapeSplineMeshOrientation : uint8_t
+{
+	LSMO_XUp                       = 0,
+	LSMO_YUp                       = 1,
+	LSMO_MAX                       = 2
+};
+
+
+// Enum Landscape.ELandscapeLayerBlendType
+enum class ELandscapeLayerBlendType : uint8_t
+{
+	LB_WeightBlend                 = 0,
+	LB_AlphaBlend                  = 1,
+	LB_HeightBlend                 = 2,
+	LB_MAX                         = 3
+};
+
+
+// Enum Landscape.ELandscapeCustomizedCoordType
+enum class ELandscapeCustomizedCoordType : uint8_t
+{
+	LCCT_None                      = 0,
+	LCCT_CustomUV0                 = 1,
+	LCCT_CustomUV1                 = 2,
+	LCCT_CustomUV2                 = 3,
+	LCCT_WeightMapUV               = 4,
+	LCCT_MAX                       = 5
+};
+
+
+// Enum Landscape.ETerrainCoordMappingType
+enum class ETerrainCoordMappingType : uint8_t
+{
+	TCMT_Auto                      = 0,
+	TCMT_XY                        = 1,
+	TCMT_XZ                        = 2,
+	TCMT_YZ                        = 3,
+	TCMT_MAX                       = 4
 };
 
 
@@ -9929,62 +10229,191 @@ enum class EZipUtilityCompressionFormat : uint8_t
 
 
 
-// Enum MovieScene.ESpawnOwnership
-enum class ESpawnOwnership : uint8_t
+// Enum ActorSequence.EActorSequenceObjectReferenceType
+enum class EActorSequenceObjectReferenceType : uint8_t
 {
-	InnerSequence                  = 0,
-	MasterSequence                 = 1,
-	External                       = 2,
-	ESpawnOwnership_MAX            = 3
+	ContextActor                   = 0,
+	ExternalActor                  = 1,
+	Component                      = 2,
+	EActorSequenceObjectReferenceType_MAX = 3
 };
 
 
-// Enum MovieScene.EMovieSceneObjectBindingSpace
-enum class EMovieSceneObjectBindingSpace : uint8_t
-{
-	Local                          = 0,
-	Root                           = 1,
-	EMovieSceneObjectBindingSpace_MAX = 2
-};
 
-
-// Enum MovieScene.EMovieSceneKeyInterpolation
-enum class EMovieSceneKeyInterpolation : uint8_t
-{
-	Auto                           = 0,
-	User                           = 1,
-	Break                          = 2,
-	Linear                         = 3,
-	Constant                       = 4,
-	EMovieSceneKeyInterpolation_MAX = 5
-};
-
-
-// Enum MovieScene.EMovieSceneCompletionMode
-enum class EMovieSceneCompletionMode : uint8_t
-{
-	KeepState                      = 0,
-	RestoreState                   = 1,
-	EMovieSceneCompletionMode_MAX  = 2
-};
-
-
-// Enum MovieScene.ESectionEvaluationFlags
-enum class ESectionEvaluationFlags : uint8_t
+// Enum Niagara.ENiagaraNumericOutputTypeSelectionMode
+enum class ENiagaraNumericOutputTypeSelectionMode : uint8_t
 {
 	None                           = 0,
-	PreRoll                        = 1,
-	PostRoll                       = 2,
-	ESectionEvaluationFlags_MAX    = 3
+	Largest                        = 1,
+	Smallest                       = 2,
+	Scalar                         = 3,
+	ENiagaraNumericOutputTypeSelectionMode_MAX = 4
 };
 
 
-// Enum MovieScene.EEvaluationMethod
-enum class EEvaluationMethod : uint8_t
+// Enum Niagara.ENiagaraScriptCompileStatus
+enum class ENiagaraScriptCompileStatus : uint8_t
 {
-	Static                         = 0,
-	Swept                          = 1,
-	EEvaluationMethod_MAX          = 2
+	NCS_Unknown                    = 0,
+	NCS_Dirty                      = 1,
+	NCS_Error                      = 2,
+	NCS_UpToDate                   = 3,
+	NCS_BeingCreated               = 4,
+	NCS_UpToDateWithWarnings       = 5,
+	NCS_MAX                        = 6
+};
+
+
+// Enum Niagara.ENiagaraInputNodeUsage
+enum class ENiagaraInputNodeUsage : uint8_t
+{
+	Undefined                      = 0,
+	Parameter                      = 1,
+	Attribute                      = 2,
+	SystemConstant                 = 3,
+	ENiagaraInputNodeUsage_MAX     = 4
+};
+
+
+// Enum Niagara.ENiagaraDataSetType
+enum class ENiagaraDataSetType : uint8_t
+{
+	ParticleData                   = 0,
+	Shared                         = 1,
+	Event                          = 2,
+	ENiagaraDataSetType_MAX        = 3
+};
+
+
+// Enum Niagara.ENiagaraSpriteFacingMode
+enum class ENiagaraSpriteFacingMode : uint8_t
+{
+	FaceCamera                     = 0,
+	FaceCameraPlane                = 1,
+	CustomFacingVector             = 2,
+	ENiagaraSpriteFacingMode_MAX   = 3
+};
+
+
+// Enum Niagara.ENiagaraSpriteAlignment
+enum class ENiagaraSpriteAlignment : uint8_t
+{
+	Unaligned                      = 0,
+	VelocityAligned                = 1,
+	CustomAlignment                = 2,
+	ENiagaraSpriteAlignment_MAX    = 3
+};
+
+
+// Enum Niagara.ENiagaraSortMode
+enum class ENiagaraSortMode : uint8_t
+{
+	SortNone                       = 0,
+	SortViewDepth                  = 1,
+	SortViewDistance               = 2,
+	ENiagaraSortMode_MAX           = 3
+};
+
+
+// Enum Niagara.ENiagaraScriptUsage
+enum class ENiagaraScriptUsage : uint8_t
+{
+	Function                       = 0,
+	Module                         = 1,
+	SpawnScript                    = 2,
+	SpawnScriptInterpolated        = 3,
+	UpdateScript                   = 4,
+	EffectScript                   = 5,
+	ENiagaraScriptUsage_MAX        = 6
+};
+
+
+// Enum Niagara.EUnusedAttributeBehaviour
+enum class EUnusedAttributeBehaviour : uint8_t
+{
+	Copy                           = 0,
+	Zero                           = 1,
+	None                           = 2,
+	MarkInvalid                    = 3,
+	PassThrough                    = 4,
+	EUnusedAttributeBehaviour_MAX  = 5
+};
+
+
+// Enum Niagara.ENiagaraCollisionMode
+enum class ENiagaraCollisionMode : uint8_t
+{
+	None                           = 0,
+	SceneGeometry                  = 1,
+	DepthBuffer                    = 2,
+	DistanceField                  = 3,
+	ENiagaraCollisionMode_MAX      = 4
+};
+
+
+// Enum Niagara.EScriptCompileIndices
+enum class EScriptCompileIndices : uint8_t
+{
+	SpawnScript                    = 0,
+	UpdateScript                   = 1,
+	EventScript                    = 2,
+	EScriptCompileIndices_MAX      = 3
+};
+
+
+// Enum Niagara.EScriptExecutionMode
+enum class EScriptExecutionMode : uint8_t
+{
+	EveryParticle                  = 0,
+	SpawnedParticles               = 1,
+	SingleParticle                 = 2,
+	EScriptExecutionMode_MAX       = 3
+};
+
+
+
+// Enum MaterialShaderQualitySettings.EMobileCSMQuality
+enum class EMobileCSMQuality : uint8_t
+{
+	NoFiltering                    = 0,
+	PCF_1x1                        = 1,
+	PCF_2x2                        = 2,
+	EMobileCSMQuality_MAX          = 3
+};
+
+
+
+// Enum AudioMixer.ESubmixEffectDynamicsPeakMode
+enum class ESubmixEffectDynamicsPeakMode : uint8_t
+{
+	MeanSquared                    = 0,
+	RootMeanSquared                = 1,
+	Peak                           = 2,
+	Count                          = 3,
+	ESubmixEffectDynamicsPeakMode_MAX = 4
+};
+
+
+// Enum AudioMixer.ESubmixEffectDynamicsProcessorType
+enum class ESubmixEffectDynamicsProcessorType : uint8_t
+{
+	Compressor                     = 0,
+	Limiter                        = 1,
+	Expander                       = 2,
+	Gate                           = 3,
+	Count                          = 4,
+	ESubmixEffectDynamicsProcessorType_MAX = 5
+};
+
+
+
+// Enum MoviePlayer.EMoviePlaybackType
+enum class EMoviePlaybackType : uint8_t
+{
+	MT_Normal                      = 0,
+	MT_Looped                      = 1,
+	MT_LoadingLoop                 = 2,
+	MT_MAX                         = 3
 };
 
 
@@ -10042,93 +10471,246 @@ enum class EParticleKey : uint8_t
 
 
 
-// Enum EngineSettings.EThreePlayerSplitScreenType
-enum class EThreePlayerSplitScreenType : uint8_t
+// Enum AnimGraphRuntime.EModifyCurveApplyMode
+enum class EModifyCurveApplyMode : uint8_t
 {
-	FavorTop                       = 0,
-	FavorBottom                    = 1,
-	EThreePlayerSplitScreenType_MAX = 2
+	Add                            = 0,
+	Scale                          = 1,
+	Blend                          = 2,
+	EModifyCurveApplyMode_MAX      = 3
 };
 
 
-// Enum EngineSettings.ETwoPlayerSplitScreenType
-enum class ETwoPlayerSplitScreenType : uint8_t
+// Enum AnimGraphRuntime.ERBFDistanceMethod
+enum class ERBFDistanceMethod : uint8_t
 {
-	Horizontal                     = 0,
-	Vertical                       = 1,
-	ETwoPlayerSplitScreenType_MAX  = 2
+	Euclidean                      = 0,
+	Quaternion                     = 1,
+	SwingAngle                     = 2,
+	ERBFDistanceMethod_MAX         = 3
+};
+
+
+// Enum AnimGraphRuntime.ERBFFunctionType
+enum class ERBFFunctionType : uint8_t
+{
+	Gaussian                       = 0,
+	Exponential                    = 1,
+	Linear                         = 2,
+	Cubic                          = 3,
+	Quintic                        = 4,
+	ERBFFunctionType_MAX           = 5
+};
+
+
+// Enum AnimGraphRuntime.EPoseDriverOutput
+enum class EPoseDriverOutput : uint8_t
+{
+	DrivePoses                     = 0,
+	DriveCurves                    = 1,
+	EPoseDriverOutput_MAX          = 2
+};
+
+
+// Enum AnimGraphRuntime.EPoseDriverSource
+enum class EPoseDriverSource : uint8_t
+{
+	Rotation                       = 0,
+	Translation                    = 1,
+	EPoseDriverSource_MAX          = 2
+};
+
+
+// Enum AnimGraphRuntime.EPoseDriverType
+enum class EPoseDriverType : uint8_t
+{
+	SwingAndTwist                  = 0,
+	SwingOnly                      = 1,
+	Translation                    = 2,
+	EPoseDriverType_MAX            = 3
+};
+
+
+// Enum AnimGraphRuntime.ESnapshotSourceMode
+enum class ESnapshotSourceMode : uint8_t
+{
+	NamedSnapshot                  = 0,
+	SnapshotPin                    = 1,
+	ESnapshotSourceMode_MAX        = 2
+};
+
+
+// Enum AnimGraphRuntime.ERefPoseType
+enum class ERefPoseType : uint8_t
+{
+	EIT_LocalSpace                 = 0,
+	EIT_Additive                   = 1,
+	EIT_MAX                        = 2
+};
+
+
+// Enum AnimGraphRuntime.ESequenceEvalReinit
+enum class ESequenceEvalReinit : uint8_t
+{
+	NoReset                        = 0,
+	StartPosition                  = 1,
+	ExplicitTime                   = 2,
+	ESequenceEvalReinit_MAX        = 3
+};
+
+
+// Enum AnimGraphRuntime.ESphericalLimitType
+enum class ESphericalLimitType : uint8_t
+{
+	Inner                          = 0,
+	Outer                          = 1,
+	ESphericalLimitType_MAX        = 2
+};
+
+
+// Enum AnimGraphRuntime.AnimPhysSimSpaceType
+enum class EAnimPhysSimSpaceType : uint8_t
+{
+	Component                      = 0,
+	Actor                          = 1,
+	World                          = 2,
+	RootRelative                   = 3,
+	BoneRelative                   = 4,
+	AnimPhysSimSpaceType_MAX       = 5
+};
+
+
+// Enum AnimGraphRuntime.AnimPhysLinearConstraintType
+enum class EAnimPhysLinearConstraintType : uint8_t
+{
+	Free                           = 0,
+	Limited                        = 1,
+	AnimPhysLinearConstraintType_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.AnimPhysAngularConstraintType
+enum class EAnimPhysAngularConstraintType : uint8_t
+{
+	Angular                        = 0,
+	Cone                           = 1,
+	AnimPhysAngularConstraintType_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.EDrivenDestinationMode
+enum class EDrivenDestinationMode : uint8_t
+{
+	Bone                           = 0,
+	MorphTarget                    = 1,
+	MaterialParameter              = 2,
+	EDrivenDestinationMode_MAX     = 3
+};
+
+
+// Enum AnimGraphRuntime.EDrivenBoneModificationMode
+enum class EDrivenBoneModificationMode : uint8_t
+{
+	AddToInput                     = 0,
+	ReplaceComponent               = 1,
+	AddToRefPose                   = 2,
+	EDrivenBoneModificationMode_MAX = 3
+};
+
+
+// Enum AnimGraphRuntime.EComponentType
+enum class EComponentType : uint8_t
+{
+	None                           = 0,
+	TranslationX                   = 1,
+	TranslationY                   = 2,
+	TranslationZ                   = 3,
+	RotationX                      = 4,
+	RotationY                      = 5,
+	RotationZ                      = 6,
+	Scale                          = 7,
+	ScaleX                         = 8,
+	ScaleY                         = 9,
+	ScaleZ                         = 10,
+	EComponentType_MAX             = 11
+};
+
+
+// Enum AnimGraphRuntime.CopyBoneDeltaMode
+enum class ECopyBoneDeltaMode : uint8_t
+{
+	Accumulate                     = 0,
+	Copy                           = 1,
+	CopyBoneDeltaMode_MAX          = 2
+};
+
+
+// Enum AnimGraphRuntime.EInterpolationBlend
+enum class EInterpolationBlend : uint8_t
+{
+	Linear                         = 0,
+	Cubic                          = 1,
+	Sinusoidal                     = 2,
+	EaseInOutExponent2             = 3,
+	EaseInOutExponent3             = 4,
+	EaseInOutExponent4             = 5,
+	EaseInOutExponent5             = 6,
+	MAX                            = 7,
+	EInterpolationBlend_MAX        = 8
+};
+
+
+// Enum AnimGraphRuntime.EBoneModificationMode
+enum class EBoneModificationMode : uint8_t
+{
+	BMM_Ignore                     = 0,
+	BMM_Replace                    = 1,
+	BMM_Additive                   = 2,
+	BMM_MAX                        = 3
+};
+
+
+// Enum AnimGraphRuntime.ESplineBoneAxis
+enum class ESplineBoneAxis : uint8_t
+{
+	X                              = 0,
+	Y                              = 1,
+	Z                              = 2,
+	ESplineBoneAxis_MAX            = 3
 };
 
 
 
-// Enum Foliage.EFoliageScaling
-enum class EFoliageScaling : uint8_t
+// Enum BuildPatchServices.EManifestFileHeader
+enum class EManifestFileHeader : uint8_t
 {
-	Uniform                        = 0,
-	Free                           = 1,
-	LockXY                         = 2,
-	LockXZ                         = 3,
-	LockYZ                         = 4,
-	EFoliageScaling_MAX            = 5
-};
-
-
-// Enum Foliage.EVertexColorMaskChannel
-enum class EVertexColorMaskChannel : uint8_t
-{
-	Red                            = 0,
-	Green                          = 1,
-	Blue                           = 2,
-	Alpha                          = 3,
-	MAX_None                       = 4,
-	EVertexColorMaskChannel_MAX    = 5
-};
-
-
-// Enum Foliage.FoliageVertexColorMask
-enum class EFoliageVertexColorMask : uint8_t
-{
-	FOLIAGEVERTEXCOLORMASK_Disabled = 0,
-	FOLIAGEVERTEXCOLORMASK_Red     = 1,
-	FOLIAGEVERTEXCOLORMASK_Green   = 2,
-	FOLIAGEVERTEXCOLORMASK_Blue    = 3,
-	FOLIAGEVERTEXCOLORMASK_Alpha   = 4,
-	FOLIAGEVERTEXCOLORMASK_MAX     = 5
-};
-
-
-// Enum Foliage.ESimulationQuery
-enum class ESimulationQuery : uint8_t
-{
-	CollisionOverlap               = 0,
-	ShadeOverlap                   = 1,
-	AnyOverlap                     = 2,
-	ESimulationQuery_MAX           = 3
-};
-
-
-// Enum Foliage.ESimulationOverlap
-enum class ESimulationOverlap : uint8_t
-{
-	CollisionOverlap               = 0,
-	ShadeOverlap                   = 1,
-	None                           = 2,
-	ESimulationOverlap_MAX         = 3
+	STORED_RAW                     = 0,
+	STORED_COMPRESSED              = 1,
+	STORED_MAX                     = 2
 };
 
 
 
-// Enum MediaAssets.EMediaPlayerTrack
-enum class EMediaPlayerTrack : uint8_t
+// Enum MovieSceneCapture.EHDRCaptureGamut
+enum class EHDRCaptureGamut : uint8_t
 {
-	Audio                          = 0,
-	Binary                         = 1,
-	Caption                        = 2,
-	Script                         = 3,
-	Subtitle                       = 4,
-	Text                           = 5,
-	Video                          = 6,
-	EMediaPlayerTrack_MAX          = 7
+	HCGM_Rec709                    = 0,
+	HCGM_P3DCI                     = 1,
+	HCGM_Rec2020                   = 2,
+	HCGM_ACES                      = 3,
+	HCGM_ACEScg                    = 4,
+	HCGM_MAX                       = 5
+};
+
+
+
+// Enum HeadMountedDisplay.ETrackingStatus
+enum class ETrackingStatus : uint8_t
+{
+	NotTracked                     = 0,
+	InertialOnly                   = 1,
+	Tracked                        = 2,
+	ETrackingStatus_MAX            = 3
 };
 
 
@@ -10527,177 +11109,6 @@ enum class EProgressBarFillType : uint8_t
 
 
 
-// Enum MovieSceneCapture.EHDRCaptureGamut
-enum class EHDRCaptureGamut : uint8_t
-{
-	HCGM_Rec709                    = 0,
-	HCGM_P3DCI                     = 1,
-	HCGM_Rec2020                   = 2,
-	HCGM_ACES                      = 3,
-	HCGM_ACEScg                    = 4,
-	HCGM_MAX                       = 5
-};
-
-
-
-// Enum GameplayTasks.ETaskResourceOverlapPolicy
-enum class ETaskResourceOverlapPolicy : uint8_t
-{
-	StartOnTop                     = 0,
-	StartAtEnd                     = 1,
-	ETaskResourceOverlapPolicy_MAX = 2
-};
-
-
-// Enum GameplayTasks.EGameplayTaskState
-enum class EGameplayTaskState : uint8_t
-{
-	Uninitialized                  = 0,
-	AwaitingActivation             = 1,
-	Paused                         = 2,
-	Active                         = 3,
-	Finished                       = 4,
-	EGameplayTaskState_MAX         = 5
-};
-
-
-// Enum GameplayTasks.EGameplayTaskRunResult
-enum class EGameplayTaskRunResult : uint8_t
-{
-	Error                          = 0,
-	Failed                         = 1,
-	Success_Paused                 = 2,
-	Success_Active                 = 3,
-	Success_Finished               = 4,
-	EGameplayTaskRunResult_MAX     = 5
-};
-
-
-
-// Enum Landscape.ELandscapeGizmoType
-enum class ELandscapeGizmoType : uint8_t
-{
-	LGT_None                       = 0,
-	LGT_Height                     = 1,
-	LGT_Weight                     = 2,
-	LGT_MAX                        = 3
-};
-
-
-// Enum Landscape.EGrassScaling
-enum class EGrassScaling : uint8_t
-{
-	Uniform                        = 0,
-	Free                           = 1,
-	LockXY                         = 2,
-	EGrassScaling_MAX              = 3
-};
-
-
-// Enum Landscape.ELandscapeLODFalloff
-enum class ELandscapeLODFalloff : uint8_t
-{
-	Linear                         = 0,
-	SquareRoot                     = 1,
-	ELandscapeLODFalloff_MAX       = 2
-};
-
-
-// Enum Landscape.ELandscapeLayerDisplayMode
-enum class ELandscapeLayerDisplayMode : uint8_t
-{
-	Default                        = 0,
-	Alphabetical                   = 1,
-	UserSpecific                   = 2,
-	ELandscapeLayerDisplayMode_MAX = 3
-};
-
-
-// Enum Landscape.ELandscapeLayerPaintingRestriction
-enum class ELandscapeLayerPaintingRestriction : uint8_t
-{
-	None                           = 0,
-	UseMaxLayers                   = 1,
-	ExistingOnly                   = 2,
-	UseComponentWhitelist          = 3,
-	ELandscapeLayerPaintingRestriction_MAX = 4
-};
-
-
-// Enum Landscape.ELandscapeImportAlphamapType
-enum class ELandscapeImportAlphamapType : uint8_t
-{
-	Additive                       = 0,
-	Layered                        = 1,
-	ELandscapeImportAlphamapType_MAX = 2
-};
-
-
-// Enum Landscape.ELandscapeSetupErrors
-enum class ELandscapeSetupErrors : uint8_t
-{
-	LSE_None                       = 0,
-	LSE_NoLandscapeInfo            = 1,
-	LSE_CollsionXY                 = 2,
-	LSE_NoLayerInfo                = 3,
-	LSE_MAX                        = 4
-};
-
-
-// Enum Landscape.LandscapeSplineMeshOrientation
-enum class ELandscapeSplineMeshOrientation : uint8_t
-{
-	LSMO_XUp                       = 0,
-	LSMO_YUp                       = 1,
-	LSMO_MAX                       = 2
-};
-
-
-// Enum Landscape.ELandscapeLayerBlendType
-enum class ELandscapeLayerBlendType : uint8_t
-{
-	LB_WeightBlend                 = 0,
-	LB_AlphaBlend                  = 1,
-	LB_HeightBlend                 = 2,
-	LB_MAX                         = 3
-};
-
-
-// Enum Landscape.ELandscapeCustomizedCoordType
-enum class ELandscapeCustomizedCoordType : uint8_t
-{
-	LCCT_None                      = 0,
-	LCCT_CustomUV0                 = 1,
-	LCCT_CustomUV1                 = 2,
-	LCCT_CustomUV2                 = 3,
-	LCCT_WeightMapUV               = 4,
-	LCCT_MAX                       = 5
-};
-
-
-// Enum Landscape.ETerrainCoordMappingType
-enum class ETerrainCoordMappingType : uint8_t
-{
-	TCMT_Auto                      = 0,
-	TCMT_XY                        = 1,
-	TCMT_XZ                        = 2,
-	TCMT_YZ                        = 3,
-	TCMT_MAX                       = 4
-};
-
-
-
-// Enum CinematicCamera.ECameraFocusMethod
-enum class ECameraFocusMethod : uint8_t
-{
-	None                           = 0,
-	Manual                         = 1,
-	Tracking                       = 2,
-	ECameraFocusMethod_MAX         = 3
-};
-
-
-
 // Enum CoherentUIGTPlugin.ECoherentUIGTKeys
 enum class ECoherentUIGTKeys : uint8_t
 {
@@ -10876,6 +11287,25 @@ enum class ECoherentUIGTSettingsSeverity : uint8_t
 
 
 
+// Enum EngineSettings.EThreePlayerSplitScreenType
+enum class EThreePlayerSplitScreenType : uint8_t
+{
+	FavorTop                       = 0,
+	FavorBottom                    = 1,
+	EThreePlayerSplitScreenType_MAX = 2
+};
+
+
+// Enum EngineSettings.ETwoPlayerSplitScreenType
+enum class ETwoPlayerSplitScreenType : uint8_t
+{
+	Horizontal                     = 0,
+	Vertical                       = 1,
+	ETwoPlayerSplitScreenType_MAX  = 2
+};
+
+
+
 // Enum CustomizableObject.ECustomizableObjectProjectorType
 enum class ECustomizableObjectProjectorType : uint8_t
 {
@@ -10979,6 +11409,62 @@ enum class EClientRequestType : uint8_t
 
 
 
+// Enum CinematicCamera.ECameraFocusMethod
+enum class ECameraFocusMethod : uint8_t
+{
+	None                           = 0,
+	Manual                         = 1,
+	Tracking                       = 2,
+	ECameraFocusMethod_MAX         = 3
+};
+
+
+
+// Enum GameplayTags.EGameplayTagQueryExprType
+enum class EGameplayTagQueryExprType : uint8_t
+{
+	Undefined                      = 0,
+	AnyTagsMatch                   = 1,
+	AllTagsMatch                   = 2,
+	NoTagsMatch                    = 3,
+	AnyExprMatch                   = 4,
+	AllExprMatch                   = 5,
+	NoExprMatch                    = 6,
+	EGameplayTagQueryExprType_MAX  = 7
+};
+
+
+// Enum GameplayTags.EGameplayContainerMatchType
+enum class EGameplayContainerMatchType : uint8_t
+{
+	Any                            = 0,
+	All                            = 1,
+	EGameplayContainerMatchType_MAX = 2
+};
+
+
+// Enum GameplayTags.EGameplayTagMatchType
+enum class EGameplayTagMatchType : uint8_t
+{
+	Explicit                       = 0,
+	IncludeParentTags              = 1,
+	EGameplayTagMatchType_MAX      = 2
+};
+
+
+// Enum GameplayTags.EGameplayTagSourceType
+enum class EGameplayTagSourceType : uint8_t
+{
+	Native                         = 0,
+	DefaultTagList                 = 1,
+	TagList                        = 2,
+	DataTable                      = 3,
+	Invalid                        = 4,
+	EGameplayTagSourceType_MAX     = 5
+};
+
+
+
 // Enum InputCore.ETouchIndex
 enum class ETouchIndex : uint8_t
 {
@@ -11036,492 +11522,6 @@ enum class EControllerHand : uint8_t
 	Special07                      = 12,
 	Special08                      = 13,
 	EControllerHand_MAX            = 14
-};
-
-
-
-// Enum MaterialShaderQualitySettings.EMobileCSMQuality
-enum class EMobileCSMQuality : uint8_t
-{
-	NoFiltering                    = 0,
-	PCF_1x1                        = 1,
-	PCF_2x2                        = 2,
-	EMobileCSMQuality_MAX          = 3
-};
-
-
-
-// Enum AudioMixer.ESubmixEffectDynamicsPeakMode
-enum class ESubmixEffectDynamicsPeakMode : uint8_t
-{
-	MeanSquared                    = 0,
-	RootMeanSquared                = 1,
-	Peak                           = 2,
-	Count                          = 3,
-	ESubmixEffectDynamicsPeakMode_MAX = 4
-};
-
-
-// Enum AudioMixer.ESubmixEffectDynamicsProcessorType
-enum class ESubmixEffectDynamicsProcessorType : uint8_t
-{
-	Compressor                     = 0,
-	Limiter                        = 1,
-	Expander                       = 2,
-	Gate                           = 3,
-	Count                          = 4,
-	ESubmixEffectDynamicsProcessorType_MAX = 5
-};
-
-
-
-// Enum Niagara.ENiagaraNumericOutputTypeSelectionMode
-enum class ENiagaraNumericOutputTypeSelectionMode : uint8_t
-{
-	None                           = 0,
-	Largest                        = 1,
-	Smallest                       = 2,
-	Scalar                         = 3,
-	ENiagaraNumericOutputTypeSelectionMode_MAX = 4
-};
-
-
-// Enum Niagara.ENiagaraScriptCompileStatus
-enum class ENiagaraScriptCompileStatus : uint8_t
-{
-	NCS_Unknown                    = 0,
-	NCS_Dirty                      = 1,
-	NCS_Error                      = 2,
-	NCS_UpToDate                   = 3,
-	NCS_BeingCreated               = 4,
-	NCS_UpToDateWithWarnings       = 5,
-	NCS_MAX                        = 6
-};
-
-
-// Enum Niagara.ENiagaraInputNodeUsage
-enum class ENiagaraInputNodeUsage : uint8_t
-{
-	Undefined                      = 0,
-	Parameter                      = 1,
-	Attribute                      = 2,
-	SystemConstant                 = 3,
-	ENiagaraInputNodeUsage_MAX     = 4
-};
-
-
-// Enum Niagara.ENiagaraDataSetType
-enum class ENiagaraDataSetType : uint8_t
-{
-	ParticleData                   = 0,
-	Shared                         = 1,
-	Event                          = 2,
-	ENiagaraDataSetType_MAX        = 3
-};
-
-
-// Enum Niagara.ENiagaraSpriteFacingMode
-enum class ENiagaraSpriteFacingMode : uint8_t
-{
-	FaceCamera                     = 0,
-	FaceCameraPlane                = 1,
-	CustomFacingVector             = 2,
-	ENiagaraSpriteFacingMode_MAX   = 3
-};
-
-
-// Enum Niagara.ENiagaraSpriteAlignment
-enum class ENiagaraSpriteAlignment : uint8_t
-{
-	Unaligned                      = 0,
-	VelocityAligned                = 1,
-	CustomAlignment                = 2,
-	ENiagaraSpriteAlignment_MAX    = 3
-};
-
-
-// Enum Niagara.ENiagaraSortMode
-enum class ENiagaraSortMode : uint8_t
-{
-	SortNone                       = 0,
-	SortViewDepth                  = 1,
-	SortViewDistance               = 2,
-	ENiagaraSortMode_MAX           = 3
-};
-
-
-// Enum Niagara.ENiagaraScriptUsage
-enum class ENiagaraScriptUsage : uint8_t
-{
-	Function                       = 0,
-	Module                         = 1,
-	SpawnScript                    = 2,
-	SpawnScriptInterpolated        = 3,
-	UpdateScript                   = 4,
-	EffectScript                   = 5,
-	ENiagaraScriptUsage_MAX        = 6
-};
-
-
-// Enum Niagara.EUnusedAttributeBehaviour
-enum class EUnusedAttributeBehaviour : uint8_t
-{
-	Copy                           = 0,
-	Zero                           = 1,
-	None                           = 2,
-	MarkInvalid                    = 3,
-	PassThrough                    = 4,
-	EUnusedAttributeBehaviour_MAX  = 5
-};
-
-
-// Enum Niagara.ENiagaraCollisionMode
-enum class ENiagaraCollisionMode : uint8_t
-{
-	None                           = 0,
-	SceneGeometry                  = 1,
-	DepthBuffer                    = 2,
-	DistanceField                  = 3,
-	ENiagaraCollisionMode_MAX      = 4
-};
-
-
-// Enum Niagara.EScriptCompileIndices
-enum class EScriptCompileIndices : uint8_t
-{
-	SpawnScript                    = 0,
-	UpdateScript                   = 1,
-	EventScript                    = 2,
-	EScriptCompileIndices_MAX      = 3
-};
-
-
-// Enum Niagara.EScriptExecutionMode
-enum class EScriptExecutionMode : uint8_t
-{
-	EveryParticle                  = 0,
-	SpawnedParticles               = 1,
-	SingleParticle                 = 2,
-	EScriptExecutionMode_MAX       = 3
-};
-
-
-
-// Enum MoviePlayer.EMoviePlaybackType
-enum class EMoviePlaybackType : uint8_t
-{
-	MT_Normal                      = 0,
-	MT_Looped                      = 1,
-	MT_LoadingLoop                 = 2,
-	MT_MAX                         = 3
-};
-
-
-
-// Enum HeadMountedDisplay.ETrackingStatus
-enum class ETrackingStatus : uint8_t
-{
-	NotTracked                     = 0,
-	InertialOnly                   = 1,
-	Tracked                        = 2,
-	ETrackingStatus_MAX            = 3
-};
-
-
-
-// Enum GameplayTags.EGameplayTagQueryExprType
-enum class EGameplayTagQueryExprType : uint8_t
-{
-	Undefined                      = 0,
-	AnyTagsMatch                   = 1,
-	AllTagsMatch                   = 2,
-	NoTagsMatch                    = 3,
-	AnyExprMatch                   = 4,
-	AllExprMatch                   = 5,
-	NoExprMatch                    = 6,
-	EGameplayTagQueryExprType_MAX  = 7
-};
-
-
-// Enum GameplayTags.EGameplayContainerMatchType
-enum class EGameplayContainerMatchType : uint8_t
-{
-	Any                            = 0,
-	All                            = 1,
-	EGameplayContainerMatchType_MAX = 2
-};
-
-
-// Enum GameplayTags.EGameplayTagMatchType
-enum class EGameplayTagMatchType : uint8_t
-{
-	Explicit                       = 0,
-	IncludeParentTags              = 1,
-	EGameplayTagMatchType_MAX      = 2
-};
-
-
-// Enum GameplayTags.EGameplayTagSourceType
-enum class EGameplayTagSourceType : uint8_t
-{
-	Native                         = 0,
-	DefaultTagList                 = 1,
-	TagList                        = 2,
-	DataTable                      = 3,
-	Invalid                        = 4,
-	EGameplayTagSourceType_MAX     = 5
-};
-
-
-
-// Enum BuildPatchServices.EManifestFileHeader
-enum class EManifestFileHeader : uint8_t
-{
-	STORED_RAW                     = 0,
-	STORED_COMPRESSED              = 1,
-	STORED_MAX                     = 2
-};
-
-
-
-// Enum ActorSequence.EActorSequenceObjectReferenceType
-enum class EActorSequenceObjectReferenceType : uint8_t
-{
-	ContextActor                   = 0,
-	ExternalActor                  = 1,
-	Component                      = 2,
-	EActorSequenceObjectReferenceType_MAX = 3
-};
-
-
-
-// Enum AnimGraphRuntime.EModifyCurveApplyMode
-enum class EModifyCurveApplyMode : uint8_t
-{
-	Add                            = 0,
-	Scale                          = 1,
-	Blend                          = 2,
-	EModifyCurveApplyMode_MAX      = 3
-};
-
-
-// Enum AnimGraphRuntime.ERBFDistanceMethod
-enum class ERBFDistanceMethod : uint8_t
-{
-	Euclidean                      = 0,
-	Quaternion                     = 1,
-	SwingAngle                     = 2,
-	ERBFDistanceMethod_MAX         = 3
-};
-
-
-// Enum AnimGraphRuntime.ERBFFunctionType
-enum class ERBFFunctionType : uint8_t
-{
-	Gaussian                       = 0,
-	Exponential                    = 1,
-	Linear                         = 2,
-	Cubic                          = 3,
-	Quintic                        = 4,
-	ERBFFunctionType_MAX           = 5
-};
-
-
-// Enum AnimGraphRuntime.EPoseDriverOutput
-enum class EPoseDriverOutput : uint8_t
-{
-	DrivePoses                     = 0,
-	DriveCurves                    = 1,
-	EPoseDriverOutput_MAX          = 2
-};
-
-
-// Enum AnimGraphRuntime.EPoseDriverSource
-enum class EPoseDriverSource : uint8_t
-{
-	Rotation                       = 0,
-	Translation                    = 1,
-	EPoseDriverSource_MAX          = 2
-};
-
-
-// Enum AnimGraphRuntime.EPoseDriverType
-enum class EPoseDriverType : uint8_t
-{
-	SwingAndTwist                  = 0,
-	SwingOnly                      = 1,
-	Translation                    = 2,
-	EPoseDriverType_MAX            = 3
-};
-
-
-// Enum AnimGraphRuntime.ESnapshotSourceMode
-enum class ESnapshotSourceMode : uint8_t
-{
-	NamedSnapshot                  = 0,
-	SnapshotPin                    = 1,
-	ESnapshotSourceMode_MAX        = 2
-};
-
-
-// Enum AnimGraphRuntime.ERefPoseType
-enum class ERefPoseType : uint8_t
-{
-	EIT_LocalSpace                 = 0,
-	EIT_Additive                   = 1,
-	EIT_MAX                        = 2
-};
-
-
-// Enum AnimGraphRuntime.ESequenceEvalReinit
-enum class ESequenceEvalReinit : uint8_t
-{
-	NoReset                        = 0,
-	StartPosition                  = 1,
-	ExplicitTime                   = 2,
-	ESequenceEvalReinit_MAX        = 3
-};
-
-
-// Enum AnimGraphRuntime.ESphericalLimitType
-enum class ESphericalLimitType : uint8_t
-{
-	Inner                          = 0,
-	Outer                          = 1,
-	ESphericalLimitType_MAX        = 2
-};
-
-
-// Enum AnimGraphRuntime.AnimPhysSimSpaceType
-enum class EAnimPhysSimSpaceType : uint8_t
-{
-	Component                      = 0,
-	Actor                          = 1,
-	World                          = 2,
-	RootRelative                   = 3,
-	BoneRelative                   = 4,
-	AnimPhysSimSpaceType_MAX       = 5
-};
-
-
-// Enum AnimGraphRuntime.AnimPhysLinearConstraintType
-enum class EAnimPhysLinearConstraintType : uint8_t
-{
-	Free                           = 0,
-	Limited                        = 1,
-	AnimPhysLinearConstraintType_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.AnimPhysAngularConstraintType
-enum class EAnimPhysAngularConstraintType : uint8_t
-{
-	Angular                        = 0,
-	Cone                           = 1,
-	AnimPhysAngularConstraintType_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.EDrivenDestinationMode
-enum class EDrivenDestinationMode : uint8_t
-{
-	Bone                           = 0,
-	MorphTarget                    = 1,
-	MaterialParameter              = 2,
-	EDrivenDestinationMode_MAX     = 3
-};
-
-
-// Enum AnimGraphRuntime.EDrivenBoneModificationMode
-enum class EDrivenBoneModificationMode : uint8_t
-{
-	AddToInput                     = 0,
-	ReplaceComponent               = 1,
-	AddToRefPose                   = 2,
-	EDrivenBoneModificationMode_MAX = 3
-};
-
-
-// Enum AnimGraphRuntime.EComponentType
-enum class EComponentType : uint8_t
-{
-	None                           = 0,
-	TranslationX                   = 1,
-	TranslationY                   = 2,
-	TranslationZ                   = 3,
-	RotationX                      = 4,
-	RotationY                      = 5,
-	RotationZ                      = 6,
-	Scale                          = 7,
-	ScaleX                         = 8,
-	ScaleY                         = 9,
-	ScaleZ                         = 10,
-	EComponentType_MAX             = 11
-};
-
-
-// Enum AnimGraphRuntime.CopyBoneDeltaMode
-enum class ECopyBoneDeltaMode : uint8_t
-{
-	Accumulate                     = 0,
-	Copy                           = 1,
-	CopyBoneDeltaMode_MAX          = 2
-};
-
-
-// Enum AnimGraphRuntime.EInterpolationBlend
-enum class EInterpolationBlend : uint8_t
-{
-	Linear                         = 0,
-	Cubic                          = 1,
-	Sinusoidal                     = 2,
-	EaseInOutExponent2             = 3,
-	EaseInOutExponent3             = 4,
-	EaseInOutExponent4             = 5,
-	EaseInOutExponent5             = 6,
-	MAX                            = 7,
-	EInterpolationBlend_MAX        = 8
-};
-
-
-// Enum AnimGraphRuntime.EBoneModificationMode
-enum class EBoneModificationMode : uint8_t
-{
-	BMM_Ignore                     = 0,
-	BMM_Replace                    = 1,
-	BMM_Additive                   = 2,
-	BMM_MAX                        = 3
-};
-
-
-// Enum AnimGraphRuntime.ESplineBoneAxis
-enum class ESplineBoneAxis : uint8_t
-{
-	X                              = 0,
-	Y                              = 1,
-	Z                              = 2,
-	ESplineBoneAxis_MAX            = 3
-};
-
-
-
-// Enum ClothingSystemRuntime.EClothingWindMethod
-enum class EClothingWindMethod : uint8_t
-{
-	Legacy                         = 0,
-	Accurate                       = 1,
-	EClothingWindMethod_MAX        = 2
-};
-
-
-// Enum ClothingSystemRuntime.MaskTarget_PhysMesh
-enum class EMaskTarget_PhysMesh : uint8_t
-{
-	None                           = 0,
-	MaxDistance                    = 1,
-	BackstopDistance               = 2,
-	BackstopRadius                 = 3,
-	MaskTarget_MAX                 = 4
 };
 
 
